@@ -1,45 +1,31 @@
 {
   "name": "mastermind",
-  "version": "1.0.0",
-  "description": "AI-Powered Development Operating System",
-  "private": true,
+  "version": "1.8.0",
+  "description": "Autonomous, self-improving infrastructure orchestration. Phase 8: Omniscient Layer.",
+  "main": "packages/ai-orchestrator/dist/index.js",
   "type": "module",
   "scripts": {
-    "build": "tsc --build",
-    "test": "vitest run",
-    "test:watch": "vitest watch",
-    "lint": "eslint . --ext .ts,.tsx",
-    "type-check": "tsc --noEmit",
-    "clean": "find . -type d -name 'dist' -o -name '.tsbuildinfo' | xargs rm -rf",
-    "dev": "concurrently \"npm:dev:*\"",
-    "dev:orchestrator": "tsc --watch --project packages/ai-orchestrator",
-    "ai:new-service": "node dist/packages/ai-orchestrator/bin/cli.js new-service",
-    "ai:deploy": "node dist/packages/ai-orchestrator/bin/cli.js deploy",
-    "ai:metrics": "node dist/packages/ai-orchestrator/bin/cli.js metrics",
-    "ai:devops": "node dist/packages/ai-orchestrator/bin/cli.js devops",
-    "ai:chat": "node dist/packages/ai-orchestrator/bin/cli.js chat",
-    "ai:wire-mcp": "node dist/packages/ai-orchestrator/bin/cli.js wire-mcp"
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "type-check": "turbo run type-check"
   },
-  "keywords": [
-    "ai",
-    "orchestration",
-    "microservices",
-    "devops",
-    "infrastructure",
-    "automation",
-    "development"
+  "workspaces": [
+    "packages/*"
   ],
-  "author": "Mastermind Contributors",
+  "keywords": [
+    "mastermind",
+    "autonomous-infrastructure",
+    "self-improving",
+    "AI-orchestration",
+    "Phase-8-omniscient"
+  ],
+  "author": "GlacierEQ",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^20.0.0",
+    "turbo": "^2.0.0",
     "typescript": "^5.3.0",
-    "vitest": "^1.0.0",
-    "eslint": "^8.0.0",
-    "concurrently": "^8.0.0"
-  },
-  "engines": {
-    "node": ">=20.0.0",
-    "pnpm": ">=8.0.0"
+    "@types/node": "^20.10.0"
   }
 }
