@@ -1,9 +1,16 @@
-# CODEOWNERS
-# Code ownership and required reviewers
+# Code Owners - Mastermind Repository
+# This file designates ownership and locks the repository
 
-packages/ai-orchestrator/src/agents/ @GlacierEQ
-packages/ai-orchestrator/src/kernel/ @GlacierEQ
-governance/ @GlacierEQ
-docs/ @GlacierEQ
-.github/ @GlacierEQ
-package.json @GlacierEQ
+* @GlacierEQ/mastermind-core
+
+# Lock all files from direct modification
+packages/ @GlacierEQ/mastermind-core
+src/ @GlacierEQ/mastermind-core
+tests/ @GlacierEQ/mastermind-core
+docs/ @GlacierEQ/mastermind-core
+*.md @GlacierEQ/mastermind-core
+package.json @GlacierEQ/mastermind-core
+tsconfig.json @GlacierEQ/mastermind-core
+
+# Direct commits to these files are NOT allowed
+# Fork the repository to make modifications

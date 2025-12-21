@@ -1,0 +1,30 @@
+# Workflow: Enforce Repository Lock
+# Prevents direct commits to locked repository
+
+name: Enforce Repository Lock
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  check-lock:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if PR is from fork
+        run: |
+          if [ "${{ github.event.pull_request.head.repo.full_name }}" == "${{ github.repository }}" ]; then
+            echo "❌ Direct commits to locked repository are not allowed."
+            echo "ℹ️  Fork the repository and submit PRs from your fork."
+            exit 1
+          else
+            echo "✅ PR is from a fork. Processing..."
+          fi
+
+      - name: Warn: This PR will not be merged
+        if: success()
+        run: |
+          echo "⚠️  Repository is LOCKED."
+          echo "This PR will not be merged into the source repository."
+          echo "✅ Use this repo as a reference/template."
+          echo "✅ Fork it for your own implementation."
