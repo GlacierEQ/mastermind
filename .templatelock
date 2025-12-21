@@ -1,0 +1,42 @@
+# 🔒 TEMPLATE PROTECTION
+
+This file marks Mastermind as a TEMPLATE ENGINE.
+
+## ⚠️ CRITICAL: DO NOT MODIFY MASTERMIND DIRECTLY
+
+Mastermind is designed to be:
+✅ COPIED - Clone for new template variations
+✅ SPAWNED FROM - Generate new repos from this template
+✅ VERSIONED - Update carefully with semantic versions
+
+❌ NOT a working repository
+❌ NOT meant to be built into
+❌ NOT for direct service implementation
+
+## Philosophy
+
+Mastermind spawns perfect, independent repos.
+Each generated repo is self-contained and never calls back.
+
+## To Use Mastermind:
+
+1. Run: pnpm ai:new-service <name> --template=<type>
+2. New repo is created (independent, production-ready)
+3. Mastermind remains pristine for next generation
+
+## To Enhance Mastermind:
+
+1. Create feature branch
+2. Add new template variations
+3. Improve generation logic
+4. PR to main with version bump
+5. Never add service-specific code here
+
+## Version: 1.0.0
+
+Generated: 2025-12-21T06:45:00Z
+Protection Level: STRICT
+
+---
+
+🚀 Mastermind: The Template Engine That Spawns Perfect Repos

@@ -1,0 +1,69 @@
+name: Template Protection
+
+on:
+  pull_request:
+    branches: [main, develop]
+  push:
+    branches: [main, develop]
+
+jobs:
+  validate-template-purity:
+    runs-on: ubuntu-latest
+    name: Validate Mastermind Template Purity
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Check for .templatelock
+        run: |
+          if [ ! -f ".templatelock" ]; then
+            echo "❌ ERROR: .templatelock file missing!"
+            echo "Mastermind must remain a template engine."
+            exit 1
+          fi
+          echo "✅ .templatelock present"
+      
+      - name: Check for service-specific code
+        run: |
+          # Fail if service-specific directories exist
+          if [ -d "src/services" ] && [ "$(ls -A src/services)" ]; then
+            echo "❌ ERROR: Service-specific code detected in src/services/"
+            echo "Mastermind should not contain actual service implementations."
+            exit 1
+          fi
+          echo "✅ No service-specific code detected"
+      
+      - name: Validate template structure
+        run: |
+          required_dirs=("templates" "src/agents")
+          for dir in "${required_dirs[@]}"; do
+            if [ ! -d "$dir" ]; then
+              echo "❌ ERROR: Required directory $dir is missing"
+              exit 1
+            fi
+          done
+          echo "✅ Template structure valid"
+      
+      - name: Check TEMPLATE.md exists
+        run: |
+          if [ ! -f "TEMPLATE.md" ]; then
+            echo "❌ ERROR: TEMPLATE.md is missing"
+            echo "This file documents Mastermind's template philosophy."
+            exit 1
+          fi
+          echo "✅ TEMPLATE.md present"
+      
+      - name: Validate no production dependencies
+        run: |
+          # Check package.json for service-specific dependencies
+          if grep -q "express" package.json && grep -q "\"dependencies\"" package.json; then
+            echo "⚠️  WARNING: Production server dependencies detected"
+            echo "Mastermind should only have dev/generation dependencies."
+            # Don't fail, just warn for now
+          fi
+          echo "✅ Dependency check complete"
+      
+      - name: Success message
+        run: |
+          echo "🎉 Template protection validated!"
+          echo "Mastermind remains a pure template engine."
