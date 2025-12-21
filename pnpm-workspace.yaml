@@ -1,0 +1,6 @@
+packages:
+  - 'packages/*'
+  - 'governance'
+
+overrides:
+  typescript: ^5.3.0
