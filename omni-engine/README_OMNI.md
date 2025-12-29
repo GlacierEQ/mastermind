@@ -43,3 +43,8 @@ The Omni_Engine implements **Strict Redaction Protocols**. All logs and commits 
 
 ## 🛰️ Monitoring
 Track all live missions via the **[Mission Control Dashboard](../dashboard/mission_control.md)**.
+
+## 🌌 Universal Entry Point
+You can now use the **Universal Gateway** to invoke any system capability with a single command:
+- **Command**: `python3 omni-engine/core/universal_gateway.py [intent]`
+- **Example**: `python3 omni-engine/core/universal_gateway.py "run a security audit"`
