@@ -1,0 +1,48 @@
+{
+  "protocol": "Repo Operator Protocol",
+  "version": "2.1",
+  "meta": {
+    "author": "Casey",
+    "intent": "Hardened Universal Repo Completion + Deployment",
+    "idempotent": true,
+    "logging": "output/logs/operator.log"
+  },
+  "phases": [
+    {
+      "name": "Analysis",
+      "script": "scripts/analysis.py",
+      "tasks": ["Tech-stack detection", "Hygiene audit", "Largest file scan"],
+      "outputs": ["output/repo_map.json"]
+    },
+    {
+      "name": "Completion",
+      "script": "scripts/completion.py",
+      "tasks": ["Patch generation", "Baseline safety completion"],
+      "outputs": ["patches/*.diff"]
+    },
+    {
+      "name": "Deployment Prep",
+      "script": "scripts/deployment_prep.py",
+      "tasks": ["Idempotent Dockerfile", "CI Workflow generation"],
+      "outputs": ["Dockerfile", ".github/workflows/ci.yml"]
+    },
+    {
+      "name": "Validation",
+      "script": "scripts/validation.py",
+      "tasks": ["Static analysis", "Linting", "Security audit", "Dependency audit"],
+      "outputs": ["output/logs/operator.log"]
+    },
+    {
+      "name": "Deploy",
+      "script": "scripts/deploy.py",
+      "tasks": ["Zero-downtime hooks", "Custom deployment logic"],
+      "outputs": ["output/logs/operator.log"]
+    }
+  ],
+  "operator_protocol": {
+    "strict_mode": true,
+    "dry_run_support": true,
+    "apply_patches_flag": "--apply-patches",
+    "force_flag": "--force"
+  }
+}
