@@ -1,76 +1,188 @@
 {
   "meta": {
-    "generated_at": "2025-12-19T04:24:00",
-    "note": "Pre-built Supermemory addMemory payloads for the workspace skills system. Use each item.thingToRemember as the thingToRemember field when calling supermemory.addMemory.",
+    "generated_at": "2025-12-30T05:48:32.645672",
+    "note": "Pre-built Supermemory addMemory payloads for the workspace skills system.",
     "source_files": [
-      "skills/SKILLS_MANIFEST.json",
-      "skills/SKILLS_50_COMPLETE.json",
-      "skills/COLLECTED_SKILLS_INDEX.md"
+      "skills/SKILLS_MANIFEST.json"
     ]
   },
   "payloads": [
     {
       "id": "skills_global_overview",
-      "thingToRemember": "Workspace Power Skills System overview and manifest integration.\n\nConceptual skills: 50 total, across domains: data_analysis, content_creation, development, productivity, strategy, automation, communication, learning, integration.\nSource files: SKILLS_MANIFEST.json, SKILLS_50_COMPLETE.json, SKILLS_MASTER_INDEX.md, README_START_HERE.md.\nLocal implementation skills are defined via SKILL.md files under skills/*/*/SKILL.md.",
+      "thingToRemember": "Workspace Power Skills System overview and manifest integration.\n\nConceptual skills: 255 total, across domains: data_analysis, content_creation, development, productivity, strategy, automation, communication, learning, integration, hyper_ops, universal_factories, mastermind, stealth_ops, github_ops, architect_ops, general, legal_compliance, security_forensics, design_creative, customer_success, human_resources, finance_accounting, sales_revenue, operations_supply_chain, ai_machine_learning, cloud_infrastructure, quality_assurance, project_management.\nSource files: SKILLS_MANIFEST.json, COLLECTED_SKILLS_INDEX.md.\nLocal implementation skills are defined via SKILL.md files under skills/*/*/SKILL.md.",
       "suggestedProjectId": ""
     },
     {
       "id": "skills_domain_data_analysis",
       "domain": "data_analysis",
-      "thingToRemember": "Conceptual skills domain: Data Analysis (key: data_analysis).\n\nIncluded skills:\n- Data Analyst Pro: Advanced data analysis with statistical modeling, trend detection, and predictive insights\n- Database Architect: Design optimized database schemas, query optimization, and data modeling expertise\n- SQL Master: Expert-level SQL query composition, optimization, and complex data retrieval\n- Data Visualization Expert: Create compelling visual representations of complex data with storytelling\n- ML Engineer: Build and deploy machine learning models with production-ready code",
+      "thingToRemember": "Conceptual skills domain: Data Analysis (key: data_analysis).\n\nIncluded skills:\n- Data Analyst Pro: Advanced data analysis with statistical modeling, trend detection, and predictive insights...\n- Database Architect: Design optimized database schemas, query optimization, and data modeling expertise...\n- SQL Master: Expert-level SQL query composition, optimization, and complex data retrieval...\n- Data Visualization Expert: Create compelling visual representations of complex data with storytelling...\n- ML Engineer: Build and deploy machine learning models with production-ready code...\n- Data & Analytics Skill 1: Expertise in Data & Analytics with focus on specialization 1....\n- Data & Analytics Skill 2: Expertise in Data & Analytics with focus on specialization 2....\n- Data & Analytics Skill 3: Expertise in Data & Analytics with focus on specialization 3....\n- Data & Analytics Skill 4: Expertise in Data & Analytics with focus on specialization 4....\n- Data & Analytics Skill 5: Expertise in Data & Analytics with focus on specialization 5....\n- Data & Analytics Skill 6: Expertise in Data & Analytics with focus on specialization 6....\n- Data & Analytics Skill 7: Expertise in Data & Analytics with focus on specialization 7....\n- Data & Analytics Skill 8: Expertise in Data & Analytics with focus on specialization 8....\n- Data & Analytics Skill 9: Expertise in Data & Analytics with focus on specialization 9....\n- Data & Analytics Skill 10: Expertise in Data & Analytics with focus on specialization 10....",
       "suggestedProjectId": ""
     },
     {
       "id": "skills_domain_content_creation",
       "domain": "content_creation",
-      "thingToRemember": "Conceptual skills domain: Content Creation (key: content_creation).\n\nIncluded skills:\n- Content Strategist: Develop comprehensive content strategies aligned with business goals\n- Copywriter Elite: Craft persuasive, engaging copy that converts and resonates with audiences\n- SEO Optimizer: Master search engine optimization with keyword strategy and technical SEO\n- Storyteller Pro: Craft compelling narratives that engage emotions and drive action\n- Social Media Maven: Dominate social platforms with engagement strategies and viral content\n- Video Scriptwriter: Write engaging scripts optimized for different video formats and platforms",
+      "thingToRemember": "Conceptual skills domain: Content Creation (key: content_creation).\n\nIncluded skills:\n- Content Strategist: Develop comprehensive content strategies aligned with business goals...\n- Copywriter Elite: Craft persuasive, engaging copy that converts and resonates with audiences...\n- SEO Optimizer: Master search engine optimization with keyword strategy and technical SEO...\n- Storyteller Pro: Craft compelling narratives that engage emotions and drive action...\n- Social Media Maven: Dominate social platforms with engagement strategies and viral content...\n- Video Scriptwriter: Write engaging scripts optimized for different video formats and platforms...\n- Content & Marketing Skill 1: Expertise in Content & Marketing with focus on specialization 1....\n- Content & Marketing Skill 2: Expertise in Content & Marketing with focus on specialization 2....\n- Content & Marketing Skill 3: Expertise in Content & Marketing with focus on specialization 3....\n- Content & Marketing Skill 4: Expertise in Content & Marketing with focus on specialization 4....\n- Content & Marketing Skill 5: Expertise in Content & Marketing with focus on specialization 5....\n- Content & Marketing Skill 6: Expertise in Content & Marketing with focus on specialization 6....\n- Content & Marketing Skill 7: Expertise in Content & Marketing with focus on specialization 7....\n- Content & Marketing Skill 8: Expertise in Content & Marketing with focus on specialization 8....\n- Content & Marketing Skill 9: Expertise in Content & Marketing with focus on specialization 9....\n- Content & Marketing Skill 10: Expertise in Content & Marketing with focus on specialization 10....",
       "suggestedProjectId": ""
     },
     {
       "id": "skills_domain_development",
       "domain": "development",
-      "thingToRemember": "Conceptual skills domain: Development (key: development).\n\nIncluded skills:\n- Full-Stack Architect: Design and build complete web applications from frontend to backend\n- Frontend Wizard: Create stunning, responsive UIs with modern frameworks and best practices\n- Backend Engineer: Build robust, scalable backend systems with APIs and databases\n- DevOps Master: Manage infrastructure, CI/CD pipelines, and system deployment\n- Security Architect: Design secure systems with threat modeling and best security practices\n- Code Reviewer: Provide expert code reviews ensuring quality, performance, and security\n- AI Integrator: Seamlessly integrate AI/ML models and APIs into applications",
+      "thingToRemember": "Conceptual skills domain: Development (key: development).\n\nIncluded skills:\n- Full-Stack Architect: Design and build complete web applications from frontend to backend...\n- Frontend Wizard: Create stunning, responsive UIs with modern frameworks and best practices...\n- Backend Engineer: Build robust, scalable backend systems with APIs and databases...\n- DevOps Master: Manage infrastructure, CI/CD pipelines, and system deployment...\n- Security Architect: Design secure systems with threat modeling and best security practices...\n- Code Reviewer: Provide expert code reviews ensuring quality, performance, and security...\n- AI Integrator: Seamlessly integrate AI/ML models and APIs into applications...\n- Frontend Architect: Expertise in Software Development with focus on specialization 1....\n- Backend Master: Expertise in Software Development with focus on specialization 2....\n- DevOps Ninja: Expertise in Software Development with focus on specialization 3....\n- Security Guru: Expertise in Software Development with focus on specialization 4....\n- Full-Stack Lead: Expertise in Software Development with focus on specialization 5....\n- Mobile Specialist: Expertise in Software Development with focus on specialization 6....\n- API Designer: Expertise in Software Development with focus on specialization 7....\n- Cloud Engineer: Expertise in Software Development with focus on specialization 8....\n- Database Expert: Expertise in Software Development with focus on specialization 9....\n- UI/UX Developer: Expertise in Software Development with focus on specialization 10....",
       "suggestedProjectId": ""
     },
     {
       "id": "skills_domain_productivity",
       "domain": "productivity",
-      "thingToRemember": "Conceptual skills domain: Productivity (key: productivity).\n\nIncluded skills:\n- Project Manager Pro: Master project planning, execution, and stakeholder management\n- Task Optimizer: Streamline workflows and maximize productivity with intelligent prioritization\n- Meeting Facilitator: Run effective meetings with clear agendas and actionable outcomes\n- Knowledge Curator: Organize, document, and share knowledge across teams",
+      "thingToRemember": "Conceptual skills domain: Productivity (key: productivity).\n\nIncluded skills:\n- Project Manager Pro: Master project planning, execution, and stakeholder management...\n- Task Optimizer: Streamline workflows and maximize productivity with intelligent prioritization...\n- Meeting Facilitator: Run effective meetings with clear agendas and actionable outcomes...\n- Knowledge Curator: Organize, document, and share knowledge across teams...\n- Productivity & Management Skill 1: Expertise in Productivity & Management with focus on specialization 1....\n- Productivity & Management Skill 2: Expertise in Productivity & Management with focus on specialization 2....\n- Productivity & Management Skill 3: Expertise in Productivity & Management with focus on specialization 3....\n- Productivity & Management Skill 4: Expertise in Productivity & Management with focus on specialization 4....\n- Productivity & Management Skill 5: Expertise in Productivity & Management with focus on specialization 5....\n- Productivity & Management Skill 6: Expertise in Productivity & Management with focus on specialization 6....\n- Productivity & Management Skill 7: Expertise in Productivity & Management with focus on specialization 7....\n- Productivity & Management Skill 8: Expertise in Productivity & Management with focus on specialization 8....\n- Productivity & Management Skill 9: Expertise in Productivity & Management with focus on specialization 9....\n- Productivity & Management Skill 10: Expertise in Productivity & Management with focus on specialization 10....",
       "suggestedProjectId": ""
     },
     {
       "id": "skills_domain_strategy",
       "domain": "strategy",
-      "thingToRemember": "Conceptual skills domain: Strategy (key: strategy).\n\nIncluded skills:\n- Strategic Planner: Develop long-term strategies aligned with organizational vision\n- Market Analyst: Analyze market trends, competition, and opportunities\n- Business Strategist: Develop strategies for growth, profitability, and market positioning\n- Innovation Catalyst: Drive innovation through ideation, experimentation, and implementation\n- Financial Analyst: Analyze financial data and provide strategic recommendations",
+      "thingToRemember": "Conceptual skills domain: Strategy (key: strategy).\n\nIncluded skills:\n- Strategic Planner: Develop long-term strategies aligned with organizational vision...\n- Market Analyst: Analyze market trends, competition, and opportunities...\n- Business Strategist: Develop strategies for growth, profitability, and market positioning...\n- Innovation Catalyst: Drive innovation through ideation, experimentation, and implementation...\n- Financial Analyst: Analyze financial data and provide strategic recommendations...\n- Business Architect: Expertise in Strategy & Business with focus on specialization 3....\n- Growth Hacker: Expertise in Strategy & Business with focus on specialization 4....\n- Venture Strategist: Expertise in Strategy & Business with focus on specialization 5....\n- M&A Analyst: Expertise in Strategy & Business with focus on specialization 6....\n- Competitive Intel: Expertise in Strategy & Business with focus on specialization 7....\n- Operations Strategist: Expertise in Strategy & Business with focus on specialization 8....\n- Product Strategist: Expertise in Strategy & Business with focus on specialization 9....\n- Business Transformation: Expertise in Strategy & Business with focus on specialization 10....",
       "suggestedProjectId": ""
     },
     {
       "id": "skills_domain_automation",
       "domain": "automation",
-      "thingToRemember": "Conceptual skills domain: Automation (key: automation).\n\nIncluded skills:\n- Workflow Automator: Design and build automated workflows for repetitive tasks\n- RPA Specialist: Implement robotic process automation for enterprise workflows\n- API Orchestrator: Orchestrate complex workflows using multiple APIs",
+      "thingToRemember": "Conceptual skills domain: Automation (key: automation).\n\nIncluded skills:\n- Workflow Automator: Design and build automated workflows for repetitive tasks...\n- RPA Specialist: Implement robotic process automation for enterprise workflows...\n- API Orchestrator: Orchestrate complex workflows using multiple APIs...\n- Automation & Integration Skill 1: Expertise in Automation & Integration with focus on specialization 1....\n- Automation & Integration Skill 2: Expertise in Automation & Integration with focus on specialization 2....\n- Automation & Integration Skill 3: Expertise in Automation & Integration with focus on specialization 3....\n- Automation & Integration Skill 4: Expertise in Automation & Integration with focus on specialization 4....\n- Automation & Integration Skill 5: Expertise in Automation & Integration with focus on specialization 5....\n- Automation & Integration Skill 6: Expertise in Automation & Integration with focus on specialization 6....\n- Automation & Integration Skill 7: Expertise in Automation & Integration with focus on specialization 7....\n- Automation & Integration Skill 8: Expertise in Automation & Integration with focus on specialization 8....\n- Automation & Integration Skill 9: Expertise in Automation & Integration with focus on specialization 9....\n- Automation & Integration Skill 10: Expertise in Automation & Integration with focus on specialization 10....",
       "suggestedProjectId": ""
     },
     {
       "id": "skills_domain_communication",
       "domain": "communication",
-      "thingToRemember": "Conceptual skills domain: Communication (key: communication).\n\nIncluded skills:\n- Executive Communicator: Communicate complex ideas clearly to executive leadership\n- Technical Writer: Create clear technical documentation and user guides\n- Negotiator Pro: Master negotiation techniques to achieve win-win outcomes\n- Trainer Extraordinaire: Design and deliver engaging training programs",
+      "thingToRemember": "Conceptual skills domain: Communication (key: communication).\n\nIncluded skills:\n- Executive Communicator: Communicate complex ideas clearly to executive leadership...\n- Technical Writer: Create clear technical documentation and user guides...\n- Negotiator Pro: Master negotiation techniques to achieve win-win outcomes...\n- Trainer Extraordinaire: Design and deliver engaging training programs...\n- Communication & Training Skill 1: Expertise in Communication & Training with focus on specialization 1....\n- Communication & Training Skill 2: Expertise in Communication & Training with focus on specialization 2....\n- Communication & Training Skill 3: Expertise in Communication & Training with focus on specialization 3....\n- Communication & Training Skill 4: Expertise in Communication & Training with focus on specialization 4....\n- Communication & Training Skill 5: Expertise in Communication & Training with focus on specialization 5....\n- Communication & Training Skill 6: Expertise in Communication & Training with focus on specialization 6....\n- Communication & Training Skill 7: Expertise in Communication & Training with focus on specialization 7....\n- Communication & Training Skill 8: Expertise in Communication & Training with focus on specialization 8....\n- Communication & Training Skill 9: Expertise in Communication & Training with focus on specialization 9....\n- Communication & Training Skill 10: Expertise in Communication & Training with focus on specialization 10....",
       "suggestedProjectId": ""
     },
     {
       "id": "skills_domain_learning",
       "domain": "learning",
-      "thingToRemember": "Conceptual skills domain: Learning (key: learning).\n\nIncluded skills:\n- Learning Architect: Design personalized learning paths and educational programs\n- Research Specialist: Conduct rigorous research and synthesize findings\n- Expert Synthesizer: Synthesize complex information from multiple sources",
+      "thingToRemember": "Conceptual skills domain: Learning (key: learning).\n\nIncluded skills:\n- Learning Architect: Design personalized learning paths and educational programs...\n- Research Specialist: Conduct rigorous research and synthesize findings...\n- Expert Synthesizer: Synthesize complex information from multiple sources...\n- Learning & Research Skill 1: Expertise in Learning & Research with focus on specialization 1....\n- Learning & Research Skill 2: Expertise in Learning & Research with focus on specialization 2....\n- Learning & Research Skill 3: Expertise in Learning & Research with focus on specialization 3....\n- Learning & Research Skill 4: Expertise in Learning & Research with focus on specialization 4....\n- Learning & Research Skill 5: Expertise in Learning & Research with focus on specialization 5....\n- Learning & Research Skill 6: Expertise in Learning & Research with focus on specialization 6....\n- Learning & Research Skill 7: Expertise in Learning & Research with focus on specialization 7....\n- Learning & Research Skill 8: Expertise in Learning & Research with focus on specialization 8....\n- Learning & Research Skill 9: Expertise in Learning & Research with focus on specialization 9....\n- Learning & Research Skill 10: Expertise in Learning & Research with focus on specialization 10....",
       "suggestedProjectId": ""
     },
     {
       "id": "skills_domain_integration",
       "domain": "integration",
-      "thingToRemember": "Conceptual skills domain: Integration (key: integration).\n\nIncluded skills:\n- System Integrator: Integrate disparate systems and ensure seamless data flow\n- API Developer: Design and develop robust, well-documented APIs",
+      "thingToRemember": "Conceptual skills domain: Integration (key: integration).\n\nIncluded skills:\n- System Integrator: Integrate disparate systems and ensure seamless data flow...\n- API Developer: Design and develop robust, well-documented APIs...",
+      "suggestedProjectId": ""
+    },
+    {
+      "id": "skills_domain_hyper_ops",
+      "domain": "hyper_ops",
+      "thingToRemember": "Conceptual skills domain: Hyper Ops (key: hyper_ops).\n\nIncluded skills:\n- Repo Operator Protocol 2.0: Universal repository completion, validation, and multi-target deployment system....\n- AI-Autonomous Repair & Scale: Self-healing infrastructure and codebases using LLM-driven diagnostics and patching....\n- Super-Agent Orchestrator: Autonomous full-loop system combining forensics, completion, and validation....\n- Quantum Context Compression: Dynamic context management for infinite-loop reasoning....\n- Stealth Ghosting: High-speed, low-footprint execution protocol (Microwave Mode)....",
+      "suggestedProjectId": ""
+    },
+    {
+      "id": "skills_domain_universal_factories",
+      "domain": "universal_factories",
+      "thingToRemember": "Conceptual skills domain: Universal Factories (key: universal_factories).\n\nIncluded skills:\n- Universal Skill Factory: Dynamically generate and integrate new skills into the ecosystem....\n- Universal MCP Factory: On-the-fly generation of MCP servers for external service integration....",
+      "suggestedProjectId": ""
+    },
+    {
+      "id": "skills_domain_mastermind",
+      "domain": "mastermind",
+      "thingToRemember": "Conceptual skills domain: Mastermind (key: mastermind).\n\nIncluded skills:\n- Mastermind Protocol: Multi-agent OS for rapid microservice generation and advanced digital forensics....",
+      "suggestedProjectId": ""
+    },
+    {
+      "id": "skills_domain_stealth_ops",
+      "domain": "stealth_ops",
+      "thingToRemember": "Conceptual skills domain: Stealth Ops (key: stealth_ops).\n\nIncluded skills:\n- Stealth Mode: Unobtrusive background execution with minimal system footprint....\n- Microwave Mode: High-speed,  + nuke +  style completion for rapid task execution....",
+      "suggestedProjectId": ""
+    },
+    {
+      "id": "skills_domain_github_ops",
+      "domain": "github_ops",
+      "thingToRemember": "Conceptual skills domain: Github Ops (key: github_ops).\n\nIncluded skills:\n- GitHub Nexus MCP Management: Orchestrates and manages your personal MCP ecosystem on GitHub, specifically the Cognitive Nexus and...",
+      "suggestedProjectId": ""
+    },
+    {
+      "id": "skills_domain_architect_ops",
+      "domain": "architect_ops",
+      "thingToRemember": "Conceptual skills domain: Architect Ops (key: architect_ops).\n\nIncluded skills:\n- MCP Master Architect: Orchestrates multi-layer MCP ecosystems, defining hierarchy and data flow between specialized server...",
+      "suggestedProjectId": ""
+    },
+    {
+      "id": "skills_domain_general",
+      "domain": "general",
+      "thingToRemember": "Conceptual skills domain: General (key: general).\n\nIncluded skills:\n- Super-Agent Orchestrator: Autonomous system combining Cognitive Nexus patterns, Mastermind forensics, and Repo Operator comple...\n- TestSkill: TestDescription...\n- Connectivity Hub: Dynamic networking manager....\n- TestSkill: TestDescription...\n- TestSkill: TestDescription...\n- TestSkill: TestDescription...",
+      "suggestedProjectId": ""
+    },
+    {
+      "id": "skills_domain_legal_compliance",
+      "domain": "legal_compliance",
+      "thingToRemember": "Conceptual skills domain: Legal Compliance (key: legal_compliance).\n\nIncluded skills:\n- Legal & Compliance Skill 1: Expertise in Legal & Compliance with focus on specialization 1....\n- Legal & Compliance Skill 2: Expertise in Legal & Compliance with focus on specialization 2....\n- Legal & Compliance Skill 3: Expertise in Legal & Compliance with focus on specialization 3....\n- Legal & Compliance Skill 4: Expertise in Legal & Compliance with focus on specialization 4....\n- Legal & Compliance Skill 5: Expertise in Legal & Compliance with focus on specialization 5....\n- Legal & Compliance Skill 6: Expertise in Legal & Compliance with focus on specialization 6....\n- Legal & Compliance Skill 7: Expertise in Legal & Compliance with focus on specialization 7....\n- Legal & Compliance Skill 8: Expertise in Legal & Compliance with focus on specialization 8....\n- Legal & Compliance Skill 9: Expertise in Legal & Compliance with focus on specialization 9....\n- Legal & Compliance Skill 10: Expertise in Legal & Compliance with focus on specialization 10....",
+      "suggestedProjectId": ""
+    },
+    {
+      "id": "skills_domain_security_forensics",
+      "domain": "security_forensics",
+      "thingToRemember": "Conceptual skills domain: Security Forensics (key: security_forensics).\n\nIncluded skills:\n- Forensic Analyst: Expertise in Security & Forensics with focus on specialization 1....\n- Incident Responder: Expertise in Security & Forensics with focus on specialization 2....\n- Threat Hunter: Expertise in Security & Forensics with focus on specialization 3....\n- Penetration Tester: Expertise in Security & Forensics with focus on specialization 4....\n- Security Auditor: Expertise in Security & Forensics with focus on specialization 5....\n- Compliance Officer: Expertise in Security & Forensics with focus on specialization 6....\n- Malware Researcher: Expertise in Security & Forensics with focus on specialization 7....\n- Crypto Expert: Expertise in Security & Forensics with focus on specialization 8....\n- SOC Analyst: Expertise in Security & Forensics with focus on specialization 9....\n- Cloud Security: Expertise in Security & Forensics with focus on specialization 10....",
+      "suggestedProjectId": ""
+    },
+    {
+      "id": "skills_domain_design_creative",
+      "domain": "design_creative",
+      "thingToRemember": "Conceptual skills domain: Design Creative (key: design_creative).\n\nIncluded skills:\n- Design & Creative Skill 1: Expertise in Design & Creative with focus on specialization 1....\n- Design & Creative Skill 2: Expertise in Design & Creative with focus on specialization 2....\n- Design & Creative Skill 3: Expertise in Design & Creative with focus on specialization 3....\n- Design & Creative Skill 4: Expertise in Design & Creative with focus on specialization 4....\n- Design & Creative Skill 5: Expertise in Design & Creative with focus on specialization 5....\n- Design & Creative Skill 6: Expertise in Design & Creative with focus on specialization 6....\n- Design & Creative Skill 7: Expertise in Design & Creative with focus on specialization 7....\n- Design & Creative Skill 8: Expertise in Design & Creative with focus on specialization 8....\n- Design & Creative Skill 9: Expertise in Design & Creative with focus on specialization 9....\n- Design & Creative Skill 10: Expertise in Design & Creative with focus on specialization 10....",
+      "suggestedProjectId": ""
+    },
+    {
+      "id": "skills_domain_customer_success",
+      "domain": "customer_success",
+      "thingToRemember": "Conceptual skills domain: Customer Success (key: customer_success).\n\nIncluded skills:\n- Customer Success Skill 1: Expertise in Customer Success with focus on specialization 1....\n- Customer Success Skill 2: Expertise in Customer Success with focus on specialization 2....\n- Customer Success Skill 3: Expertise in Customer Success with focus on specialization 3....\n- Customer Success Skill 4: Expertise in Customer Success with focus on specialization 4....\n- Customer Success Skill 5: Expertise in Customer Success with focus on specialization 5....\n- Customer Success Skill 6: Expertise in Customer Success with focus on specialization 6....\n- Customer Success Skill 7: Expertise in Customer Success with focus on specialization 7....\n- Customer Success Skill 8: Expertise in Customer Success with focus on specialization 8....\n- Customer Success Skill 9: Expertise in Customer Success with focus on specialization 9....\n- Customer Success Skill 10: Expertise in Customer Success with focus on specialization 10....",
+      "suggestedProjectId": ""
+    },
+    {
+      "id": "skills_domain_human_resources",
+      "domain": "human_resources",
+      "thingToRemember": "Conceptual skills domain: Human Resources (key: human_resources).\n\nIncluded skills:\n- Human Resources Skill 1: Expertise in Human Resources with focus on specialization 1....\n- Human Resources Skill 2: Expertise in Human Resources with focus on specialization 2....\n- Human Resources Skill 3: Expertise in Human Resources with focus on specialization 3....\n- Human Resources Skill 4: Expertise in Human Resources with focus on specialization 4....\n- Human Resources Skill 5: Expertise in Human Resources with focus on specialization 5....\n- Human Resources Skill 6: Expertise in Human Resources with focus on specialization 6....\n- Human Resources Skill 7: Expertise in Human Resources with focus on specialization 7....\n- Human Resources Skill 8: Expertise in Human Resources with focus on specialization 8....\n- Human Resources Skill 9: Expertise in Human Resources with focus on specialization 9....\n- Human Resources Skill 10: Expertise in Human Resources with focus on specialization 10....",
+      "suggestedProjectId": ""
+    },
+    {
+      "id": "skills_domain_finance_accounting",
+      "domain": "finance_accounting",
+      "thingToRemember": "Conceptual skills domain: Finance Accounting (key: finance_accounting).\n\nIncluded skills:\n- Finance & Accounting Skill 1: Expertise in Finance & Accounting with focus on specialization 1....\n- Finance & Accounting Skill 2: Expertise in Finance & Accounting with focus on specialization 2....\n- Finance & Accounting Skill 3: Expertise in Finance & Accounting with focus on specialization 3....\n- Finance & Accounting Skill 4: Expertise in Finance & Accounting with focus on specialization 4....\n- Finance & Accounting Skill 5: Expertise in Finance & Accounting with focus on specialization 5....\n- Finance & Accounting Skill 6: Expertise in Finance & Accounting with focus on specialization 6....\n- Finance & Accounting Skill 7: Expertise in Finance & Accounting with focus on specialization 7....\n- Finance & Accounting Skill 8: Expertise in Finance & Accounting with focus on specialization 8....\n- Finance & Accounting Skill 9: Expertise in Finance & Accounting with focus on specialization 9....\n- Finance & Accounting Skill 10: Expertise in Finance & Accounting with focus on specialization 10....",
+      "suggestedProjectId": ""
+    },
+    {
+      "id": "skills_domain_sales_revenue",
+      "domain": "sales_revenue",
+      "thingToRemember": "Conceptual skills domain: Sales Revenue (key: sales_revenue).\n\nIncluded skills:\n- Sales & Revenue Skill 1: Expertise in Sales & Revenue with focus on specialization 1....\n- Sales & Revenue Skill 2: Expertise in Sales & Revenue with focus on specialization 2....\n- Sales & Revenue Skill 3: Expertise in Sales & Revenue with focus on specialization 3....\n- Sales & Revenue Skill 4: Expertise in Sales & Revenue with focus on specialization 4....\n- Sales & Revenue Skill 5: Expertise in Sales & Revenue with focus on specialization 5....\n- Sales & Revenue Skill 6: Expertise in Sales & Revenue with focus on specialization 6....\n- Sales & Revenue Skill 7: Expertise in Sales & Revenue with focus on specialization 7....\n- Sales & Revenue Skill 8: Expertise in Sales & Revenue with focus on specialization 8....\n- Sales & Revenue Skill 9: Expertise in Sales & Revenue with focus on specialization 9....\n- Sales & Revenue Skill 10: Expertise in Sales & Revenue with focus on specialization 10....",
+      "suggestedProjectId": ""
+    },
+    {
+      "id": "skills_domain_operations_supply_chain",
+      "domain": "operations_supply_chain",
+      "thingToRemember": "Conceptual skills domain: Operations Supply Chain (key: operations_supply_chain).\n\nIncluded skills:\n- Operations & Supply Chain Skill 1: Expertise in Operations & Supply Chain with focus on specialization 1....\n- Operations & Supply Chain Skill 2: Expertise in Operations & Supply Chain with focus on specialization 2....\n- Operations & Supply Chain Skill 3: Expertise in Operations & Supply Chain with focus on specialization 3....\n- Operations & Supply Chain Skill 4: Expertise in Operations & Supply Chain with focus on specialization 4....\n- Operations & Supply Chain Skill 5: Expertise in Operations & Supply Chain with focus on specialization 5....\n- Operations & Supply Chain Skill 6: Expertise in Operations & Supply Chain with focus on specialization 6....\n- Operations & Supply Chain Skill 7: Expertise in Operations & Supply Chain with focus on specialization 7....\n- Operations & Supply Chain Skill 8: Expertise in Operations & Supply Chain with focus on specialization 8....\n- Operations & Supply Chain Skill 9: Expertise in Operations & Supply Chain with focus on specialization 9....\n- Operations & Supply Chain Skill 10: Expertise in Operations & Supply Chain with focus on specialization 10....",
+      "suggestedProjectId": ""
+    },
+    {
+      "id": "skills_domain_ai_machine_learning",
+      "domain": "ai_machine_learning",
+      "thingToRemember": "Conceptual skills domain: Ai Machine Learning (key: ai_machine_learning).\n\nIncluded skills:\n- ML Engineer: Expertise in AI & Machine Learning with focus on specialization 1....\n- Data Scientist: Expertise in AI & Machine Learning with focus on specialization 2....\n- LLM Specialist: Expertise in AI & Machine Learning with focus on specialization 3....\n- NLP Researcher: Expertise in AI & Machine Learning with focus on specialization 4....\n- Computer Vision Expert: Expertise in AI & Machine Learning with focus on specialization 5....\n- Reinforcement Learning Eng: Expertise in AI & Machine Learning with focus on specialization 6....\n- AI Ethicist: Expertise in AI & Machine Learning with focus on specialization 7....\n- Prompt Engineer: Expertise in AI & Machine Learning with focus on specialization 8....\n- MLOps Lead: Expertise in AI & Machine Learning with focus on specialization 9....\n- Neural Network Designer: Expertise in AI & Machine Learning with focus on specialization 10....",
+      "suggestedProjectId": ""
+    },
+    {
+      "id": "skills_domain_cloud_infrastructure",
+      "domain": "cloud_infrastructure",
+      "thingToRemember": "Conceptual skills domain: Cloud Infrastructure (key: cloud_infrastructure).\n\nIncluded skills:\n- Cloud & Infrastructure Skill 1: Expertise in Cloud & Infrastructure with focus on specialization 1....\n- Cloud & Infrastructure Skill 2: Expertise in Cloud & Infrastructure with focus on specialization 2....\n- Cloud & Infrastructure Skill 3: Expertise in Cloud & Infrastructure with focus on specialization 3....\n- Cloud & Infrastructure Skill 4: Expertise in Cloud & Infrastructure with focus on specialization 4....\n- Cloud & Infrastructure Skill 5: Expertise in Cloud & Infrastructure with focus on specialization 5....\n- Cloud & Infrastructure Skill 6: Expertise in Cloud & Infrastructure with focus on specialization 6....\n- Cloud & Infrastructure Skill 7: Expertise in Cloud & Infrastructure with focus on specialization 7....\n- Cloud & Infrastructure Skill 8: Expertise in Cloud & Infrastructure with focus on specialization 8....\n- Cloud & Infrastructure Skill 9: Expertise in Cloud & Infrastructure with focus on specialization 9....\n- Cloud & Infrastructure Skill 10: Expertise in Cloud & Infrastructure with focus on specialization 10....",
+      "suggestedProjectId": ""
+    },
+    {
+      "id": "skills_domain_quality_assurance",
+      "domain": "quality_assurance",
+      "thingToRemember": "Conceptual skills domain: Quality Assurance (key: quality_assurance).\n\nIncluded skills:\n- Quality Assurance Skill 1: Expertise in Quality Assurance with focus on specialization 1....\n- Quality Assurance Skill 2: Expertise in Quality Assurance with focus on specialization 2....\n- Quality Assurance Skill 3: Expertise in Quality Assurance with focus on specialization 3....\n- Quality Assurance Skill 4: Expertise in Quality Assurance with focus on specialization 4....\n- Quality Assurance Skill 5: Expertise in Quality Assurance with focus on specialization 5....\n- Quality Assurance Skill 6: Expertise in Quality Assurance with focus on specialization 6....\n- Quality Assurance Skill 7: Expertise in Quality Assurance with focus on specialization 7....\n- Quality Assurance Skill 8: Expertise in Quality Assurance with focus on specialization 8....\n- Quality Assurance Skill 9: Expertise in Quality Assurance with focus on specialization 9....\n- Quality Assurance Skill 10: Expertise in Quality Assurance with focus on specialization 10....",
+      "suggestedProjectId": ""
+    },
+    {
+      "id": "skills_domain_project_management",
+      "domain": "project_management",
+      "thingToRemember": "Conceptual skills domain: Project Management (key: project_management).\n\nIncluded skills:\n- Project Management Skill 1: Expertise in Project Management with focus on specialization 1....\n- Project Management Skill 2: Expertise in Project Management with focus on specialization 2....\n- Project Management Skill 3: Expertise in Project Management with focus on specialization 3....\n- Project Management Skill 4: Expertise in Project Management with focus on specialization 4....\n- Project Management Skill 5: Expertise in Project Management with focus on specialization 5....\n- Project Management Skill 6: Expertise in Project Management with focus on specialization 6....\n- Project Management Skill 7: Expertise in Project Management with focus on specialization 7....\n- Project Management Skill 8: Expertise in Project Management with focus on specialization 8....\n- Project Management Skill 9: Expertise in Project Management with focus on specialization 9....\n- Project Management Skill 10: Expertise in Project Management with focus on specialization 10....",
       "suggestedProjectId": ""
     },
     {
       "id": "skills_local_implementation",
-      "thingToRemember": "Local implementation skills available in this workspace (actual tools / processes).\nEach entry includes the skill name, a short description, and the file path to its SKILL.md definition.\n\n- pdf (skills/anthropics/pdf/SKILL.md): Comprehensive PDF manipulation toolkit for extracting text and tables, creating new PDFs, merging/splitting documents, and handling forms. When Claude needs to fill in a PDF form or programmatically process, generate, or analyze PDF documents at scale.\n- gemini (skills/cexll/gemini/SKILL.md): Execute Gemini CLI for AI-powered code analysis and generation. Use when you need to leverage Google's Gemini models for complex reasoning tasks.\n- file-organizer (skills/composiohq/file-organizer/SKILL.md): Intelligently organizes your files and folders across your computer by understanding context, finding duplicates, suggesting better structures, and automating cleanup tasks. Reduces cognitive load and keeps your digital workspace tidy without manual effort.\n- Forensic & Document Analysis Tools\\n\\nBest practice toolkit for PDF/metadata extraction, timeline reconstruction, hash verification.\\n\\n## Quick Start\\n1. Install: `pip install pdfplumber exiftool autopsy`\\n2. Core commands in `forensics/tools/` (skills/forensics/tools/SKILL.md): \n- brainstorming (skills/obra/brainstorming/SKILL.md): Use when creating or developing, before writing code or implementation plans - refines rough ideas into fully-formed designs through collaborative questioning, alternative exploration, and incremental validation. Don't use during clear 'mechanical' processes",
+      "thingToRemember": "Local implementation skills available in this workspace (actual tools / processes).\n- pdf (skills/anthropics/pdf/SKILL.md)\n- gemini (skills/cexll/gemini/SKILL.md)\n- file-organizer (skills/composiohq/file-organizer/SKILL.md)\n- brainstorming (skills/obra/brainstorming/SKILL.md)",
       "suggestedProjectId": ""
     }
   ]

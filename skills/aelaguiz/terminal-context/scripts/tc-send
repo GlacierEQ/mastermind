@@ -1,0 +1,115 @@
+#!/usr/bin/env python3
+
+from __future__ import annotations
+
+import argparse
+import sys
+from pathlib import Path
+from typing import Any
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from tc_common import KittyClient, KittyRemoteError, detect_service_type, find_pane_by_cwd, iter_panes
+
+
+def _resolve_pane_id(client: KittyClient, pane_id: int | None, cwd: str | None, service: str | None) -> int:
+    try:
+        kitty_state = client.ls()
+    except KittyRemoteError as e:
+        print(str(e), file=sys.stderr)
+        raise SystemExit(2)
+
+    if cwd:
+        pane = find_pane_by_cwd(kitty_state, cwd)
+        if pane is None:
+            print(f"could not find pane with cwd matching '{cwd}'", file=sys.stderr)
+            raise SystemExit(1)
+        try:
+            return int(pane.get("id"))
+        except Exception:
+            print(f"matched pane has non-integer id: {pane.get('id')}", file=sys.stderr)
+            raise SystemExit(1)
+
+    if service:
+        needle = service.strip().lower()
+        for pane in iter_panes(kitty_state):
+            svc = detect_service_type(pane) or {}
+            if str(svc.get("type", "")).lower() == needle or str(svc.get("framework", "")).lower() == needle:
+                try:
+                    return int(pane.get("id"))
+                except Exception:
+                    continue
+        print(f"could not find pane for service '{service}'", file=sys.stderr)
+        raise SystemExit(1)
+
+    if pane_id is None:
+        print("must specify pane_id, --cwd, or --service", file=sys.stderr)
+        raise SystemExit(1)
+
+    return pane_id
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Send text/commands to a Kitty pane")
+    # NOTE: This is intentionally a string (not int) so `tc-send --cwd X "echo hi"`
+    # works. If this were `type=int`, argparse would try to parse "echo" as an int.
+    parser.add_argument("pane_id", nargs="?", help="Pane id (optional)")
+    parser.add_argument("text", nargs=argparse.REMAINDER, help="Text to send (wrap in quotes for one command)")
+    parser.add_argument("--cwd", help="Find target pane by substring match on cwd")
+    parser.add_argument("--service", help="Find target pane by detected service type/framework (dev_server, node, etc.)")
+    parser.add_argument("--interrupt", action="store_true", help="Send Ctrl+C")
+    parser.add_argument("--no-enter", action="store_true", help="Do not append an Enter key")
+    parser.add_argument("--focus", action="store_true", help="Focus the pane after sending")
+    args = parser.parse_args()
+
+    client = KittyClient(timeout_s=2.0)
+    pane_id: int | None = None
+    if args.pane_id is not None:
+        # If the first positional isn't an int, treat it as the start of the text payload.
+        if str(args.pane_id).isdigit():
+            pane_id = int(args.pane_id)
+        else:
+            args.text = [str(args.pane_id)] + list(args.text or [])
+            args.pane_id = None
+
+    pane_id = _resolve_pane_id(client, pane_id, args.cwd, args.service)
+
+    if args.interrupt:
+        try:
+            client.send_text(pane_id, "\x03")
+        except KittyRemoteError as e:
+            print(str(e), file=sys.stderr)
+            raise SystemExit(2)
+        if args.focus:
+            try:
+                client.focus_window(pane_id)
+            except KittyRemoteError:
+                pass
+        print(f"sent interrupt to pane {pane_id}")
+        return
+
+    if not args.text:
+        print("must specify text to send (or use --interrupt)", file=sys.stderr)
+        raise SystemExit(1)
+
+    text = " ".join(args.text).lstrip()
+    if not args.no_enter and not text.endswith("\n"):
+        text += "\n"
+
+    try:
+        client.send_text(pane_id, text)
+    except KittyRemoteError as e:
+        print(str(e), file=sys.stderr)
+        raise SystemExit(2)
+
+    if args.focus:
+        try:
+            client.focus_window(pane_id)
+        except KittyRemoteError:
+            pass
+
+    print(f"sent to pane {pane_id}: {' '.join(args.text).strip()}")
+
+
+if __name__ == "__main__":
+    main()

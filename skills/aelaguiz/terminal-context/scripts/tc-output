@@ -1,0 +1,75 @@
+#!/usr/bin/env python3
+
+from __future__ import annotations
+
+import argparse
+import json
+import re
+import sys
+from pathlib import Path
+from typing import Any
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from tc_common import KittyClient, KittyRemoteError, find_pane_by_cwd
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Get text output (scrollback) from a Kitty pane")
+    parser.add_argument("pane_id", nargs="?", type=int, help="Pane id")
+    parser.add_argument("--cwd", help="Find target pane by substring match on cwd")
+    parser.add_argument("--lines", type=int, help="Return only the last N lines")
+    parser.add_argument("--all", action="store_true", help="Use full scrollback instead of current screen")
+    parser.add_argument("--match", help="Filter lines by regex pattern (case-insensitive)")
+    parser.add_argument("--json", action="store_true", help="Emit JSON output")
+    args = parser.parse_args()
+
+    client = KittyClient(timeout_s=2.0)
+
+    pane_id = args.pane_id
+    kitty_state: list[dict[str, Any]] = []
+
+    if args.cwd:
+        try:
+            kitty_state = client.ls()
+        except KittyRemoteError as e:
+            print(str(e), file=sys.stderr)
+            sys.exit(2)
+        pane = find_pane_by_cwd(kitty_state, args.cwd)
+        if pane is None:
+            print(f"no pane found with cwd matching '{args.cwd}'", file=sys.stderr)
+            sys.exit(1)
+        try:
+            pane_id = int(pane.get("id"))
+        except Exception:
+            print(f"matched pane has non-integer id: {pane.get('id')}", file=sys.stderr)
+            sys.exit(1)
+
+    if pane_id is None:
+        print("must specify pane_id or --cwd", file=sys.stderr)
+        sys.exit(1)
+
+    extent = "all" if args.all else "screen"
+    try:
+        text = client.get_text(pane_id, extent=extent)  # type: ignore[arg-type]
+    except KittyRemoteError as e:
+        print(str(e), file=sys.stderr)
+        sys.exit(2)
+
+    lines = text.splitlines()
+
+    if args.match:
+        pattern = re.compile(args.match, re.IGNORECASE)
+        lines = [l for l in lines if pattern.search(l)]
+
+    if args.lines is not None:
+        lines = lines[-args.lines :]
+
+    if args.json:
+        print(json.dumps({"pane_id": pane_id, "lines": lines}, ensure_ascii=False))
+    else:
+        sys.stdout.write("\n".join(lines) + ("\n" if lines else ""))
+
+
+if __name__ == "__main__":
+    main()

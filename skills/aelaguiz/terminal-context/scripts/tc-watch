@@ -1,0 +1,116 @@
+#!/usr/bin/env python3
+
+from __future__ import annotations
+
+import argparse
+import re
+import subprocess
+import sys
+import time
+from pathlib import Path
+from typing import Any
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from tc_common import KittyClient, KittyRemoteError, find_pane_by_cwd
+
+
+def _notify(title: str, message: str) -> None:
+    # macOS best-effort notification.
+    try:
+        subprocess.run(
+            ["osascript", "-e", f'display notification "{message}" with title "{title}"'],
+            check=False,
+            capture_output=True,
+            text=True,
+            timeout=2,
+        )
+    except Exception:
+        return
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Watch a Kitty pane for an output pattern")
+    # Keep these as strings so `tc-watch --cwd X "ready|listening"` works.
+    # We shift positionals below when a pane id isn't provided.
+    parser.add_argument("pane_id", nargs="?", help="Pane id (optional)")
+    parser.add_argument("pattern", nargs="?", help="Regex pattern to watch for")
+    parser.add_argument("--cwd", help="Find target pane by substring match on cwd")
+    parser.add_argument("--timeout", type=int, default=300, help="Timeout in seconds (default: 300)")
+    parser.add_argument("--interval", type=float, default=1.0, help="Poll interval in seconds (default: 1.0)")
+    parser.add_argument("--alert", action="store_true", help="Show a desktop notification on match (macOS)")
+    parser.add_argument("--case-sensitive", action="store_true", help="Make regex match case-sensitive")
+    args = parser.parse_args()
+
+    client = KittyClient(timeout_s=2.0)
+
+    pane_id: int | None = None
+    pattern = args.pattern
+    if pattern is None:
+        # Called as: tc-watch [--cwd ...] "<pattern>"
+        pattern = args.pane_id
+        args.pane_id = None
+    else:
+        # Called as: tc-watch <pane_id> "<pattern>"
+        if args.pane_id is not None and str(args.pane_id).isdigit():
+            pane_id = int(args.pane_id)
+        elif args.pane_id is not None:
+            print("pane_id must be an integer (or omit it and use --cwd)", file=sys.stderr)
+            raise SystemExit(1)
+
+    if not pattern:
+        print("must specify a pattern to watch for", file=sys.stderr)
+        raise SystemExit(1)
+
+    if args.cwd:
+        try:
+            kitty_state = client.ls()
+        except KittyRemoteError as e:
+            print(str(e), file=sys.stderr)
+            raise SystemExit(2)
+        pane = find_pane_by_cwd(kitty_state, args.cwd)
+        if pane is None:
+            print(f"no pane found with cwd matching '{args.cwd}'", file=sys.stderr)
+            raise SystemExit(1)
+        try:
+            pane_id = int(pane.get("id"))
+        except Exception:
+            print(f"matched pane has non-integer id: {pane.get('id')}", file=sys.stderr)
+            raise SystemExit(1)
+
+    if pane_id is None:
+        print("must specify pane_id or --cwd", file=sys.stderr)
+        raise SystemExit(1)
+
+    flags = 0 if args.case_sensitive else re.IGNORECASE
+    pattern = re.compile(pattern, flags)
+
+    seen: set[str] = set()
+    start = time.time()
+    print(f"watching pane {pane_id} for pattern: {pattern.pattern}")
+
+    while time.time() - start < args.timeout:
+        try:
+            text = client.get_text(pane_id, extent="screen")
+        except KittyRemoteError as e:
+            print(str(e), file=sys.stderr)
+            raise SystemExit(2)
+
+        for line in text.splitlines():
+            if line in seen:
+                continue
+            seen.add(line)
+            if pattern.search(line):
+                print(line)
+                if args.alert:
+                    _notify("Terminal Watch", line[:120])
+                raise SystemExit(0)
+
+        time.sleep(args.interval)
+
+    print(f"timeout after {args.timeout}s", file=sys.stderr)
+    raise SystemExit(1)
+
+
+if __name__ == "__main__":
+    main()

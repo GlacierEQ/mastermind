@@ -15,7 +15,7 @@ const __dirname = path.dirname(__filename);
 const execAsync = promisify(exec);
 
 const server = new Server(
-  { name: "omni-mastermind", version: "3.1.0" },
+  { name: "omni-mastermind", version: "MAX-OVERCLOCK" },
   { capabilities: { tools: {} } }
 );
 
