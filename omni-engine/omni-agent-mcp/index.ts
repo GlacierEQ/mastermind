@@ -49,48 +49,39 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
         }
       },
       {
+        name: "mcp_orchestrator",
+        description: "Invoke tools from ANY connected MCP server.",
+        inputSchema: {
+          type: "object",
+          properties: {
+            action: { type: "string", enum: ["list_servers", "search_capabilities", "invoke_tool"] },
+            query: { type: "string" },
+            serverName: { type: "string" },
+            toolName: { type: "string" },
+            args: { type: "object" }
+          },
+          required: ["action"]
+        }
+      },
+      {
+        name: "ingest_secrets",
+        description: "Securely ingest API keys into the local vault (.env).",
+        inputSchema: {
+          type: "object",
+          properties: {
+            secrets: { 
+              type: "object",
+              additionalProperties: { type: "string" }
+            }
+          },
+          required: ["secrets"]
+        }
+      },
+      {
         name: "check_battery_and_note",
-        description: "Checks the MacBook battery level and creates a new Apple Note with the result.",
+        description: "Checks battery and creates note (macOS only).",
         inputSchema: { "type": "object", "properties": {} }
       },
-      ,
-      {
-        name: "mcp_orchestrator",
-        description: "The Universal Cross-Server Bridge. Can list, search, and invoke tools from ANY of the 82+ connected MCP servers.",
-        inputSchema: {
-  "type": "object",
-  "properties": {
-    "action": {
-      "type": "string",
-      "enum": [
-        "list_servers",
-        "search_capabilities",
-        "invoke_tool"
-      ],
-      "description": "The action to perform"
-    },
-    "query": {
-      "type": "string",
-      "description": "Search query for capabilities"
-    },
-    "serverName": {
-      "type": "string",
-      "description": "Name of the target MCP server"
-    },
-    "toolName": {
-      "type": "string",
-      "description": "Name of the target tool"
-    },
-    "args": {
-      "type": "object",
-      "description": "Arguments for the target tool"
-    }
-  },
-  "required": [
-    "action"
-  ]
-}
-      }
       /* INSERTION_POINT_TOOLS */
     ]
   };
@@ -101,49 +92,63 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 
   try {
     if (name === "system_master_control") {
+      const codeStr = args?.code as string;
       const cmd = args?.type === "applescript" 
-        ? `osascript -e ${JSON.stringify(args.code)}` 
-        : (args?.code as string);
+        ? `osascript -e ${JSON.stringify(codeStr)}` 
+        : codeStr;
       const { stdout, stderr } = await execAsync(cmd);
       return { content: [{ type: "text", text: stdout || stderr || "Executed." }] };
+    }
+
+    if (name === "mcp_orchestrator") {
+        const { action, serverName, toolName, args: toolArgs, query } = args as any;
+        if (action === "list_servers") {
+          const { stdout } = await execAsync("mcp --json");
+          return { content: [{ type: "text", text: stdout }] };
+        }
+        if (action === "search_capabilities") {
+          const { stdout } = await execAsync(`mcp --search "${query}"`);
+          return { content: [{ type: "text", text: stdout }] };
+        }
+        if (action === "invoke_tool") {
+          const jsonArgs = JSON.stringify(toolArgs || {});
+          const { stdout, stderr } = await execAsync(`mcp ${serverName} ${toolName} '${jsonArgs}'`);
+          return { content: [{ type: "text", text: stdout || stderr }] };
+        }
+    }
+
+    if (name === "ingest_secrets") {
+        const secrets = (args as any).secrets;
+        const envPath = path.join(process.cwd(), ".env");
+        let envContent = "";
+        try { envContent = await fs.readFile(envPath, "utf-8"); } catch (e) { envContent = ""; }
+        const updates = [];
+        for (const [key, value] of Object.entries(secrets)) {
+          const regex = new RegExp(`^${key}=.*`, "m");
+          if (envContent.match(regex)) {
+            envContent = envContent.replace(regex, `${key}=${value}`);
+            updates.push(`Updated ${key}`);
+          } else {
+            envContent += `\n${key}=${value}`;
+            updates.push(`Added ${key}`);
+          }
+        }
+        await fs.writeFile(envPath, envContent);
+        return { content: [{ type: "text", text: "Vault Updated:\n" + updates.join("\n") }] };
     }
 
     if (name === "check_battery_and_note") {
       const { stdout: battery } = await execAsync("pmset -g batt | grep -o '[0-9]*%' || echo 'Unknown%'");
       const noteContent = `Current Battery Level: ${battery.trim()}`;
-      const appleScript = `tell application "Notes" to make new note with properties {body: "${noteContent}"}`;
-      // Note: This only runs on macOS
       if (process.platform === 'darwin') {
-        await execAsync(`osascript -e ${JSON.stringify(appleScript)}`);
+        await execAsync(`osascript -e 'tell application "Notes" to make new note with properties {body: "${noteContent}"}'`);
       }
-      return { content: [{ type: "text", text: `Battery level (${battery.trim()}) processed. (AppleScript skipped on non-macOS)` }] };
+      return { content: [{ type: "text", text: `Battery level (${battery.trim()}) processed.` }] };
     }
 
     if (name === "evolve_toolset") {
-      // Self-mutation logic remains for future evolutions
-      return { content: [{ type: "text", text: "Evolution logic ready for next mutation." }] };
-    }
-
-        if (name === "mcp_orchestrator") {
-      const { action, serverName, toolName, args: toolArgs, query } = args as any;
-      
-      if (action === "list_servers") {
-        const { stdout } = await execAsync("mcp --json");
-        return { content: [{ type: "text", text: stdout }] };
-      }
-      
-      if (action === "search_capabilities") {
-        const { stdout } = await execAsync(`mcp --search "${query}"`);
-        return { content: [{ type: "text", text: stdout }] };
-      }
-      
-      if (action === "invoke_tool") {
-        const jsonArgs = JSON.stringify(toolArgs || {});
-        const { stdout, stderr } = await execAsync(`mcp ${serverName} ${toolName} '${jsonArgs}'`);
-        return { content: [{ type: "text", text: stdout || stderr }] };
-      }
-      
-      return { content: [{ type: "text", text: "Invalid action for mcp_orchestrator" }] };
+      // Self-mutation logic kept for future evolutions
+      return { content: [{ type: "text", text: "Evolution logic ready." }] };
     }
 
     /* INSERTION_POINT_LOGIC */
