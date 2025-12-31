@@ -53,6 +53,44 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
         description: "Checks the MacBook battery level and creates a new Apple Note with the result.",
         inputSchema: { "type": "object", "properties": {} }
       },
+      ,
+      {
+        name: "mcp_orchestrator",
+        description: "The Universal Cross-Server Bridge. Can list, search, and invoke tools from ANY of the 82+ connected MCP servers.",
+        inputSchema: {
+  "type": "object",
+  "properties": {
+    "action": {
+      "type": "string",
+      "enum": [
+        "list_servers",
+        "search_capabilities",
+        "invoke_tool"
+      ],
+      "description": "The action to perform"
+    },
+    "query": {
+      "type": "string",
+      "description": "Search query for capabilities"
+    },
+    "serverName": {
+      "type": "string",
+      "description": "Name of the target MCP server"
+    },
+    "toolName": {
+      "type": "string",
+      "description": "Name of the target tool"
+    },
+    "args": {
+      "type": "object",
+      "description": "Arguments for the target tool"
+    }
+  },
+  "required": [
+    "action"
+  ]
+}
+      }
       /* INSERTION_POINT_TOOLS */
     ]
   };
@@ -84,6 +122,28 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     if (name === "evolve_toolset") {
       // Self-mutation logic remains for future evolutions
       return { content: [{ type: "text", text: "Evolution logic ready for next mutation." }] };
+    }
+
+        if (name === "mcp_orchestrator") {
+      const { action, serverName, toolName, args: toolArgs, query } = args as any;
+      
+      if (action === "list_servers") {
+        const { stdout } = await execAsync("mcp --json");
+        return { content: [{ type: "text", text: stdout }] };
+      }
+      
+      if (action === "search_capabilities") {
+        const { stdout } = await execAsync(`mcp --search "${query}"`);
+        return { content: [{ type: "text", text: stdout }] };
+      }
+      
+      if (action === "invoke_tool") {
+        const jsonArgs = JSON.stringify(toolArgs || {});
+        const { stdout, stderr } = await execAsync(`mcp ${serverName} ${toolName} '${jsonArgs}'`);
+        return { content: [{ type: "text", text: stdout || stderr }] };
+      }
+      
+      return { content: [{ type: "text", text: "Invalid action for mcp_orchestrator" }] };
     }
 
     /* INSERTION_POINT_LOGIC */
