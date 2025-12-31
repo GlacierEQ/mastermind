@@ -26,59 +26,15 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
   return {
     tools: [
       {
-        name: "grok_voice_init",
-        description: "Initialize or status-check a Grok Realtime Voice Session (x.ai).",
+        name: "execute_opr_module",
+        description: "Invoke a specialized Operator Module (e.g., OPR-LEGA-001 for legal context).",
         inputSchema: {
           type: "object",
           properties: {
-            action: { type: "string", enum: ["check_status", "get_endpoint"] }
+            module: { type: "string", enum: ["OPR-VAULT-001", "OPR-LEGA-001", "OPR-MEMO-001"] },
+            action: { type: "string" }
           },
-          required: ["action"]
-        }
-      },
-      {
-        name: "plaid_recovery_vault",
-        description: "Access secured Plaid recovery protocols and codes.",
-        inputSchema: {
-          type: "object",
-          properties: {
-            request_type: { type: "string", enum: ["get_code", "status"] }
-          },
-          required: ["request_type"]
-        }
-      },
-      {
-        name: "zen_coder_control",
-        description: "Interface with Zen Coder API using Client ID and Secret.",
-        inputSchema: {
-          type: "object",
-          properties: {
-            action: { type: "string", enum: ["authenticate", "status"] }
-          },
-          required: ["action"]
-        }
-      },
-      {
-        name: "ref_tools_nexus",
-        description: "Query the Ref Tools Streamable HTTP MCP endpoint.",
-        inputSchema: {
-          type: "object",
-          properties: {
-            query: { type: "string" }
-          },
-          required: ["query"]
-        }
-      },
-      {
-        name: "system_master_control",
-        description: "Execute complex AppleScript or Shell workflows.",
-        inputSchema: {
-          type: "object",
-          properties: {
-            type: { type: "string", enum: ["applescript", "shell"] },
-            code: { type: "string" }
-          },
-          required: ["type", "code"]
+          required: ["module"]
         }
       },
       {
@@ -110,6 +66,18 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
           required: ["secrets"]
         }
       },
+      {
+        name: "system_master_control",
+        description: "Execute complex AppleScript or Shell workflows.",
+        inputSchema: {
+          type: "object",
+          properties: {
+            type: { type: "string", enum: ["applescript", "shell"] },
+            code: { type: "string" }
+          },
+          required: ["type", "code"]
+        }
+      },
       /* INSERTION_POINT_TOOLS */
     ]
   };
@@ -119,34 +87,11 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
   const { name, arguments: args } = request.params;
 
   try {
-    if (name === "grok_voice_init") {
-      const key = process.env.GROK_VOICE_API_KEY;
-      if (!key) throw new Error("GROK_VOICE_API_KEY missing in vault.");
-      return { content: [{ type: "text", text: `Grok Voice Session (x.ai) initialized with key: ${key.substring(0, 8)}... via wss://api.x.ai/v1/realtimeSession` }] };
-    }
-
-    if (name === "plaid_recovery_vault") {
-      const code = process.env.PLAID_RECOVERY_CODE || "ERQLSGHIPIQYOPOMMH3JNTZKCA";
-      return { content: [{ type: "text", text: `Plaid Recovery Protocol: ${code}` }] };
-    }
-
-    if (name === "zen_coder_control") {
-      const id = process.env.ZEN_CODER_CLIENT_ID || "16490679-8391-4719-85ed-5f39dd02289c";
-      return { content: [{ type: "text", text: `Zen Coder connected via ID: ${id}` }] };
-    }
-
-    if (name === "ref_tools_nexus") {
-      const refKey = process.env.REF_API_KEY || "ref-0e17c31da90b5c966164";
-      return { content: [{ type: "text", text: `Ref Tools Query to https://api.ref.tools/mcp with key ${refKey}` }] };
-    }
-
-    if (name === "system_master_control") {
-      const codeStr = args?.code as string;
-      const cmd = args?.type === "applescript" 
-        ? `osascript -e ${JSON.stringify(codeStr)}` 
-        : codeStr;
-      const { stdout, stderr } = await execAsync(cmd);
-      return { content: [{ type: "text", text: stdout || stderr || "Executed." }] };
+    if (name === "execute_opr_module") {
+      const module = args?.module as string;
+      const scriptPath = path.join(__dirname, "..", "..", "core", "operator_matrix", `${module}.py`);
+      const { stdout } = await execAsync(`python3 ${scriptPath}`);
+      return { content: [{ type: "text", text: stdout }] };
     }
 
     if (name === "mcp_orchestrator") {
@@ -184,6 +129,15 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         }
         await fs.writeFile(envPath, envContent);
         return { content: [{ type: "text", text: "Vault Updated:\n" + updates.join("\n") }] };
+    }
+
+    if (name === "system_master_control") {
+      const codeStr = args?.code as string;
+      const cmd = args?.type === "applescript" 
+        ? `osascript -e ${JSON.stringify(codeStr)}` 
+        : codeStr;
+      const { stdout, stderr } = await execAsync(cmd);
+      return { content: [{ type: "text", text: stdout || stderr || "Executed." }] };
     }
 
     /* INSERTION_POINT_LOGIC */
