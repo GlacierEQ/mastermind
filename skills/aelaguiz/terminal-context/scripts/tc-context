@@ -1,0 +1,210 @@
+#!/usr/bin/env python3
+
+from __future__ import annotations
+
+import argparse
+import json
+import sys
+from pathlib import Path
+from collections import defaultdict
+from datetime import datetime, timezone
+from typing import Any
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from tc_common import (
+    KittyRemoteError,
+    KittyClient,
+    decode_user_var,
+    enrich_kitty_state,
+    find_pane_by_id,
+    generate_insights,
+    get_docker_containers,
+    get_listening_ports,
+    history_file_path,
+    iter_panes,
+    normalize_cmdline,
+    read_recent_history,
+)
+
+
+def _iso_utc_now() -> str:
+    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def build_pane_metadata(history: list[dict[str, Any]]) -> dict[str, Any]:
+    """
+    Convert raw start/end events into a per-pane recent command list.
+
+    We assume a shell runs commands sequentially per pane, so pairing the latest
+    'start' with the next 'end' per pane is a reasonable heuristic.
+    """
+    per_pane: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    last_start: dict[str, dict[str, Any]] = {}
+
+    for ev in history:
+        pane = str(ev.get("pane", "unknown"))
+        if ev.get("event") == "start":
+            last_start[pane] = ev
+            continue
+        if ev.get("event") != "end":
+            continue
+
+        start = last_start.pop(pane, None)
+        rec: dict[str, Any] = {
+            "command": ev.get("cmd") or (start.get("cmd") if start else ""),
+            "cwd": ev.get("cwd") or (start.get("cwd") if start else ""),
+            "started_at": start.get("ts") if start else None,
+            "finished_at": ev.get("ts"),
+            "exit_code": ev.get("exit"),
+            "duration_ms": ev.get("duration_ms"),
+        }
+        per_pane[pane].append(rec)
+
+    # Emit a dict keyed by pane id (string for JSON compatibility).
+    return {
+        pane: {
+            "pane_id": pane,
+            "recent_commands": cmds[-25:],  # keep it bounded
+        }
+        for pane, cmds in per_pane.items()
+    }
+
+
+def get_full_context(minutes: int = 30) -> dict[str, Any]:
+    errors: list[str] = []
+
+    kitty_client = KittyClient(timeout_s=2.0)
+    kitty_state: list[dict[str, Any]] = []
+    try:
+        kitty_state = kitty_client.ls()
+        kitty_state = enrich_kitty_state(kitty_state)
+    except KittyRemoteError as e:
+        errors.append(str(e))
+
+    ports = get_listening_ports()
+    docker = get_docker_containers()
+    history = read_recent_history(minutes=minutes)
+
+    context: dict[str, Any] = {
+        "timestamp": _iso_utc_now(),
+        "kitty": kitty_state,
+        "pane_metadata": build_pane_metadata(history),
+        "system": {
+            "listening_ports": ports,
+            "docker_containers": docker,
+        },
+        "recent_history": history,
+        "insights": generate_insights(kitty_state, ports, history) if kitty_state else [],
+    }
+    if errors:
+        context["errors"] = errors
+        context["setup_hint"] = (
+            "For reliable, non-interactive remote control: set `listen_on unix:/tmp/kitty-{user}` in kitty.conf "
+            "and restart Kitty. See skills/codex/terminal-context/references/SETUP.md."
+        )
+    context["history_file"] = str(history_file_path())
+    return context
+
+
+def format_summary(context: dict[str, Any]) -> str:
+    lines: list[str] = []
+    lines.append("=" * 72)
+    lines.append("TERMINAL CONTEXT SUMMARY")
+    lines.append("=" * 72)
+    lines.append(f"timestamp: {context.get('timestamp')}")
+
+    errors = context.get("errors") or []
+    if errors:
+        lines.append("")
+        lines.append("errors:")
+        for e in errors:
+            lines.append(f"  - {e}")
+
+    kitty = context.get("kitty") or []
+    for os_window in kitty:
+        lines.append("")
+        lines.append(f"os_window {os_window.get('id')}:")
+        for tab in os_window.get("tabs", []) or []:
+            tab_title = tab.get("title") or "untitled"
+            active = "*" if tab.get("is_focused") or tab.get("is_active") else " "
+            lines.append(f"  {active} tab {tab.get('id')}: {tab_title}")
+            for pane in tab.get("windows", []) or []:
+                focused = ">" if pane.get("is_focused") else " "
+                self_mark = "(self)" if pane.get("is_self") else ""
+                cmdline = normalize_cmdline(pane.get("cmdline")).strip()[:60]
+                service = pane.get("detected_service") or {}
+                service_str = f"[{service.get('type')}]" if service.get("type") else ""
+
+                user_vars = pane.get("user_vars") or {}
+                branch = decode_user_var(user_vars.get("git_branch"))
+                label = decode_user_var(user_vars.get("custom_label"))
+                branch_str = f" ({branch})" if branch else ""
+                label_str = f" <{label}>" if label else ""
+
+                lines.append(f"    {focused} pane {pane.get('id')}: {cmdline} {service_str} {self_mark}{branch_str}{label_str}")
+                lines.append(f"        cwd: {pane.get('cwd')}")
+
+    ports = context.get("system", {}).get("listening_ports") or []
+    if ports:
+        lines.append("")
+        lines.append("listening ports:")
+        for p in sorted(ports, key=lambda x: int(x.get("port", 0)))[:20]:
+            lines.append(f"  - :{p.get('port')} -> {p.get('process_name')} (pid {p.get('pid')})")
+
+    insights = context.get("insights") or []
+    if insights:
+        lines.append("")
+        lines.append("insights:")
+        for i in insights:
+            cat = i.get("category") or "other"
+            lines.append(f"  - [{cat}] {i.get('message')}")
+
+    return "\n".join(lines)
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Get full Kitty terminal context for coding agents")
+    parser.add_argument("--summary", action="store_true", help="Human-readable summary")
+    parser.add_argument("--compact", action="store_true", help="Compact JSON (no indentation)")
+    parser.add_argument("--minutes", type=int, default=30, help="History window in minutes (default: 30)")
+    parser.add_argument("--pane", type=int, help="Print the JSON for a specific pane id")
+    parser.add_argument("--insights", action="store_true", help="Print insights as JSONL")
+    parser.add_argument("--find-service", type=str, help="Find a pane by service type or framework")
+    args = parser.parse_args()
+
+    context = get_full_context(minutes=args.minutes)
+
+    if args.summary:
+        print(format_summary(context))
+        return
+
+    if args.insights:
+        for i in context.get("insights") or []:
+            print(json.dumps(i, ensure_ascii=False))
+        return
+
+    if args.pane is not None:
+        pane = find_pane_by_id(context.get("kitty") or [], args.pane)
+        if pane is None:
+            print(f"pane {args.pane} not found", file=sys.stderr)
+            sys.exit(1)
+        print(json.dumps(pane, indent=2, ensure_ascii=False))
+        return
+
+    if args.find_service:
+        needle = args.find_service.strip().lower()
+        for pane in iter_panes(context.get("kitty") or []):
+            svc = pane.get("detected_service") or {}
+            if str(svc.get("type", "")).lower() == needle or str(svc.get("framework", "")).lower() == needle:
+                print(json.dumps(pane, indent=2, ensure_ascii=False))
+                return
+        print(f"service '{args.find_service}' not found", file=sys.stderr)
+        sys.exit(1)
+
+    indent = None if args.compact else 2
+    print(json.dumps(context, indent=indent, ensure_ascii=False))
+
+
+if __name__ == "__main__":
+    main()

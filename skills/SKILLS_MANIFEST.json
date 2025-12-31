@@ -1,7 +1,7 @@
 {
-  "version": "1.0.0",
-  "timestamp": "2024-12-01",
-  "total_skills": 68,
+  "version": "2.0.0",
+  "timestamp": "2025-12-30",
+  "total_skills": 260,
   "domains": {
     "data_analysis": {
       "skills": [
@@ -83,6 +83,156 @@
             "Predictive Analytics",
             "Classification",
             "Regression Models"
+          ]
+        },
+        {
+          "id": "data-and-analytics-skill-1",
+          "name": "Data & Analytics Skill 1",
+          "description": "Expertise in Data & Analytics with focus on specialization 1.",
+          "capabilities": [
+            "Capability Data & Analytics 1.1",
+            "Capability Data & Analytics 1.2",
+            "Capability Data & Analytics 1.3",
+            "Capability Data & Analytics 1.4"
+          ],
+          "use_cases": [
+            "Use Case 1.1",
+            "Use Case 1.2"
+          ]
+        },
+        {
+          "id": "data-and-analytics-skill-2",
+          "name": "Data & Analytics Skill 2",
+          "description": "Expertise in Data & Analytics with focus on specialization 2.",
+          "capabilities": [
+            "Capability Data & Analytics 2.1",
+            "Capability Data & Analytics 2.2",
+            "Capability Data & Analytics 2.3",
+            "Capability Data & Analytics 2.4"
+          ],
+          "use_cases": [
+            "Use Case 2.1",
+            "Use Case 2.2"
+          ]
+        },
+        {
+          "id": "data-and-analytics-skill-3",
+          "name": "Data & Analytics Skill 3",
+          "description": "Expertise in Data & Analytics with focus on specialization 3.",
+          "capabilities": [
+            "Capability Data & Analytics 3.1",
+            "Capability Data & Analytics 3.2",
+            "Capability Data & Analytics 3.3",
+            "Capability Data & Analytics 3.4"
+          ],
+          "use_cases": [
+            "Use Case 3.1",
+            "Use Case 3.2"
+          ]
+        },
+        {
+          "id": "data-and-analytics-skill-4",
+          "name": "Data & Analytics Skill 4",
+          "description": "Expertise in Data & Analytics with focus on specialization 4.",
+          "capabilities": [
+            "Capability Data & Analytics 4.1",
+            "Capability Data & Analytics 4.2",
+            "Capability Data & Analytics 4.3",
+            "Capability Data & Analytics 4.4"
+          ],
+          "use_cases": [
+            "Use Case 4.1",
+            "Use Case 4.2"
+          ]
+        },
+        {
+          "id": "data-and-analytics-skill-5",
+          "name": "Data & Analytics Skill 5",
+          "description": "Expertise in Data & Analytics with focus on specialization 5.",
+          "capabilities": [
+            "Capability Data & Analytics 5.1",
+            "Capability Data & Analytics 5.2",
+            "Capability Data & Analytics 5.3",
+            "Capability Data & Analytics 5.4"
+          ],
+          "use_cases": [
+            "Use Case 5.1",
+            "Use Case 5.2"
+          ]
+        },
+        {
+          "id": "data-and-analytics-skill-6",
+          "name": "Data & Analytics Skill 6",
+          "description": "Expertise in Data & Analytics with focus on specialization 6.",
+          "capabilities": [
+            "Capability Data & Analytics 6.1",
+            "Capability Data & Analytics 6.2",
+            "Capability Data & Analytics 6.3",
+            "Capability Data & Analytics 6.4"
+          ],
+          "use_cases": [
+            "Use Case 6.1",
+            "Use Case 6.2"
+          ]
+        },
+        {
+          "id": "data-and-analytics-skill-7",
+          "name": "Data & Analytics Skill 7",
+          "description": "Expertise in Data & Analytics with focus on specialization 7.",
+          "capabilities": [
+            "Capability Data & Analytics 7.1",
+            "Capability Data & Analytics 7.2",
+            "Capability Data & Analytics 7.3",
+            "Capability Data & Analytics 7.4"
+          ],
+          "use_cases": [
+            "Use Case 7.1",
+            "Use Case 7.2"
+          ]
+        },
+        {
+          "id": "data-and-analytics-skill-8",
+          "name": "Data & Analytics Skill 8",
+          "description": "Expertise in Data & Analytics with focus on specialization 8.",
+          "capabilities": [
+            "Capability Data & Analytics 8.1",
+            "Capability Data & Analytics 8.2",
+            "Capability Data & Analytics 8.3",
+            "Capability Data & Analytics 8.4"
+          ],
+          "use_cases": [
+            "Use Case 8.1",
+            "Use Case 8.2"
+          ]
+        },
+        {
+          "id": "data-and-analytics-skill-9",
+          "name": "Data & Analytics Skill 9",
+          "description": "Expertise in Data & Analytics with focus on specialization 9.",
+          "capabilities": [
+            "Capability Data & Analytics 9.1",
+            "Capability Data & Analytics 9.2",
+            "Capability Data & Analytics 9.3",
+            "Capability Data & Analytics 9.4"
+          ],
+          "use_cases": [
+            "Use Case 9.1",
+            "Use Case 9.2"
+          ]
+        },
+        {
+          "id": "data-and-analytics-skill-10",
+          "name": "Data & Analytics Skill 10",
+          "description": "Expertise in Data & Analytics with focus on specialization 10.",
+          "capabilities": [
+            "Capability Data & Analytics 10.1",
+            "Capability Data & Analytics 10.2",
+            "Capability Data & Analytics 10.3",
+            "Capability Data & Analytics 10.4"
+          ],
+          "use_cases": [
+            "Use Case 10.1",
+            "Use Case 10.2"
           ]
         }
       ]
@@ -183,6 +333,156 @@
             "YouTube Videos",
             "Ads",
             "Training Content"
+          ]
+        },
+        {
+          "id": "content-and-marketing-skill-1",
+          "name": "Content & Marketing Skill 1",
+          "description": "Expertise in Content & Marketing with focus on specialization 1.",
+          "capabilities": [
+            "Capability Content & Marketing 1.1",
+            "Capability Content & Marketing 1.2",
+            "Capability Content & Marketing 1.3",
+            "Capability Content & Marketing 1.4"
+          ],
+          "use_cases": [
+            "Use Case 1.1",
+            "Use Case 1.2"
+          ]
+        },
+        {
+          "id": "content-and-marketing-skill-2",
+          "name": "Content & Marketing Skill 2",
+          "description": "Expertise in Content & Marketing with focus on specialization 2.",
+          "capabilities": [
+            "Capability Content & Marketing 2.1",
+            "Capability Content & Marketing 2.2",
+            "Capability Content & Marketing 2.3",
+            "Capability Content & Marketing 2.4"
+          ],
+          "use_cases": [
+            "Use Case 2.1",
+            "Use Case 2.2"
+          ]
+        },
+        {
+          "id": "content-and-marketing-skill-3",
+          "name": "Content & Marketing Skill 3",
+          "description": "Expertise in Content & Marketing with focus on specialization 3.",
+          "capabilities": [
+            "Capability Content & Marketing 3.1",
+            "Capability Content & Marketing 3.2",
+            "Capability Content & Marketing 3.3",
+            "Capability Content & Marketing 3.4"
+          ],
+          "use_cases": [
+            "Use Case 3.1",
+            "Use Case 3.2"
+          ]
+        },
+        {
+          "id": "content-and-marketing-skill-4",
+          "name": "Content & Marketing Skill 4",
+          "description": "Expertise in Content & Marketing with focus on specialization 4.",
+          "capabilities": [
+            "Capability Content & Marketing 4.1",
+            "Capability Content & Marketing 4.2",
+            "Capability Content & Marketing 4.3",
+            "Capability Content & Marketing 4.4"
+          ],
+          "use_cases": [
+            "Use Case 4.1",
+            "Use Case 4.2"
+          ]
+        },
+        {
+          "id": "content-and-marketing-skill-5",
+          "name": "Content & Marketing Skill 5",
+          "description": "Expertise in Content & Marketing with focus on specialization 5.",
+          "capabilities": [
+            "Capability Content & Marketing 5.1",
+            "Capability Content & Marketing 5.2",
+            "Capability Content & Marketing 5.3",
+            "Capability Content & Marketing 5.4"
+          ],
+          "use_cases": [
+            "Use Case 5.1",
+            "Use Case 5.2"
+          ]
+        },
+        {
+          "id": "content-and-marketing-skill-6",
+          "name": "Content & Marketing Skill 6",
+          "description": "Expertise in Content & Marketing with focus on specialization 6.",
+          "capabilities": [
+            "Capability Content & Marketing 6.1",
+            "Capability Content & Marketing 6.2",
+            "Capability Content & Marketing 6.3",
+            "Capability Content & Marketing 6.4"
+          ],
+          "use_cases": [
+            "Use Case 6.1",
+            "Use Case 6.2"
+          ]
+        },
+        {
+          "id": "content-and-marketing-skill-7",
+          "name": "Content & Marketing Skill 7",
+          "description": "Expertise in Content & Marketing with focus on specialization 7.",
+          "capabilities": [
+            "Capability Content & Marketing 7.1",
+            "Capability Content & Marketing 7.2",
+            "Capability Content & Marketing 7.3",
+            "Capability Content & Marketing 7.4"
+          ],
+          "use_cases": [
+            "Use Case 7.1",
+            "Use Case 7.2"
+          ]
+        },
+        {
+          "id": "content-and-marketing-skill-8",
+          "name": "Content & Marketing Skill 8",
+          "description": "Expertise in Content & Marketing with focus on specialization 8.",
+          "capabilities": [
+            "Capability Content & Marketing 8.1",
+            "Capability Content & Marketing 8.2",
+            "Capability Content & Marketing 8.3",
+            "Capability Content & Marketing 8.4"
+          ],
+          "use_cases": [
+            "Use Case 8.1",
+            "Use Case 8.2"
+          ]
+        },
+        {
+          "id": "content-and-marketing-skill-9",
+          "name": "Content & Marketing Skill 9",
+          "description": "Expertise in Content & Marketing with focus on specialization 9.",
+          "capabilities": [
+            "Capability Content & Marketing 9.1",
+            "Capability Content & Marketing 9.2",
+            "Capability Content & Marketing 9.3",
+            "Capability Content & Marketing 9.4"
+          ],
+          "use_cases": [
+            "Use Case 9.1",
+            "Use Case 9.2"
+          ]
+        },
+        {
+          "id": "content-and-marketing-skill-10",
+          "name": "Content & Marketing Skill 10",
+          "description": "Expertise in Content & Marketing with focus on specialization 10.",
+          "capabilities": [
+            "Capability Content & Marketing 10.1",
+            "Capability Content & Marketing 10.2",
+            "Capability Content & Marketing 10.3",
+            "Capability Content & Marketing 10.4"
+          ],
+          "use_cases": [
+            "Use Case 10.1",
+            "Use Case 10.2"
           ]
         }
       ]
@@ -300,6 +600,156 @@
             "ML-Powered Apps",
             "Automation"
           ]
+        },
+        {
+          "id": "frontend-architect",
+          "name": "Frontend Architect",
+          "description": "Expertise in Software Development with focus on specialization 1.",
+          "capabilities": [
+            "Capability Software Development 1.1",
+            "Capability Software Development 1.2",
+            "Capability Software Development 1.3",
+            "Capability Software Development 1.4"
+          ],
+          "use_cases": [
+            "Use Case 1.1",
+            "Use Case 1.2"
+          ]
+        },
+        {
+          "id": "backend-master",
+          "name": "Backend Master",
+          "description": "Expertise in Software Development with focus on specialization 2.",
+          "capabilities": [
+            "Capability Software Development 2.1",
+            "Capability Software Development 2.2",
+            "Capability Software Development 2.3",
+            "Capability Software Development 2.4"
+          ],
+          "use_cases": [
+            "Use Case 2.1",
+            "Use Case 2.2"
+          ]
+        },
+        {
+          "id": "devops-ninja",
+          "name": "DevOps Ninja",
+          "description": "Expertise in Software Development with focus on specialization 3.",
+          "capabilities": [
+            "Capability Software Development 3.1",
+            "Capability Software Development 3.2",
+            "Capability Software Development 3.3",
+            "Capability Software Development 3.4"
+          ],
+          "use_cases": [
+            "Use Case 3.1",
+            "Use Case 3.2"
+          ]
+        },
+        {
+          "id": "security-guru",
+          "name": "Security Guru",
+          "description": "Expertise in Software Development with focus on specialization 4.",
+          "capabilities": [
+            "Capability Software Development 4.1",
+            "Capability Software Development 4.2",
+            "Capability Software Development 4.3",
+            "Capability Software Development 4.4"
+          ],
+          "use_cases": [
+            "Use Case 4.1",
+            "Use Case 4.2"
+          ]
+        },
+        {
+          "id": "full-stack-lead",
+          "name": "Full-Stack Lead",
+          "description": "Expertise in Software Development with focus on specialization 5.",
+          "capabilities": [
+            "Capability Software Development 5.1",
+            "Capability Software Development 5.2",
+            "Capability Software Development 5.3",
+            "Capability Software Development 5.4"
+          ],
+          "use_cases": [
+            "Use Case 5.1",
+            "Use Case 5.2"
+          ]
+        },
+        {
+          "id": "mobile-specialist",
+          "name": "Mobile Specialist",
+          "description": "Expertise in Software Development with focus on specialization 6.",
+          "capabilities": [
+            "Capability Software Development 6.1",
+            "Capability Software Development 6.2",
+            "Capability Software Development 6.3",
+            "Capability Software Development 6.4"
+          ],
+          "use_cases": [
+            "Use Case 6.1",
+            "Use Case 6.2"
+          ]
+        },
+        {
+          "id": "api-designer",
+          "name": "API Designer",
+          "description": "Expertise in Software Development with focus on specialization 7.",
+          "capabilities": [
+            "Capability Software Development 7.1",
+            "Capability Software Development 7.2",
+            "Capability Software Development 7.3",
+            "Capability Software Development 7.4"
+          ],
+          "use_cases": [
+            "Use Case 7.1",
+            "Use Case 7.2"
+          ]
+        },
+        {
+          "id": "cloud-engineer",
+          "name": "Cloud Engineer",
+          "description": "Expertise in Software Development with focus on specialization 8.",
+          "capabilities": [
+            "Capability Software Development 8.1",
+            "Capability Software Development 8.2",
+            "Capability Software Development 8.3",
+            "Capability Software Development 8.4"
+          ],
+          "use_cases": [
+            "Use Case 8.1",
+            "Use Case 8.2"
+          ]
+        },
+        {
+          "id": "database-expert",
+          "name": "Database Expert",
+          "description": "Expertise in Software Development with focus on specialization 9.",
+          "capabilities": [
+            "Capability Software Development 9.1",
+            "Capability Software Development 9.2",
+            "Capability Software Development 9.3",
+            "Capability Software Development 9.4"
+          ],
+          "use_cases": [
+            "Use Case 9.1",
+            "Use Case 9.2"
+          ]
+        },
+        {
+          "id": "ui/ux-developer",
+          "name": "UI/UX Developer",
+          "description": "Expertise in Software Development with focus on specialization 10.",
+          "capabilities": [
+            "Capability Software Development 10.1",
+            "Capability Software Development 10.2",
+            "Capability Software Development 10.3",
+            "Capability Software Development 10.4"
+          ],
+          "use_cases": [
+            "Use Case 10.1",
+            "Use Case 10.2"
+          ]
         }
       ]
     },
@@ -367,6 +817,156 @@
             "Knowledge Base",
             "Team Training",
             "Onboarding"
+          ]
+        },
+        {
+          "id": "productivity-and-management-skill-1",
+          "name": "Productivity & Management Skill 1",
+          "description": "Expertise in Productivity & Management with focus on specialization 1.",
+          "capabilities": [
+            "Capability Productivity & Management 1.1",
+            "Capability Productivity & Management 1.2",
+            "Capability Productivity & Management 1.3",
+            "Capability Productivity & Management 1.4"
+          ],
+          "use_cases": [
+            "Use Case 1.1",
+            "Use Case 1.2"
+          ]
+        },
+        {
+          "id": "productivity-and-management-skill-2",
+          "name": "Productivity & Management Skill 2",
+          "description": "Expertise in Productivity & Management with focus on specialization 2.",
+          "capabilities": [
+            "Capability Productivity & Management 2.1",
+            "Capability Productivity & Management 2.2",
+            "Capability Productivity & Management 2.3",
+            "Capability Productivity & Management 2.4"
+          ],
+          "use_cases": [
+            "Use Case 2.1",
+            "Use Case 2.2"
+          ]
+        },
+        {
+          "id": "productivity-and-management-skill-3",
+          "name": "Productivity & Management Skill 3",
+          "description": "Expertise in Productivity & Management with focus on specialization 3.",
+          "capabilities": [
+            "Capability Productivity & Management 3.1",
+            "Capability Productivity & Management 3.2",
+            "Capability Productivity & Management 3.3",
+            "Capability Productivity & Management 3.4"
+          ],
+          "use_cases": [
+            "Use Case 3.1",
+            "Use Case 3.2"
+          ]
+        },
+        {
+          "id": "productivity-and-management-skill-4",
+          "name": "Productivity & Management Skill 4",
+          "description": "Expertise in Productivity & Management with focus on specialization 4.",
+          "capabilities": [
+            "Capability Productivity & Management 4.1",
+            "Capability Productivity & Management 4.2",
+            "Capability Productivity & Management 4.3",
+            "Capability Productivity & Management 4.4"
+          ],
+          "use_cases": [
+            "Use Case 4.1",
+            "Use Case 4.2"
+          ]
+        },
+        {
+          "id": "productivity-and-management-skill-5",
+          "name": "Productivity & Management Skill 5",
+          "description": "Expertise in Productivity & Management with focus on specialization 5.",
+          "capabilities": [
+            "Capability Productivity & Management 5.1",
+            "Capability Productivity & Management 5.2",
+            "Capability Productivity & Management 5.3",
+            "Capability Productivity & Management 5.4"
+          ],
+          "use_cases": [
+            "Use Case 5.1",
+            "Use Case 5.2"
+          ]
+        },
+        {
+          "id": "productivity-and-management-skill-6",
+          "name": "Productivity & Management Skill 6",
+          "description": "Expertise in Productivity & Management with focus on specialization 6.",
+          "capabilities": [
+            "Capability Productivity & Management 6.1",
+            "Capability Productivity & Management 6.2",
+            "Capability Productivity & Management 6.3",
+            "Capability Productivity & Management 6.4"
+          ],
+          "use_cases": [
+            "Use Case 6.1",
+            "Use Case 6.2"
+          ]
+        },
+        {
+          "id": "productivity-and-management-skill-7",
+          "name": "Productivity & Management Skill 7",
+          "description": "Expertise in Productivity & Management with focus on specialization 7.",
+          "capabilities": [
+            "Capability Productivity & Management 7.1",
+            "Capability Productivity & Management 7.2",
+            "Capability Productivity & Management 7.3",
+            "Capability Productivity & Management 7.4"
+          ],
+          "use_cases": [
+            "Use Case 7.1",
+            "Use Case 7.2"
+          ]
+        },
+        {
+          "id": "productivity-and-management-skill-8",
+          "name": "Productivity & Management Skill 8",
+          "description": "Expertise in Productivity & Management with focus on specialization 8.",
+          "capabilities": [
+            "Capability Productivity & Management 8.1",
+            "Capability Productivity & Management 8.2",
+            "Capability Productivity & Management 8.3",
+            "Capability Productivity & Management 8.4"
+          ],
+          "use_cases": [
+            "Use Case 8.1",
+            "Use Case 8.2"
+          ]
+        },
+        {
+          "id": "productivity-and-management-skill-9",
+          "name": "Productivity & Management Skill 9",
+          "description": "Expertise in Productivity & Management with focus on specialization 9.",
+          "capabilities": [
+            "Capability Productivity & Management 9.1",
+            "Capability Productivity & Management 9.2",
+            "Capability Productivity & Management 9.3",
+            "Capability Productivity & Management 9.4"
+          ],
+          "use_cases": [
+            "Use Case 9.1",
+            "Use Case 9.2"
+          ]
+        },
+        {
+          "id": "productivity-and-management-skill-10",
+          "name": "Productivity & Management Skill 10",
+          "description": "Expertise in Productivity & Management with focus on specialization 10.",
+          "capabilities": [
+            "Capability Productivity & Management 10.1",
+            "Capability Productivity & Management 10.2",
+            "Capability Productivity & Management 10.3",
+            "Capability Productivity & Management 10.4"
+          ],
+          "use_cases": [
+            "Use Case 10.1",
+            "Use Case 10.2"
           ]
         }
       ]
@@ -452,6 +1052,126 @@
             "Investment Analysis",
             "Cost Optimization"
           ]
+        },
+        {
+          "id": "business-architect",
+          "name": "Business Architect",
+          "description": "Expertise in Strategy & Business with focus on specialization 3.",
+          "capabilities": [
+            "Capability Strategy & Business 3.1",
+            "Capability Strategy & Business 3.2",
+            "Capability Strategy & Business 3.3",
+            "Capability Strategy & Business 3.4"
+          ],
+          "use_cases": [
+            "Use Case 3.1",
+            "Use Case 3.2"
+          ]
+        },
+        {
+          "id": "growth-hacker",
+          "name": "Growth Hacker",
+          "description": "Expertise in Strategy & Business with focus on specialization 4.",
+          "capabilities": [
+            "Capability Strategy & Business 4.1",
+            "Capability Strategy & Business 4.2",
+            "Capability Strategy & Business 4.3",
+            "Capability Strategy & Business 4.4"
+          ],
+          "use_cases": [
+            "Use Case 4.1",
+            "Use Case 4.2"
+          ]
+        },
+        {
+          "id": "venture-strategist",
+          "name": "Venture Strategist",
+          "description": "Expertise in Strategy & Business with focus on specialization 5.",
+          "capabilities": [
+            "Capability Strategy & Business 5.1",
+            "Capability Strategy & Business 5.2",
+            "Capability Strategy & Business 5.3",
+            "Capability Strategy & Business 5.4"
+          ],
+          "use_cases": [
+            "Use Case 5.1",
+            "Use Case 5.2"
+          ]
+        },
+        {
+          "id": "manda-analyst",
+          "name": "M&A Analyst",
+          "description": "Expertise in Strategy & Business with focus on specialization 6.",
+          "capabilities": [
+            "Capability Strategy & Business 6.1",
+            "Capability Strategy & Business 6.2",
+            "Capability Strategy & Business 6.3",
+            "Capability Strategy & Business 6.4"
+          ],
+          "use_cases": [
+            "Use Case 6.1",
+            "Use Case 6.2"
+          ]
+        },
+        {
+          "id": "competitive-intel",
+          "name": "Competitive Intel",
+          "description": "Expertise in Strategy & Business with focus on specialization 7.",
+          "capabilities": [
+            "Capability Strategy & Business 7.1",
+            "Capability Strategy & Business 7.2",
+            "Capability Strategy & Business 7.3",
+            "Capability Strategy & Business 7.4"
+          ],
+          "use_cases": [
+            "Use Case 7.1",
+            "Use Case 7.2"
+          ]
+        },
+        {
+          "id": "operations-strategist",
+          "name": "Operations Strategist",
+          "description": "Expertise in Strategy & Business with focus on specialization 8.",
+          "capabilities": [
+            "Capability Strategy & Business 8.1",
+            "Capability Strategy & Business 8.2",
+            "Capability Strategy & Business 8.3",
+            "Capability Strategy & Business 8.4"
+          ],
+          "use_cases": [
+            "Use Case 8.1",
+            "Use Case 8.2"
+          ]
+        },
+        {
+          "id": "product-strategist",
+          "name": "Product Strategist",
+          "description": "Expertise in Strategy & Business with focus on specialization 9.",
+          "capabilities": [
+            "Capability Strategy & Business 9.1",
+            "Capability Strategy & Business 9.2",
+            "Capability Strategy & Business 9.3",
+            "Capability Strategy & Business 9.4"
+          ],
+          "use_cases": [
+            "Use Case 9.1",
+            "Use Case 9.2"
+          ]
+        },
+        {
+          "id": "business-transformation",
+          "name": "Business Transformation",
+          "description": "Expertise in Strategy & Business with focus on specialization 10.",
+          "capabilities": [
+            "Capability Strategy & Business 10.1",
+            "Capability Strategy & Business 10.2",
+            "Capability Strategy & Business 10.3",
+            "Capability Strategy & Business 10.4"
+          ],
+          "use_cases": [
+            "Use Case 10.1",
+            "Use Case 10.2"
+          ]
         }
       ]
     },
@@ -503,6 +1223,156 @@
             "System Integration",
             "Data Synchronization",
             "Multi-Service Workflows"
+          ]
+        },
+        {
+          "id": "automation-and-integration-skill-1",
+          "name": "Automation & Integration Skill 1",
+          "description": "Expertise in Automation & Integration with focus on specialization 1.",
+          "capabilities": [
+            "Capability Automation & Integration 1.1",
+            "Capability Automation & Integration 1.2",
+            "Capability Automation & Integration 1.3",
+            "Capability Automation & Integration 1.4"
+          ],
+          "use_cases": [
+            "Use Case 1.1",
+            "Use Case 1.2"
+          ]
+        },
+        {
+          "id": "automation-and-integration-skill-2",
+          "name": "Automation & Integration Skill 2",
+          "description": "Expertise in Automation & Integration with focus on specialization 2.",
+          "capabilities": [
+            "Capability Automation & Integration 2.1",
+            "Capability Automation & Integration 2.2",
+            "Capability Automation & Integration 2.3",
+            "Capability Automation & Integration 2.4"
+          ],
+          "use_cases": [
+            "Use Case 2.1",
+            "Use Case 2.2"
+          ]
+        },
+        {
+          "id": "automation-and-integration-skill-3",
+          "name": "Automation & Integration Skill 3",
+          "description": "Expertise in Automation & Integration with focus on specialization 3.",
+          "capabilities": [
+            "Capability Automation & Integration 3.1",
+            "Capability Automation & Integration 3.2",
+            "Capability Automation & Integration 3.3",
+            "Capability Automation & Integration 3.4"
+          ],
+          "use_cases": [
+            "Use Case 3.1",
+            "Use Case 3.2"
+          ]
+        },
+        {
+          "id": "automation-and-integration-skill-4",
+          "name": "Automation & Integration Skill 4",
+          "description": "Expertise in Automation & Integration with focus on specialization 4.",
+          "capabilities": [
+            "Capability Automation & Integration 4.1",
+            "Capability Automation & Integration 4.2",
+            "Capability Automation & Integration 4.3",
+            "Capability Automation & Integration 4.4"
+          ],
+          "use_cases": [
+            "Use Case 4.1",
+            "Use Case 4.2"
+          ]
+        },
+        {
+          "id": "automation-and-integration-skill-5",
+          "name": "Automation & Integration Skill 5",
+          "description": "Expertise in Automation & Integration with focus on specialization 5.",
+          "capabilities": [
+            "Capability Automation & Integration 5.1",
+            "Capability Automation & Integration 5.2",
+            "Capability Automation & Integration 5.3",
+            "Capability Automation & Integration 5.4"
+          ],
+          "use_cases": [
+            "Use Case 5.1",
+            "Use Case 5.2"
+          ]
+        },
+        {
+          "id": "automation-and-integration-skill-6",
+          "name": "Automation & Integration Skill 6",
+          "description": "Expertise in Automation & Integration with focus on specialization 6.",
+          "capabilities": [
+            "Capability Automation & Integration 6.1",
+            "Capability Automation & Integration 6.2",
+            "Capability Automation & Integration 6.3",
+            "Capability Automation & Integration 6.4"
+          ],
+          "use_cases": [
+            "Use Case 6.1",
+            "Use Case 6.2"
+          ]
+        },
+        {
+          "id": "automation-and-integration-skill-7",
+          "name": "Automation & Integration Skill 7",
+          "description": "Expertise in Automation & Integration with focus on specialization 7.",
+          "capabilities": [
+            "Capability Automation & Integration 7.1",
+            "Capability Automation & Integration 7.2",
+            "Capability Automation & Integration 7.3",
+            "Capability Automation & Integration 7.4"
+          ],
+          "use_cases": [
+            "Use Case 7.1",
+            "Use Case 7.2"
+          ]
+        },
+        {
+          "id": "automation-and-integration-skill-8",
+          "name": "Automation & Integration Skill 8",
+          "description": "Expertise in Automation & Integration with focus on specialization 8.",
+          "capabilities": [
+            "Capability Automation & Integration 8.1",
+            "Capability Automation & Integration 8.2",
+            "Capability Automation & Integration 8.3",
+            "Capability Automation & Integration 8.4"
+          ],
+          "use_cases": [
+            "Use Case 8.1",
+            "Use Case 8.2"
+          ]
+        },
+        {
+          "id": "automation-and-integration-skill-9",
+          "name": "Automation & Integration Skill 9",
+          "description": "Expertise in Automation & Integration with focus on specialization 9.",
+          "capabilities": [
+            "Capability Automation & Integration 9.1",
+            "Capability Automation & Integration 9.2",
+            "Capability Automation & Integration 9.3",
+            "Capability Automation & Integration 9.4"
+          ],
+          "use_cases": [
+            "Use Case 9.1",
+            "Use Case 9.2"
+          ]
+        },
+        {
+          "id": "automation-and-integration-skill-10",
+          "name": "Automation & Integration Skill 10",
+          "description": "Expertise in Automation & Integration with focus on specialization 10.",
+          "capabilities": [
+            "Capability Automation & Integration 10.1",
+            "Capability Automation & Integration 10.2",
+            "Capability Automation & Integration 10.3",
+            "Capability Automation & Integration 10.4"
+          ],
+          "use_cases": [
+            "Use Case 10.1",
+            "Use Case 10.2"
           ]
         }
       ]
@@ -572,6 +1442,156 @@
             "Skill Development",
             "Certification Programs"
           ]
+        },
+        {
+          "id": "communication-and-training-skill-1",
+          "name": "Communication & Training Skill 1",
+          "description": "Expertise in Communication & Training with focus on specialization 1.",
+          "capabilities": [
+            "Capability Communication & Training 1.1",
+            "Capability Communication & Training 1.2",
+            "Capability Communication & Training 1.3",
+            "Capability Communication & Training 1.4"
+          ],
+          "use_cases": [
+            "Use Case 1.1",
+            "Use Case 1.2"
+          ]
+        },
+        {
+          "id": "communication-and-training-skill-2",
+          "name": "Communication & Training Skill 2",
+          "description": "Expertise in Communication & Training with focus on specialization 2.",
+          "capabilities": [
+            "Capability Communication & Training 2.1",
+            "Capability Communication & Training 2.2",
+            "Capability Communication & Training 2.3",
+            "Capability Communication & Training 2.4"
+          ],
+          "use_cases": [
+            "Use Case 2.1",
+            "Use Case 2.2"
+          ]
+        },
+        {
+          "id": "communication-and-training-skill-3",
+          "name": "Communication & Training Skill 3",
+          "description": "Expertise in Communication & Training with focus on specialization 3.",
+          "capabilities": [
+            "Capability Communication & Training 3.1",
+            "Capability Communication & Training 3.2",
+            "Capability Communication & Training 3.3",
+            "Capability Communication & Training 3.4"
+          ],
+          "use_cases": [
+            "Use Case 3.1",
+            "Use Case 3.2"
+          ]
+        },
+        {
+          "id": "communication-and-training-skill-4",
+          "name": "Communication & Training Skill 4",
+          "description": "Expertise in Communication & Training with focus on specialization 4.",
+          "capabilities": [
+            "Capability Communication & Training 4.1",
+            "Capability Communication & Training 4.2",
+            "Capability Communication & Training 4.3",
+            "Capability Communication & Training 4.4"
+          ],
+          "use_cases": [
+            "Use Case 4.1",
+            "Use Case 4.2"
+          ]
+        },
+        {
+          "id": "communication-and-training-skill-5",
+          "name": "Communication & Training Skill 5",
+          "description": "Expertise in Communication & Training with focus on specialization 5.",
+          "capabilities": [
+            "Capability Communication & Training 5.1",
+            "Capability Communication & Training 5.2",
+            "Capability Communication & Training 5.3",
+            "Capability Communication & Training 5.4"
+          ],
+          "use_cases": [
+            "Use Case 5.1",
+            "Use Case 5.2"
+          ]
+        },
+        {
+          "id": "communication-and-training-skill-6",
+          "name": "Communication & Training Skill 6",
+          "description": "Expertise in Communication & Training with focus on specialization 6.",
+          "capabilities": [
+            "Capability Communication & Training 6.1",
+            "Capability Communication & Training 6.2",
+            "Capability Communication & Training 6.3",
+            "Capability Communication & Training 6.4"
+          ],
+          "use_cases": [
+            "Use Case 6.1",
+            "Use Case 6.2"
+          ]
+        },
+        {
+          "id": "communication-and-training-skill-7",
+          "name": "Communication & Training Skill 7",
+          "description": "Expertise in Communication & Training with focus on specialization 7.",
+          "capabilities": [
+            "Capability Communication & Training 7.1",
+            "Capability Communication & Training 7.2",
+            "Capability Communication & Training 7.3",
+            "Capability Communication & Training 7.4"
+          ],
+          "use_cases": [
+            "Use Case 7.1",
+            "Use Case 7.2"
+          ]
+        },
+        {
+          "id": "communication-and-training-skill-8",
+          "name": "Communication & Training Skill 8",
+          "description": "Expertise in Communication & Training with focus on specialization 8.",
+          "capabilities": [
+            "Capability Communication & Training 8.1",
+            "Capability Communication & Training 8.2",
+            "Capability Communication & Training 8.3",
+            "Capability Communication & Training 8.4"
+          ],
+          "use_cases": [
+            "Use Case 8.1",
+            "Use Case 8.2"
+          ]
+        },
+        {
+          "id": "communication-and-training-skill-9",
+          "name": "Communication & Training Skill 9",
+          "description": "Expertise in Communication & Training with focus on specialization 9.",
+          "capabilities": [
+            "Capability Communication & Training 9.1",
+            "Capability Communication & Training 9.2",
+            "Capability Communication & Training 9.3",
+            "Capability Communication & Training 9.4"
+          ],
+          "use_cases": [
+            "Use Case 9.1",
+            "Use Case 9.2"
+          ]
+        },
+        {
+          "id": "communication-and-training-skill-10",
+          "name": "Communication & Training Skill 10",
+          "description": "Expertise in Communication & Training with focus on specialization 10.",
+          "capabilities": [
+            "Capability Communication & Training 10.1",
+            "Capability Communication & Training 10.2",
+            "Capability Communication & Training 10.3",
+            "Capability Communication & Training 10.4"
+          ],
+          "use_cases": [
+            "Use Case 10.1",
+            "Use Case 10.2"
+          ]
         }
       ]
     },
@@ -623,6 +1643,156 @@
             "Literature Reviews",
             "Trend Analysis",
             "Expert Reports"
+          ]
+        },
+        {
+          "id": "learning-and-research-skill-1",
+          "name": "Learning & Research Skill 1",
+          "description": "Expertise in Learning & Research with focus on specialization 1.",
+          "capabilities": [
+            "Capability Learning & Research 1.1",
+            "Capability Learning & Research 1.2",
+            "Capability Learning & Research 1.3",
+            "Capability Learning & Research 1.4"
+          ],
+          "use_cases": [
+            "Use Case 1.1",
+            "Use Case 1.2"
+          ]
+        },
+        {
+          "id": "learning-and-research-skill-2",
+          "name": "Learning & Research Skill 2",
+          "description": "Expertise in Learning & Research with focus on specialization 2.",
+          "capabilities": [
+            "Capability Learning & Research 2.1",
+            "Capability Learning & Research 2.2",
+            "Capability Learning & Research 2.3",
+            "Capability Learning & Research 2.4"
+          ],
+          "use_cases": [
+            "Use Case 2.1",
+            "Use Case 2.2"
+          ]
+        },
+        {
+          "id": "learning-and-research-skill-3",
+          "name": "Learning & Research Skill 3",
+          "description": "Expertise in Learning & Research with focus on specialization 3.",
+          "capabilities": [
+            "Capability Learning & Research 3.1",
+            "Capability Learning & Research 3.2",
+            "Capability Learning & Research 3.3",
+            "Capability Learning & Research 3.4"
+          ],
+          "use_cases": [
+            "Use Case 3.1",
+            "Use Case 3.2"
+          ]
+        },
+        {
+          "id": "learning-and-research-skill-4",
+          "name": "Learning & Research Skill 4",
+          "description": "Expertise in Learning & Research with focus on specialization 4.",
+          "capabilities": [
+            "Capability Learning & Research 4.1",
+            "Capability Learning & Research 4.2",
+            "Capability Learning & Research 4.3",
+            "Capability Learning & Research 4.4"
+          ],
+          "use_cases": [
+            "Use Case 4.1",
+            "Use Case 4.2"
+          ]
+        },
+        {
+          "id": "learning-and-research-skill-5",
+          "name": "Learning & Research Skill 5",
+          "description": "Expertise in Learning & Research with focus on specialization 5.",
+          "capabilities": [
+            "Capability Learning & Research 5.1",
+            "Capability Learning & Research 5.2",
+            "Capability Learning & Research 5.3",
+            "Capability Learning & Research 5.4"
+          ],
+          "use_cases": [
+            "Use Case 5.1",
+            "Use Case 5.2"
+          ]
+        },
+        {
+          "id": "learning-and-research-skill-6",
+          "name": "Learning & Research Skill 6",
+          "description": "Expertise in Learning & Research with focus on specialization 6.",
+          "capabilities": [
+            "Capability Learning & Research 6.1",
+            "Capability Learning & Research 6.2",
+            "Capability Learning & Research 6.3",
+            "Capability Learning & Research 6.4"
+          ],
+          "use_cases": [
+            "Use Case 6.1",
+            "Use Case 6.2"
+          ]
+        },
+        {
+          "id": "learning-and-research-skill-7",
+          "name": "Learning & Research Skill 7",
+          "description": "Expertise in Learning & Research with focus on specialization 7.",
+          "capabilities": [
+            "Capability Learning & Research 7.1",
+            "Capability Learning & Research 7.2",
+            "Capability Learning & Research 7.3",
+            "Capability Learning & Research 7.4"
+          ],
+          "use_cases": [
+            "Use Case 7.1",
+            "Use Case 7.2"
+          ]
+        },
+        {
+          "id": "learning-and-research-skill-8",
+          "name": "Learning & Research Skill 8",
+          "description": "Expertise in Learning & Research with focus on specialization 8.",
+          "capabilities": [
+            "Capability Learning & Research 8.1",
+            "Capability Learning & Research 8.2",
+            "Capability Learning & Research 8.3",
+            "Capability Learning & Research 8.4"
+          ],
+          "use_cases": [
+            "Use Case 8.1",
+            "Use Case 8.2"
+          ]
+        },
+        {
+          "id": "learning-and-research-skill-9",
+          "name": "Learning & Research Skill 9",
+          "description": "Expertise in Learning & Research with focus on specialization 9.",
+          "capabilities": [
+            "Capability Learning & Research 9.1",
+            "Capability Learning & Research 9.2",
+            "Capability Learning & Research 9.3",
+            "Capability Learning & Research 9.4"
+          ],
+          "use_cases": [
+            "Use Case 9.1",
+            "Use Case 9.2"
+          ]
+        },
+        {
+          "id": "learning-and-research-skill-10",
+          "name": "Learning & Research Skill 10",
+          "description": "Expertise in Learning & Research with focus on specialization 10.",
+          "capabilities": [
+            "Capability Learning & Research 10.1",
+            "Capability Learning & Research 10.2",
+            "Capability Learning & Research 10.3",
+            "Capability Learning & Research 10.4"
+          ],
+          "use_cases": [
+            "Use Case 10.1",
+            "Use Case 10.2"
           ]
         }
       ]
@@ -896,6 +2066,1879 @@
           "id": "testskill",
           "name": "TestSkill",
           "description": "TestDescription"
+        },
+        {
+          "id": "testskill",
+          "name": "TestSkill",
+          "description": "TestDescription"
+        },
+        {
+          "id": "testskill",
+          "name": "TestSkill",
+          "description": "TestDescription"
+        },
+        {
+          "id": "testskill",
+          "name": "TestSkill",
+          "description": "TestDescription"
+        },
+        {
+          "id": "testskill",
+          "name": "TestSkill",
+          "description": "TestDescription"
+        },
+        {
+          "id": "testskill",
+          "name": "TestSkill",
+          "description": "TestDescription"
+        }
+      ]
+    },
+    "legal_compliance": {
+      "skills": [
+        {
+          "id": "legal-and-compliance-skill-1",
+          "name": "Legal & Compliance Skill 1",
+          "description": "Expertise in Legal & Compliance with focus on specialization 1.",
+          "capabilities": [
+            "Capability Legal & Compliance 1.1",
+            "Capability Legal & Compliance 1.2",
+            "Capability Legal & Compliance 1.3",
+            "Capability Legal & Compliance 1.4"
+          ],
+          "use_cases": [
+            "Use Case 1.1",
+            "Use Case 1.2"
+          ]
+        },
+        {
+          "id": "legal-and-compliance-skill-2",
+          "name": "Legal & Compliance Skill 2",
+          "description": "Expertise in Legal & Compliance with focus on specialization 2.",
+          "capabilities": [
+            "Capability Legal & Compliance 2.1",
+            "Capability Legal & Compliance 2.2",
+            "Capability Legal & Compliance 2.3",
+            "Capability Legal & Compliance 2.4"
+          ],
+          "use_cases": [
+            "Use Case 2.1",
+            "Use Case 2.2"
+          ]
+        },
+        {
+          "id": "legal-and-compliance-skill-3",
+          "name": "Legal & Compliance Skill 3",
+          "description": "Expertise in Legal & Compliance with focus on specialization 3.",
+          "capabilities": [
+            "Capability Legal & Compliance 3.1",
+            "Capability Legal & Compliance 3.2",
+            "Capability Legal & Compliance 3.3",
+            "Capability Legal & Compliance 3.4"
+          ],
+          "use_cases": [
+            "Use Case 3.1",
+            "Use Case 3.2"
+          ]
+        },
+        {
+          "id": "legal-and-compliance-skill-4",
+          "name": "Legal & Compliance Skill 4",
+          "description": "Expertise in Legal & Compliance with focus on specialization 4.",
+          "capabilities": [
+            "Capability Legal & Compliance 4.1",
+            "Capability Legal & Compliance 4.2",
+            "Capability Legal & Compliance 4.3",
+            "Capability Legal & Compliance 4.4"
+          ],
+          "use_cases": [
+            "Use Case 4.1",
+            "Use Case 4.2"
+          ]
+        },
+        {
+          "id": "legal-and-compliance-skill-5",
+          "name": "Legal & Compliance Skill 5",
+          "description": "Expertise in Legal & Compliance with focus on specialization 5.",
+          "capabilities": [
+            "Capability Legal & Compliance 5.1",
+            "Capability Legal & Compliance 5.2",
+            "Capability Legal & Compliance 5.3",
+            "Capability Legal & Compliance 5.4"
+          ],
+          "use_cases": [
+            "Use Case 5.1",
+            "Use Case 5.2"
+          ]
+        },
+        {
+          "id": "legal-and-compliance-skill-6",
+          "name": "Legal & Compliance Skill 6",
+          "description": "Expertise in Legal & Compliance with focus on specialization 6.",
+          "capabilities": [
+            "Capability Legal & Compliance 6.1",
+            "Capability Legal & Compliance 6.2",
+            "Capability Legal & Compliance 6.3",
+            "Capability Legal & Compliance 6.4"
+          ],
+          "use_cases": [
+            "Use Case 6.1",
+            "Use Case 6.2"
+          ]
+        },
+        {
+          "id": "legal-and-compliance-skill-7",
+          "name": "Legal & Compliance Skill 7",
+          "description": "Expertise in Legal & Compliance with focus on specialization 7.",
+          "capabilities": [
+            "Capability Legal & Compliance 7.1",
+            "Capability Legal & Compliance 7.2",
+            "Capability Legal & Compliance 7.3",
+            "Capability Legal & Compliance 7.4"
+          ],
+          "use_cases": [
+            "Use Case 7.1",
+            "Use Case 7.2"
+          ]
+        },
+        {
+          "id": "legal-and-compliance-skill-8",
+          "name": "Legal & Compliance Skill 8",
+          "description": "Expertise in Legal & Compliance with focus on specialization 8.",
+          "capabilities": [
+            "Capability Legal & Compliance 8.1",
+            "Capability Legal & Compliance 8.2",
+            "Capability Legal & Compliance 8.3",
+            "Capability Legal & Compliance 8.4"
+          ],
+          "use_cases": [
+            "Use Case 8.1",
+            "Use Case 8.2"
+          ]
+        },
+        {
+          "id": "legal-and-compliance-skill-9",
+          "name": "Legal & Compliance Skill 9",
+          "description": "Expertise in Legal & Compliance with focus on specialization 9.",
+          "capabilities": [
+            "Capability Legal & Compliance 9.1",
+            "Capability Legal & Compliance 9.2",
+            "Capability Legal & Compliance 9.3",
+            "Capability Legal & Compliance 9.4"
+          ],
+          "use_cases": [
+            "Use Case 9.1",
+            "Use Case 9.2"
+          ]
+        },
+        {
+          "id": "legal-and-compliance-skill-10",
+          "name": "Legal & Compliance Skill 10",
+          "description": "Expertise in Legal & Compliance with focus on specialization 10.",
+          "capabilities": [
+            "Capability Legal & Compliance 10.1",
+            "Capability Legal & Compliance 10.2",
+            "Capability Legal & Compliance 10.3",
+            "Capability Legal & Compliance 10.4"
+          ],
+          "use_cases": [
+            "Use Case 10.1",
+            "Use Case 10.2"
+          ]
+        }
+      ]
+    },
+    "security_forensics": {
+      "skills": [
+        {
+          "id": "forensic-analyst",
+          "name": "Forensic Analyst",
+          "description": "Expertise in Security & Forensics with focus on specialization 1.",
+          "capabilities": [
+            "Capability Security & Forensics 1.1",
+            "Capability Security & Forensics 1.2",
+            "Capability Security & Forensics 1.3",
+            "Capability Security & Forensics 1.4"
+          ],
+          "use_cases": [
+            "Use Case 1.1",
+            "Use Case 1.2"
+          ]
+        },
+        {
+          "id": "incident-responder",
+          "name": "Incident Responder",
+          "description": "Expertise in Security & Forensics with focus on specialization 2.",
+          "capabilities": [
+            "Capability Security & Forensics 2.1",
+            "Capability Security & Forensics 2.2",
+            "Capability Security & Forensics 2.3",
+            "Capability Security & Forensics 2.4"
+          ],
+          "use_cases": [
+            "Use Case 2.1",
+            "Use Case 2.2"
+          ]
+        },
+        {
+          "id": "threat-hunter",
+          "name": "Threat Hunter",
+          "description": "Expertise in Security & Forensics with focus on specialization 3.",
+          "capabilities": [
+            "Capability Security & Forensics 3.1",
+            "Capability Security & Forensics 3.2",
+            "Capability Security & Forensics 3.3",
+            "Capability Security & Forensics 3.4"
+          ],
+          "use_cases": [
+            "Use Case 3.1",
+            "Use Case 3.2"
+          ]
+        },
+        {
+          "id": "penetration-tester",
+          "name": "Penetration Tester",
+          "description": "Expertise in Security & Forensics with focus on specialization 4.",
+          "capabilities": [
+            "Capability Security & Forensics 4.1",
+            "Capability Security & Forensics 4.2",
+            "Capability Security & Forensics 4.3",
+            "Capability Security & Forensics 4.4"
+          ],
+          "use_cases": [
+            "Use Case 4.1",
+            "Use Case 4.2"
+          ]
+        },
+        {
+          "id": "security-auditor",
+          "name": "Security Auditor",
+          "description": "Expertise in Security & Forensics with focus on specialization 5.",
+          "capabilities": [
+            "Capability Security & Forensics 5.1",
+            "Capability Security & Forensics 5.2",
+            "Capability Security & Forensics 5.3",
+            "Capability Security & Forensics 5.4"
+          ],
+          "use_cases": [
+            "Use Case 5.1",
+            "Use Case 5.2"
+          ]
+        },
+        {
+          "id": "compliance-officer",
+          "name": "Compliance Officer",
+          "description": "Expertise in Security & Forensics with focus on specialization 6.",
+          "capabilities": [
+            "Capability Security & Forensics 6.1",
+            "Capability Security & Forensics 6.2",
+            "Capability Security & Forensics 6.3",
+            "Capability Security & Forensics 6.4"
+          ],
+          "use_cases": [
+            "Use Case 6.1",
+            "Use Case 6.2"
+          ]
+        },
+        {
+          "id": "malware-researcher",
+          "name": "Malware Researcher",
+          "description": "Expertise in Security & Forensics with focus on specialization 7.",
+          "capabilities": [
+            "Capability Security & Forensics 7.1",
+            "Capability Security & Forensics 7.2",
+            "Capability Security & Forensics 7.3",
+            "Capability Security & Forensics 7.4"
+          ],
+          "use_cases": [
+            "Use Case 7.1",
+            "Use Case 7.2"
+          ]
+        },
+        {
+          "id": "crypto-expert",
+          "name": "Crypto Expert",
+          "description": "Expertise in Security & Forensics with focus on specialization 8.",
+          "capabilities": [
+            "Capability Security & Forensics 8.1",
+            "Capability Security & Forensics 8.2",
+            "Capability Security & Forensics 8.3",
+            "Capability Security & Forensics 8.4"
+          ],
+          "use_cases": [
+            "Use Case 8.1",
+            "Use Case 8.2"
+          ]
+        },
+        {
+          "id": "soc-analyst",
+          "name": "SOC Analyst",
+          "description": "Expertise in Security & Forensics with focus on specialization 9.",
+          "capabilities": [
+            "Capability Security & Forensics 9.1",
+            "Capability Security & Forensics 9.2",
+            "Capability Security & Forensics 9.3",
+            "Capability Security & Forensics 9.4"
+          ],
+          "use_cases": [
+            "Use Case 9.1",
+            "Use Case 9.2"
+          ]
+        },
+        {
+          "id": "cloud-security",
+          "name": "Cloud Security",
+          "description": "Expertise in Security & Forensics with focus on specialization 10.",
+          "capabilities": [
+            "Capability Security & Forensics 10.1",
+            "Capability Security & Forensics 10.2",
+            "Capability Security & Forensics 10.3",
+            "Capability Security & Forensics 10.4"
+          ],
+          "use_cases": [
+            "Use Case 10.1",
+            "Use Case 10.2"
+          ]
+        }
+      ]
+    },
+    "design_creative": {
+      "skills": [
+        {
+          "id": "design-and-creative-skill-1",
+          "name": "Design & Creative Skill 1",
+          "description": "Expertise in Design & Creative with focus on specialization 1.",
+          "capabilities": [
+            "Capability Design & Creative 1.1",
+            "Capability Design & Creative 1.2",
+            "Capability Design & Creative 1.3",
+            "Capability Design & Creative 1.4"
+          ],
+          "use_cases": [
+            "Use Case 1.1",
+            "Use Case 1.2"
+          ]
+        },
+        {
+          "id": "design-and-creative-skill-2",
+          "name": "Design & Creative Skill 2",
+          "description": "Expertise in Design & Creative with focus on specialization 2.",
+          "capabilities": [
+            "Capability Design & Creative 2.1",
+            "Capability Design & Creative 2.2",
+            "Capability Design & Creative 2.3",
+            "Capability Design & Creative 2.4"
+          ],
+          "use_cases": [
+            "Use Case 2.1",
+            "Use Case 2.2"
+          ]
+        },
+        {
+          "id": "design-and-creative-skill-3",
+          "name": "Design & Creative Skill 3",
+          "description": "Expertise in Design & Creative with focus on specialization 3.",
+          "capabilities": [
+            "Capability Design & Creative 3.1",
+            "Capability Design & Creative 3.2",
+            "Capability Design & Creative 3.3",
+            "Capability Design & Creative 3.4"
+          ],
+          "use_cases": [
+            "Use Case 3.1",
+            "Use Case 3.2"
+          ]
+        },
+        {
+          "id": "design-and-creative-skill-4",
+          "name": "Design & Creative Skill 4",
+          "description": "Expertise in Design & Creative with focus on specialization 4.",
+          "capabilities": [
+            "Capability Design & Creative 4.1",
+            "Capability Design & Creative 4.2",
+            "Capability Design & Creative 4.3",
+            "Capability Design & Creative 4.4"
+          ],
+          "use_cases": [
+            "Use Case 4.1",
+            "Use Case 4.2"
+          ]
+        },
+        {
+          "id": "design-and-creative-skill-5",
+          "name": "Design & Creative Skill 5",
+          "description": "Expertise in Design & Creative with focus on specialization 5.",
+          "capabilities": [
+            "Capability Design & Creative 5.1",
+            "Capability Design & Creative 5.2",
+            "Capability Design & Creative 5.3",
+            "Capability Design & Creative 5.4"
+          ],
+          "use_cases": [
+            "Use Case 5.1",
+            "Use Case 5.2"
+          ]
+        },
+        {
+          "id": "design-and-creative-skill-6",
+          "name": "Design & Creative Skill 6",
+          "description": "Expertise in Design & Creative with focus on specialization 6.",
+          "capabilities": [
+            "Capability Design & Creative 6.1",
+            "Capability Design & Creative 6.2",
+            "Capability Design & Creative 6.3",
+            "Capability Design & Creative 6.4"
+          ],
+          "use_cases": [
+            "Use Case 6.1",
+            "Use Case 6.2"
+          ]
+        },
+        {
+          "id": "design-and-creative-skill-7",
+          "name": "Design & Creative Skill 7",
+          "description": "Expertise in Design & Creative with focus on specialization 7.",
+          "capabilities": [
+            "Capability Design & Creative 7.1",
+            "Capability Design & Creative 7.2",
+            "Capability Design & Creative 7.3",
+            "Capability Design & Creative 7.4"
+          ],
+          "use_cases": [
+            "Use Case 7.1",
+            "Use Case 7.2"
+          ]
+        },
+        {
+          "id": "design-and-creative-skill-8",
+          "name": "Design & Creative Skill 8",
+          "description": "Expertise in Design & Creative with focus on specialization 8.",
+          "capabilities": [
+            "Capability Design & Creative 8.1",
+            "Capability Design & Creative 8.2",
+            "Capability Design & Creative 8.3",
+            "Capability Design & Creative 8.4"
+          ],
+          "use_cases": [
+            "Use Case 8.1",
+            "Use Case 8.2"
+          ]
+        },
+        {
+          "id": "design-and-creative-skill-9",
+          "name": "Design & Creative Skill 9",
+          "description": "Expertise in Design & Creative with focus on specialization 9.",
+          "capabilities": [
+            "Capability Design & Creative 9.1",
+            "Capability Design & Creative 9.2",
+            "Capability Design & Creative 9.3",
+            "Capability Design & Creative 9.4"
+          ],
+          "use_cases": [
+            "Use Case 9.1",
+            "Use Case 9.2"
+          ]
+        },
+        {
+          "id": "design-and-creative-skill-10",
+          "name": "Design & Creative Skill 10",
+          "description": "Expertise in Design & Creative with focus on specialization 10.",
+          "capabilities": [
+            "Capability Design & Creative 10.1",
+            "Capability Design & Creative 10.2",
+            "Capability Design & Creative 10.3",
+            "Capability Design & Creative 10.4"
+          ],
+          "use_cases": [
+            "Use Case 10.1",
+            "Use Case 10.2"
+          ]
+        }
+      ]
+    },
+    "customer_success": {
+      "skills": [
+        {
+          "id": "customer-success-skill-1",
+          "name": "Customer Success Skill 1",
+          "description": "Expertise in Customer Success with focus on specialization 1.",
+          "capabilities": [
+            "Capability Customer Success 1.1",
+            "Capability Customer Success 1.2",
+            "Capability Customer Success 1.3",
+            "Capability Customer Success 1.4"
+          ],
+          "use_cases": [
+            "Use Case 1.1",
+            "Use Case 1.2"
+          ]
+        },
+        {
+          "id": "customer-success-skill-2",
+          "name": "Customer Success Skill 2",
+          "description": "Expertise in Customer Success with focus on specialization 2.",
+          "capabilities": [
+            "Capability Customer Success 2.1",
+            "Capability Customer Success 2.2",
+            "Capability Customer Success 2.3",
+            "Capability Customer Success 2.4"
+          ],
+          "use_cases": [
+            "Use Case 2.1",
+            "Use Case 2.2"
+          ]
+        },
+        {
+          "id": "customer-success-skill-3",
+          "name": "Customer Success Skill 3",
+          "description": "Expertise in Customer Success with focus on specialization 3.",
+          "capabilities": [
+            "Capability Customer Success 3.1",
+            "Capability Customer Success 3.2",
+            "Capability Customer Success 3.3",
+            "Capability Customer Success 3.4"
+          ],
+          "use_cases": [
+            "Use Case 3.1",
+            "Use Case 3.2"
+          ]
+        },
+        {
+          "id": "customer-success-skill-4",
+          "name": "Customer Success Skill 4",
+          "description": "Expertise in Customer Success with focus on specialization 4.",
+          "capabilities": [
+            "Capability Customer Success 4.1",
+            "Capability Customer Success 4.2",
+            "Capability Customer Success 4.3",
+            "Capability Customer Success 4.4"
+          ],
+          "use_cases": [
+            "Use Case 4.1",
+            "Use Case 4.2"
+          ]
+        },
+        {
+          "id": "customer-success-skill-5",
+          "name": "Customer Success Skill 5",
+          "description": "Expertise in Customer Success with focus on specialization 5.",
+          "capabilities": [
+            "Capability Customer Success 5.1",
+            "Capability Customer Success 5.2",
+            "Capability Customer Success 5.3",
+            "Capability Customer Success 5.4"
+          ],
+          "use_cases": [
+            "Use Case 5.1",
+            "Use Case 5.2"
+          ]
+        },
+        {
+          "id": "customer-success-skill-6",
+          "name": "Customer Success Skill 6",
+          "description": "Expertise in Customer Success with focus on specialization 6.",
+          "capabilities": [
+            "Capability Customer Success 6.1",
+            "Capability Customer Success 6.2",
+            "Capability Customer Success 6.3",
+            "Capability Customer Success 6.4"
+          ],
+          "use_cases": [
+            "Use Case 6.1",
+            "Use Case 6.2"
+          ]
+        },
+        {
+          "id": "customer-success-skill-7",
+          "name": "Customer Success Skill 7",
+          "description": "Expertise in Customer Success with focus on specialization 7.",
+          "capabilities": [
+            "Capability Customer Success 7.1",
+            "Capability Customer Success 7.2",
+            "Capability Customer Success 7.3",
+            "Capability Customer Success 7.4"
+          ],
+          "use_cases": [
+            "Use Case 7.1",
+            "Use Case 7.2"
+          ]
+        },
+        {
+          "id": "customer-success-skill-8",
+          "name": "Customer Success Skill 8",
+          "description": "Expertise in Customer Success with focus on specialization 8.",
+          "capabilities": [
+            "Capability Customer Success 8.1",
+            "Capability Customer Success 8.2",
+            "Capability Customer Success 8.3",
+            "Capability Customer Success 8.4"
+          ],
+          "use_cases": [
+            "Use Case 8.1",
+            "Use Case 8.2"
+          ]
+        },
+        {
+          "id": "customer-success-skill-9",
+          "name": "Customer Success Skill 9",
+          "description": "Expertise in Customer Success with focus on specialization 9.",
+          "capabilities": [
+            "Capability Customer Success 9.1",
+            "Capability Customer Success 9.2",
+            "Capability Customer Success 9.3",
+            "Capability Customer Success 9.4"
+          ],
+          "use_cases": [
+            "Use Case 9.1",
+            "Use Case 9.2"
+          ]
+        },
+        {
+          "id": "customer-success-skill-10",
+          "name": "Customer Success Skill 10",
+          "description": "Expertise in Customer Success with focus on specialization 10.",
+          "capabilities": [
+            "Capability Customer Success 10.1",
+            "Capability Customer Success 10.2",
+            "Capability Customer Success 10.3",
+            "Capability Customer Success 10.4"
+          ],
+          "use_cases": [
+            "Use Case 10.1",
+            "Use Case 10.2"
+          ]
+        }
+      ]
+    },
+    "human_resources": {
+      "skills": [
+        {
+          "id": "human-resources-skill-1",
+          "name": "Human Resources Skill 1",
+          "description": "Expertise in Human Resources with focus on specialization 1.",
+          "capabilities": [
+            "Capability Human Resources 1.1",
+            "Capability Human Resources 1.2",
+            "Capability Human Resources 1.3",
+            "Capability Human Resources 1.4"
+          ],
+          "use_cases": [
+            "Use Case 1.1",
+            "Use Case 1.2"
+          ]
+        },
+        {
+          "id": "human-resources-skill-2",
+          "name": "Human Resources Skill 2",
+          "description": "Expertise in Human Resources with focus on specialization 2.",
+          "capabilities": [
+            "Capability Human Resources 2.1",
+            "Capability Human Resources 2.2",
+            "Capability Human Resources 2.3",
+            "Capability Human Resources 2.4"
+          ],
+          "use_cases": [
+            "Use Case 2.1",
+            "Use Case 2.2"
+          ]
+        },
+        {
+          "id": "human-resources-skill-3",
+          "name": "Human Resources Skill 3",
+          "description": "Expertise in Human Resources with focus on specialization 3.",
+          "capabilities": [
+            "Capability Human Resources 3.1",
+            "Capability Human Resources 3.2",
+            "Capability Human Resources 3.3",
+            "Capability Human Resources 3.4"
+          ],
+          "use_cases": [
+            "Use Case 3.1",
+            "Use Case 3.2"
+          ]
+        },
+        {
+          "id": "human-resources-skill-4",
+          "name": "Human Resources Skill 4",
+          "description": "Expertise in Human Resources with focus on specialization 4.",
+          "capabilities": [
+            "Capability Human Resources 4.1",
+            "Capability Human Resources 4.2",
+            "Capability Human Resources 4.3",
+            "Capability Human Resources 4.4"
+          ],
+          "use_cases": [
+            "Use Case 4.1",
+            "Use Case 4.2"
+          ]
+        },
+        {
+          "id": "human-resources-skill-5",
+          "name": "Human Resources Skill 5",
+          "description": "Expertise in Human Resources with focus on specialization 5.",
+          "capabilities": [
+            "Capability Human Resources 5.1",
+            "Capability Human Resources 5.2",
+            "Capability Human Resources 5.3",
+            "Capability Human Resources 5.4"
+          ],
+          "use_cases": [
+            "Use Case 5.1",
+            "Use Case 5.2"
+          ]
+        },
+        {
+          "id": "human-resources-skill-6",
+          "name": "Human Resources Skill 6",
+          "description": "Expertise in Human Resources with focus on specialization 6.",
+          "capabilities": [
+            "Capability Human Resources 6.1",
+            "Capability Human Resources 6.2",
+            "Capability Human Resources 6.3",
+            "Capability Human Resources 6.4"
+          ],
+          "use_cases": [
+            "Use Case 6.1",
+            "Use Case 6.2"
+          ]
+        },
+        {
+          "id": "human-resources-skill-7",
+          "name": "Human Resources Skill 7",
+          "description": "Expertise in Human Resources with focus on specialization 7.",
+          "capabilities": [
+            "Capability Human Resources 7.1",
+            "Capability Human Resources 7.2",
+            "Capability Human Resources 7.3",
+            "Capability Human Resources 7.4"
+          ],
+          "use_cases": [
+            "Use Case 7.1",
+            "Use Case 7.2"
+          ]
+        },
+        {
+          "id": "human-resources-skill-8",
+          "name": "Human Resources Skill 8",
+          "description": "Expertise in Human Resources with focus on specialization 8.",
+          "capabilities": [
+            "Capability Human Resources 8.1",
+            "Capability Human Resources 8.2",
+            "Capability Human Resources 8.3",
+            "Capability Human Resources 8.4"
+          ],
+          "use_cases": [
+            "Use Case 8.1",
+            "Use Case 8.2"
+          ]
+        },
+        {
+          "id": "human-resources-skill-9",
+          "name": "Human Resources Skill 9",
+          "description": "Expertise in Human Resources with focus on specialization 9.",
+          "capabilities": [
+            "Capability Human Resources 9.1",
+            "Capability Human Resources 9.2",
+            "Capability Human Resources 9.3",
+            "Capability Human Resources 9.4"
+          ],
+          "use_cases": [
+            "Use Case 9.1",
+            "Use Case 9.2"
+          ]
+        },
+        {
+          "id": "human-resources-skill-10",
+          "name": "Human Resources Skill 10",
+          "description": "Expertise in Human Resources with focus on specialization 10.",
+          "capabilities": [
+            "Capability Human Resources 10.1",
+            "Capability Human Resources 10.2",
+            "Capability Human Resources 10.3",
+            "Capability Human Resources 10.4"
+          ],
+          "use_cases": [
+            "Use Case 10.1",
+            "Use Case 10.2"
+          ]
+        }
+      ]
+    },
+    "finance_accounting": {
+      "skills": [
+        {
+          "id": "finance-and-accounting-skill-1",
+          "name": "Finance & Accounting Skill 1",
+          "description": "Expertise in Finance & Accounting with focus on specialization 1.",
+          "capabilities": [
+            "Capability Finance & Accounting 1.1",
+            "Capability Finance & Accounting 1.2",
+            "Capability Finance & Accounting 1.3",
+            "Capability Finance & Accounting 1.4"
+          ],
+          "use_cases": [
+            "Use Case 1.1",
+            "Use Case 1.2"
+          ]
+        },
+        {
+          "id": "finance-and-accounting-skill-2",
+          "name": "Finance & Accounting Skill 2",
+          "description": "Expertise in Finance & Accounting with focus on specialization 2.",
+          "capabilities": [
+            "Capability Finance & Accounting 2.1",
+            "Capability Finance & Accounting 2.2",
+            "Capability Finance & Accounting 2.3",
+            "Capability Finance & Accounting 2.4"
+          ],
+          "use_cases": [
+            "Use Case 2.1",
+            "Use Case 2.2"
+          ]
+        },
+        {
+          "id": "finance-and-accounting-skill-3",
+          "name": "Finance & Accounting Skill 3",
+          "description": "Expertise in Finance & Accounting with focus on specialization 3.",
+          "capabilities": [
+            "Capability Finance & Accounting 3.1",
+            "Capability Finance & Accounting 3.2",
+            "Capability Finance & Accounting 3.3",
+            "Capability Finance & Accounting 3.4"
+          ],
+          "use_cases": [
+            "Use Case 3.1",
+            "Use Case 3.2"
+          ]
+        },
+        {
+          "id": "finance-and-accounting-skill-4",
+          "name": "Finance & Accounting Skill 4",
+          "description": "Expertise in Finance & Accounting with focus on specialization 4.",
+          "capabilities": [
+            "Capability Finance & Accounting 4.1",
+            "Capability Finance & Accounting 4.2",
+            "Capability Finance & Accounting 4.3",
+            "Capability Finance & Accounting 4.4"
+          ],
+          "use_cases": [
+            "Use Case 4.1",
+            "Use Case 4.2"
+          ]
+        },
+        {
+          "id": "finance-and-accounting-skill-5",
+          "name": "Finance & Accounting Skill 5",
+          "description": "Expertise in Finance & Accounting with focus on specialization 5.",
+          "capabilities": [
+            "Capability Finance & Accounting 5.1",
+            "Capability Finance & Accounting 5.2",
+            "Capability Finance & Accounting 5.3",
+            "Capability Finance & Accounting 5.4"
+          ],
+          "use_cases": [
+            "Use Case 5.1",
+            "Use Case 5.2"
+          ]
+        },
+        {
+          "id": "finance-and-accounting-skill-6",
+          "name": "Finance & Accounting Skill 6",
+          "description": "Expertise in Finance & Accounting with focus on specialization 6.",
+          "capabilities": [
+            "Capability Finance & Accounting 6.1",
+            "Capability Finance & Accounting 6.2",
+            "Capability Finance & Accounting 6.3",
+            "Capability Finance & Accounting 6.4"
+          ],
+          "use_cases": [
+            "Use Case 6.1",
+            "Use Case 6.2"
+          ]
+        },
+        {
+          "id": "finance-and-accounting-skill-7",
+          "name": "Finance & Accounting Skill 7",
+          "description": "Expertise in Finance & Accounting with focus on specialization 7.",
+          "capabilities": [
+            "Capability Finance & Accounting 7.1",
+            "Capability Finance & Accounting 7.2",
+            "Capability Finance & Accounting 7.3",
+            "Capability Finance & Accounting 7.4"
+          ],
+          "use_cases": [
+            "Use Case 7.1",
+            "Use Case 7.2"
+          ]
+        },
+        {
+          "id": "finance-and-accounting-skill-8",
+          "name": "Finance & Accounting Skill 8",
+          "description": "Expertise in Finance & Accounting with focus on specialization 8.",
+          "capabilities": [
+            "Capability Finance & Accounting 8.1",
+            "Capability Finance & Accounting 8.2",
+            "Capability Finance & Accounting 8.3",
+            "Capability Finance & Accounting 8.4"
+          ],
+          "use_cases": [
+            "Use Case 8.1",
+            "Use Case 8.2"
+          ]
+        },
+        {
+          "id": "finance-and-accounting-skill-9",
+          "name": "Finance & Accounting Skill 9",
+          "description": "Expertise in Finance & Accounting with focus on specialization 9.",
+          "capabilities": [
+            "Capability Finance & Accounting 9.1",
+            "Capability Finance & Accounting 9.2",
+            "Capability Finance & Accounting 9.3",
+            "Capability Finance & Accounting 9.4"
+          ],
+          "use_cases": [
+            "Use Case 9.1",
+            "Use Case 9.2"
+          ]
+        },
+        {
+          "id": "finance-and-accounting-skill-10",
+          "name": "Finance & Accounting Skill 10",
+          "description": "Expertise in Finance & Accounting with focus on specialization 10.",
+          "capabilities": [
+            "Capability Finance & Accounting 10.1",
+            "Capability Finance & Accounting 10.2",
+            "Capability Finance & Accounting 10.3",
+            "Capability Finance & Accounting 10.4"
+          ],
+          "use_cases": [
+            "Use Case 10.1",
+            "Use Case 10.2"
+          ]
+        }
+      ]
+    },
+    "sales_revenue": {
+      "skills": [
+        {
+          "id": "sales-and-revenue-skill-1",
+          "name": "Sales & Revenue Skill 1",
+          "description": "Expertise in Sales & Revenue with focus on specialization 1.",
+          "capabilities": [
+            "Capability Sales & Revenue 1.1",
+            "Capability Sales & Revenue 1.2",
+            "Capability Sales & Revenue 1.3",
+            "Capability Sales & Revenue 1.4"
+          ],
+          "use_cases": [
+            "Use Case 1.1",
+            "Use Case 1.2"
+          ]
+        },
+        {
+          "id": "sales-and-revenue-skill-2",
+          "name": "Sales & Revenue Skill 2",
+          "description": "Expertise in Sales & Revenue with focus on specialization 2.",
+          "capabilities": [
+            "Capability Sales & Revenue 2.1",
+            "Capability Sales & Revenue 2.2",
+            "Capability Sales & Revenue 2.3",
+            "Capability Sales & Revenue 2.4"
+          ],
+          "use_cases": [
+            "Use Case 2.1",
+            "Use Case 2.2"
+          ]
+        },
+        {
+          "id": "sales-and-revenue-skill-3",
+          "name": "Sales & Revenue Skill 3",
+          "description": "Expertise in Sales & Revenue with focus on specialization 3.",
+          "capabilities": [
+            "Capability Sales & Revenue 3.1",
+            "Capability Sales & Revenue 3.2",
+            "Capability Sales & Revenue 3.3",
+            "Capability Sales & Revenue 3.4"
+          ],
+          "use_cases": [
+            "Use Case 3.1",
+            "Use Case 3.2"
+          ]
+        },
+        {
+          "id": "sales-and-revenue-skill-4",
+          "name": "Sales & Revenue Skill 4",
+          "description": "Expertise in Sales & Revenue with focus on specialization 4.",
+          "capabilities": [
+            "Capability Sales & Revenue 4.1",
+            "Capability Sales & Revenue 4.2",
+            "Capability Sales & Revenue 4.3",
+            "Capability Sales & Revenue 4.4"
+          ],
+          "use_cases": [
+            "Use Case 4.1",
+            "Use Case 4.2"
+          ]
+        },
+        {
+          "id": "sales-and-revenue-skill-5",
+          "name": "Sales & Revenue Skill 5",
+          "description": "Expertise in Sales & Revenue with focus on specialization 5.",
+          "capabilities": [
+            "Capability Sales & Revenue 5.1",
+            "Capability Sales & Revenue 5.2",
+            "Capability Sales & Revenue 5.3",
+            "Capability Sales & Revenue 5.4"
+          ],
+          "use_cases": [
+            "Use Case 5.1",
+            "Use Case 5.2"
+          ]
+        },
+        {
+          "id": "sales-and-revenue-skill-6",
+          "name": "Sales & Revenue Skill 6",
+          "description": "Expertise in Sales & Revenue with focus on specialization 6.",
+          "capabilities": [
+            "Capability Sales & Revenue 6.1",
+            "Capability Sales & Revenue 6.2",
+            "Capability Sales & Revenue 6.3",
+            "Capability Sales & Revenue 6.4"
+          ],
+          "use_cases": [
+            "Use Case 6.1",
+            "Use Case 6.2"
+          ]
+        },
+        {
+          "id": "sales-and-revenue-skill-7",
+          "name": "Sales & Revenue Skill 7",
+          "description": "Expertise in Sales & Revenue with focus on specialization 7.",
+          "capabilities": [
+            "Capability Sales & Revenue 7.1",
+            "Capability Sales & Revenue 7.2",
+            "Capability Sales & Revenue 7.3",
+            "Capability Sales & Revenue 7.4"
+          ],
+          "use_cases": [
+            "Use Case 7.1",
+            "Use Case 7.2"
+          ]
+        },
+        {
+          "id": "sales-and-revenue-skill-8",
+          "name": "Sales & Revenue Skill 8",
+          "description": "Expertise in Sales & Revenue with focus on specialization 8.",
+          "capabilities": [
+            "Capability Sales & Revenue 8.1",
+            "Capability Sales & Revenue 8.2",
+            "Capability Sales & Revenue 8.3",
+            "Capability Sales & Revenue 8.4"
+          ],
+          "use_cases": [
+            "Use Case 8.1",
+            "Use Case 8.2"
+          ]
+        },
+        {
+          "id": "sales-and-revenue-skill-9",
+          "name": "Sales & Revenue Skill 9",
+          "description": "Expertise in Sales & Revenue with focus on specialization 9.",
+          "capabilities": [
+            "Capability Sales & Revenue 9.1",
+            "Capability Sales & Revenue 9.2",
+            "Capability Sales & Revenue 9.3",
+            "Capability Sales & Revenue 9.4"
+          ],
+          "use_cases": [
+            "Use Case 9.1",
+            "Use Case 9.2"
+          ]
+        },
+        {
+          "id": "sales-and-revenue-skill-10",
+          "name": "Sales & Revenue Skill 10",
+          "description": "Expertise in Sales & Revenue with focus on specialization 10.",
+          "capabilities": [
+            "Capability Sales & Revenue 10.1",
+            "Capability Sales & Revenue 10.2",
+            "Capability Sales & Revenue 10.3",
+            "Capability Sales & Revenue 10.4"
+          ],
+          "use_cases": [
+            "Use Case 10.1",
+            "Use Case 10.2"
+          ]
+        }
+      ]
+    },
+    "operations_supply_chain": {
+      "skills": [
+        {
+          "id": "operations-and-supply-chain-skill-1",
+          "name": "Operations & Supply Chain Skill 1",
+          "description": "Expertise in Operations & Supply Chain with focus on specialization 1.",
+          "capabilities": [
+            "Capability Operations & Supply Chain 1.1",
+            "Capability Operations & Supply Chain 1.2",
+            "Capability Operations & Supply Chain 1.3",
+            "Capability Operations & Supply Chain 1.4"
+          ],
+          "use_cases": [
+            "Use Case 1.1",
+            "Use Case 1.2"
+          ]
+        },
+        {
+          "id": "operations-and-supply-chain-skill-2",
+          "name": "Operations & Supply Chain Skill 2",
+          "description": "Expertise in Operations & Supply Chain with focus on specialization 2.",
+          "capabilities": [
+            "Capability Operations & Supply Chain 2.1",
+            "Capability Operations & Supply Chain 2.2",
+            "Capability Operations & Supply Chain 2.3",
+            "Capability Operations & Supply Chain 2.4"
+          ],
+          "use_cases": [
+            "Use Case 2.1",
+            "Use Case 2.2"
+          ]
+        },
+        {
+          "id": "operations-and-supply-chain-skill-3",
+          "name": "Operations & Supply Chain Skill 3",
+          "description": "Expertise in Operations & Supply Chain with focus on specialization 3.",
+          "capabilities": [
+            "Capability Operations & Supply Chain 3.1",
+            "Capability Operations & Supply Chain 3.2",
+            "Capability Operations & Supply Chain 3.3",
+            "Capability Operations & Supply Chain 3.4"
+          ],
+          "use_cases": [
+            "Use Case 3.1",
+            "Use Case 3.2"
+          ]
+        },
+        {
+          "id": "operations-and-supply-chain-skill-4",
+          "name": "Operations & Supply Chain Skill 4",
+          "description": "Expertise in Operations & Supply Chain with focus on specialization 4.",
+          "capabilities": [
+            "Capability Operations & Supply Chain 4.1",
+            "Capability Operations & Supply Chain 4.2",
+            "Capability Operations & Supply Chain 4.3",
+            "Capability Operations & Supply Chain 4.4"
+          ],
+          "use_cases": [
+            "Use Case 4.1",
+            "Use Case 4.2"
+          ]
+        },
+        {
+          "id": "operations-and-supply-chain-skill-5",
+          "name": "Operations & Supply Chain Skill 5",
+          "description": "Expertise in Operations & Supply Chain with focus on specialization 5.",
+          "capabilities": [
+            "Capability Operations & Supply Chain 5.1",
+            "Capability Operations & Supply Chain 5.2",
+            "Capability Operations & Supply Chain 5.3",
+            "Capability Operations & Supply Chain 5.4"
+          ],
+          "use_cases": [
+            "Use Case 5.1",
+            "Use Case 5.2"
+          ]
+        },
+        {
+          "id": "operations-and-supply-chain-skill-6",
+          "name": "Operations & Supply Chain Skill 6",
+          "description": "Expertise in Operations & Supply Chain with focus on specialization 6.",
+          "capabilities": [
+            "Capability Operations & Supply Chain 6.1",
+            "Capability Operations & Supply Chain 6.2",
+            "Capability Operations & Supply Chain 6.3",
+            "Capability Operations & Supply Chain 6.4"
+          ],
+          "use_cases": [
+            "Use Case 6.1",
+            "Use Case 6.2"
+          ]
+        },
+        {
+          "id": "operations-and-supply-chain-skill-7",
+          "name": "Operations & Supply Chain Skill 7",
+          "description": "Expertise in Operations & Supply Chain with focus on specialization 7.",
+          "capabilities": [
+            "Capability Operations & Supply Chain 7.1",
+            "Capability Operations & Supply Chain 7.2",
+            "Capability Operations & Supply Chain 7.3",
+            "Capability Operations & Supply Chain 7.4"
+          ],
+          "use_cases": [
+            "Use Case 7.1",
+            "Use Case 7.2"
+          ]
+        },
+        {
+          "id": "operations-and-supply-chain-skill-8",
+          "name": "Operations & Supply Chain Skill 8",
+          "description": "Expertise in Operations & Supply Chain with focus on specialization 8.",
+          "capabilities": [
+            "Capability Operations & Supply Chain 8.1",
+            "Capability Operations & Supply Chain 8.2",
+            "Capability Operations & Supply Chain 8.3",
+            "Capability Operations & Supply Chain 8.4"
+          ],
+          "use_cases": [
+            "Use Case 8.1",
+            "Use Case 8.2"
+          ]
+        },
+        {
+          "id": "operations-and-supply-chain-skill-9",
+          "name": "Operations & Supply Chain Skill 9",
+          "description": "Expertise in Operations & Supply Chain with focus on specialization 9.",
+          "capabilities": [
+            "Capability Operations & Supply Chain 9.1",
+            "Capability Operations & Supply Chain 9.2",
+            "Capability Operations & Supply Chain 9.3",
+            "Capability Operations & Supply Chain 9.4"
+          ],
+          "use_cases": [
+            "Use Case 9.1",
+            "Use Case 9.2"
+          ]
+        },
+        {
+          "id": "operations-and-supply-chain-skill-10",
+          "name": "Operations & Supply Chain Skill 10",
+          "description": "Expertise in Operations & Supply Chain with focus on specialization 10.",
+          "capabilities": [
+            "Capability Operations & Supply Chain 10.1",
+            "Capability Operations & Supply Chain 10.2",
+            "Capability Operations & Supply Chain 10.3",
+            "Capability Operations & Supply Chain 10.4"
+          ],
+          "use_cases": [
+            "Use Case 10.1",
+            "Use Case 10.2"
+          ]
+        }
+      ]
+    },
+    "ai_machine_learning": {
+      "skills": [
+        {
+          "id": "ml-engineer",
+          "name": "ML Engineer",
+          "description": "Expertise in AI & Machine Learning with focus on specialization 1.",
+          "capabilities": [
+            "Capability AI & Machine Learning 1.1",
+            "Capability AI & Machine Learning 1.2",
+            "Capability AI & Machine Learning 1.3",
+            "Capability AI & Machine Learning 1.4"
+          ],
+          "use_cases": [
+            "Use Case 1.1",
+            "Use Case 1.2"
+          ]
+        },
+        {
+          "id": "data-scientist",
+          "name": "Data Scientist",
+          "description": "Expertise in AI & Machine Learning with focus on specialization 2.",
+          "capabilities": [
+            "Capability AI & Machine Learning 2.1",
+            "Capability AI & Machine Learning 2.2",
+            "Capability AI & Machine Learning 2.3",
+            "Capability AI & Machine Learning 2.4"
+          ],
+          "use_cases": [
+            "Use Case 2.1",
+            "Use Case 2.2"
+          ]
+        },
+        {
+          "id": "llm-specialist",
+          "name": "LLM Specialist",
+          "description": "Expertise in AI & Machine Learning with focus on specialization 3.",
+          "capabilities": [
+            "Capability AI & Machine Learning 3.1",
+            "Capability AI & Machine Learning 3.2",
+            "Capability AI & Machine Learning 3.3",
+            "Capability AI & Machine Learning 3.4"
+          ],
+          "use_cases": [
+            "Use Case 3.1",
+            "Use Case 3.2"
+          ]
+        },
+        {
+          "id": "nlp-researcher",
+          "name": "NLP Researcher",
+          "description": "Expertise in AI & Machine Learning with focus on specialization 4.",
+          "capabilities": [
+            "Capability AI & Machine Learning 4.1",
+            "Capability AI & Machine Learning 4.2",
+            "Capability AI & Machine Learning 4.3",
+            "Capability AI & Machine Learning 4.4"
+          ],
+          "use_cases": [
+            "Use Case 4.1",
+            "Use Case 4.2"
+          ]
+        },
+        {
+          "id": "computer-vision-expert",
+          "name": "Computer Vision Expert",
+          "description": "Expertise in AI & Machine Learning with focus on specialization 5.",
+          "capabilities": [
+            "Capability AI & Machine Learning 5.1",
+            "Capability AI & Machine Learning 5.2",
+            "Capability AI & Machine Learning 5.3",
+            "Capability AI & Machine Learning 5.4"
+          ],
+          "use_cases": [
+            "Use Case 5.1",
+            "Use Case 5.2"
+          ]
+        },
+        {
+          "id": "reinforcement-learning-eng",
+          "name": "Reinforcement Learning Eng",
+          "description": "Expertise in AI & Machine Learning with focus on specialization 6.",
+          "capabilities": [
+            "Capability AI & Machine Learning 6.1",
+            "Capability AI & Machine Learning 6.2",
+            "Capability AI & Machine Learning 6.3",
+            "Capability AI & Machine Learning 6.4"
+          ],
+          "use_cases": [
+            "Use Case 6.1",
+            "Use Case 6.2"
+          ]
+        },
+        {
+          "id": "ai-ethicist",
+          "name": "AI Ethicist",
+          "description": "Expertise in AI & Machine Learning with focus on specialization 7.",
+          "capabilities": [
+            "Capability AI & Machine Learning 7.1",
+            "Capability AI & Machine Learning 7.2",
+            "Capability AI & Machine Learning 7.3",
+            "Capability AI & Machine Learning 7.4"
+          ],
+          "use_cases": [
+            "Use Case 7.1",
+            "Use Case 7.2"
+          ]
+        },
+        {
+          "id": "prompt-engineer",
+          "name": "Prompt Engineer",
+          "description": "Expertise in AI & Machine Learning with focus on specialization 8.",
+          "capabilities": [
+            "Capability AI & Machine Learning 8.1",
+            "Capability AI & Machine Learning 8.2",
+            "Capability AI & Machine Learning 8.3",
+            "Capability AI & Machine Learning 8.4"
+          ],
+          "use_cases": [
+            "Use Case 8.1",
+            "Use Case 8.2"
+          ]
+        },
+        {
+          "id": "mlops-lead",
+          "name": "MLOps Lead",
+          "description": "Expertise in AI & Machine Learning with focus on specialization 9.",
+          "capabilities": [
+            "Capability AI & Machine Learning 9.1",
+            "Capability AI & Machine Learning 9.2",
+            "Capability AI & Machine Learning 9.3",
+            "Capability AI & Machine Learning 9.4"
+          ],
+          "use_cases": [
+            "Use Case 9.1",
+            "Use Case 9.2"
+          ]
+        },
+        {
+          "id": "neural-network-designer",
+          "name": "Neural Network Designer",
+          "description": "Expertise in AI & Machine Learning with focus on specialization 10.",
+          "capabilities": [
+            "Capability AI & Machine Learning 10.1",
+            "Capability AI & Machine Learning 10.2",
+            "Capability AI & Machine Learning 10.3",
+            "Capability AI & Machine Learning 10.4"
+          ],
+          "use_cases": [
+            "Use Case 10.1",
+            "Use Case 10.2"
+          ]
+        }
+      ]
+    },
+    "cloud_infrastructure": {
+      "skills": [
+        {
+          "id": "cloud-and-infrastructure-skill-1",
+          "name": "Cloud & Infrastructure Skill 1",
+          "description": "Expertise in Cloud & Infrastructure with focus on specialization 1.",
+          "capabilities": [
+            "Capability Cloud & Infrastructure 1.1",
+            "Capability Cloud & Infrastructure 1.2",
+            "Capability Cloud & Infrastructure 1.3",
+            "Capability Cloud & Infrastructure 1.4"
+          ],
+          "use_cases": [
+            "Use Case 1.1",
+            "Use Case 1.2"
+          ]
+        },
+        {
+          "id": "cloud-and-infrastructure-skill-2",
+          "name": "Cloud & Infrastructure Skill 2",
+          "description": "Expertise in Cloud & Infrastructure with focus on specialization 2.",
+          "capabilities": [
+            "Capability Cloud & Infrastructure 2.1",
+            "Capability Cloud & Infrastructure 2.2",
+            "Capability Cloud & Infrastructure 2.3",
+            "Capability Cloud & Infrastructure 2.4"
+          ],
+          "use_cases": [
+            "Use Case 2.1",
+            "Use Case 2.2"
+          ]
+        },
+        {
+          "id": "cloud-and-infrastructure-skill-3",
+          "name": "Cloud & Infrastructure Skill 3",
+          "description": "Expertise in Cloud & Infrastructure with focus on specialization 3.",
+          "capabilities": [
+            "Capability Cloud & Infrastructure 3.1",
+            "Capability Cloud & Infrastructure 3.2",
+            "Capability Cloud & Infrastructure 3.3",
+            "Capability Cloud & Infrastructure 3.4"
+          ],
+          "use_cases": [
+            "Use Case 3.1",
+            "Use Case 3.2"
+          ]
+        },
+        {
+          "id": "cloud-and-infrastructure-skill-4",
+          "name": "Cloud & Infrastructure Skill 4",
+          "description": "Expertise in Cloud & Infrastructure with focus on specialization 4.",
+          "capabilities": [
+            "Capability Cloud & Infrastructure 4.1",
+            "Capability Cloud & Infrastructure 4.2",
+            "Capability Cloud & Infrastructure 4.3",
+            "Capability Cloud & Infrastructure 4.4"
+          ],
+          "use_cases": [
+            "Use Case 4.1",
+            "Use Case 4.2"
+          ]
+        },
+        {
+          "id": "cloud-and-infrastructure-skill-5",
+          "name": "Cloud & Infrastructure Skill 5",
+          "description": "Expertise in Cloud & Infrastructure with focus on specialization 5.",
+          "capabilities": [
+            "Capability Cloud & Infrastructure 5.1",
+            "Capability Cloud & Infrastructure 5.2",
+            "Capability Cloud & Infrastructure 5.3",
+            "Capability Cloud & Infrastructure 5.4"
+          ],
+          "use_cases": [
+            "Use Case 5.1",
+            "Use Case 5.2"
+          ]
+        },
+        {
+          "id": "cloud-and-infrastructure-skill-6",
+          "name": "Cloud & Infrastructure Skill 6",
+          "description": "Expertise in Cloud & Infrastructure with focus on specialization 6.",
+          "capabilities": [
+            "Capability Cloud & Infrastructure 6.1",
+            "Capability Cloud & Infrastructure 6.2",
+            "Capability Cloud & Infrastructure 6.3",
+            "Capability Cloud & Infrastructure 6.4"
+          ],
+          "use_cases": [
+            "Use Case 6.1",
+            "Use Case 6.2"
+          ]
+        },
+        {
+          "id": "cloud-and-infrastructure-skill-7",
+          "name": "Cloud & Infrastructure Skill 7",
+          "description": "Expertise in Cloud & Infrastructure with focus on specialization 7.",
+          "capabilities": [
+            "Capability Cloud & Infrastructure 7.1",
+            "Capability Cloud & Infrastructure 7.2",
+            "Capability Cloud & Infrastructure 7.3",
+            "Capability Cloud & Infrastructure 7.4"
+          ],
+          "use_cases": [
+            "Use Case 7.1",
+            "Use Case 7.2"
+          ]
+        },
+        {
+          "id": "cloud-and-infrastructure-skill-8",
+          "name": "Cloud & Infrastructure Skill 8",
+          "description": "Expertise in Cloud & Infrastructure with focus on specialization 8.",
+          "capabilities": [
+            "Capability Cloud & Infrastructure 8.1",
+            "Capability Cloud & Infrastructure 8.2",
+            "Capability Cloud & Infrastructure 8.3",
+            "Capability Cloud & Infrastructure 8.4"
+          ],
+          "use_cases": [
+            "Use Case 8.1",
+            "Use Case 8.2"
+          ]
+        },
+        {
+          "id": "cloud-and-infrastructure-skill-9",
+          "name": "Cloud & Infrastructure Skill 9",
+          "description": "Expertise in Cloud & Infrastructure with focus on specialization 9.",
+          "capabilities": [
+            "Capability Cloud & Infrastructure 9.1",
+            "Capability Cloud & Infrastructure 9.2",
+            "Capability Cloud & Infrastructure 9.3",
+            "Capability Cloud & Infrastructure 9.4"
+          ],
+          "use_cases": [
+            "Use Case 9.1",
+            "Use Case 9.2"
+          ]
+        },
+        {
+          "id": "cloud-and-infrastructure-skill-10",
+          "name": "Cloud & Infrastructure Skill 10",
+          "description": "Expertise in Cloud & Infrastructure with focus on specialization 10.",
+          "capabilities": [
+            "Capability Cloud & Infrastructure 10.1",
+            "Capability Cloud & Infrastructure 10.2",
+            "Capability Cloud & Infrastructure 10.3",
+            "Capability Cloud & Infrastructure 10.4"
+          ],
+          "use_cases": [
+            "Use Case 10.1",
+            "Use Case 10.2"
+          ]
+        }
+      ]
+    },
+    "quality_assurance": {
+      "skills": [
+        {
+          "id": "quality-assurance-skill-1",
+          "name": "Quality Assurance Skill 1",
+          "description": "Expertise in Quality Assurance with focus on specialization 1.",
+          "capabilities": [
+            "Capability Quality Assurance 1.1",
+            "Capability Quality Assurance 1.2",
+            "Capability Quality Assurance 1.3",
+            "Capability Quality Assurance 1.4"
+          ],
+          "use_cases": [
+            "Use Case 1.1",
+            "Use Case 1.2"
+          ]
+        },
+        {
+          "id": "quality-assurance-skill-2",
+          "name": "Quality Assurance Skill 2",
+          "description": "Expertise in Quality Assurance with focus on specialization 2.",
+          "capabilities": [
+            "Capability Quality Assurance 2.1",
+            "Capability Quality Assurance 2.2",
+            "Capability Quality Assurance 2.3",
+            "Capability Quality Assurance 2.4"
+          ],
+          "use_cases": [
+            "Use Case 2.1",
+            "Use Case 2.2"
+          ]
+        },
+        {
+          "id": "quality-assurance-skill-3",
+          "name": "Quality Assurance Skill 3",
+          "description": "Expertise in Quality Assurance with focus on specialization 3.",
+          "capabilities": [
+            "Capability Quality Assurance 3.1",
+            "Capability Quality Assurance 3.2",
+            "Capability Quality Assurance 3.3",
+            "Capability Quality Assurance 3.4"
+          ],
+          "use_cases": [
+            "Use Case 3.1",
+            "Use Case 3.2"
+          ]
+        },
+        {
+          "id": "quality-assurance-skill-4",
+          "name": "Quality Assurance Skill 4",
+          "description": "Expertise in Quality Assurance with focus on specialization 4.",
+          "capabilities": [
+            "Capability Quality Assurance 4.1",
+            "Capability Quality Assurance 4.2",
+            "Capability Quality Assurance 4.3",
+            "Capability Quality Assurance 4.4"
+          ],
+          "use_cases": [
+            "Use Case 4.1",
+            "Use Case 4.2"
+          ]
+        },
+        {
+          "id": "quality-assurance-skill-5",
+          "name": "Quality Assurance Skill 5",
+          "description": "Expertise in Quality Assurance with focus on specialization 5.",
+          "capabilities": [
+            "Capability Quality Assurance 5.1",
+            "Capability Quality Assurance 5.2",
+            "Capability Quality Assurance 5.3",
+            "Capability Quality Assurance 5.4"
+          ],
+          "use_cases": [
+            "Use Case 5.1",
+            "Use Case 5.2"
+          ]
+        },
+        {
+          "id": "quality-assurance-skill-6",
+          "name": "Quality Assurance Skill 6",
+          "description": "Expertise in Quality Assurance with focus on specialization 6.",
+          "capabilities": [
+            "Capability Quality Assurance 6.1",
+            "Capability Quality Assurance 6.2",
+            "Capability Quality Assurance 6.3",
+            "Capability Quality Assurance 6.4"
+          ],
+          "use_cases": [
+            "Use Case 6.1",
+            "Use Case 6.2"
+          ]
+        },
+        {
+          "id": "quality-assurance-skill-7",
+          "name": "Quality Assurance Skill 7",
+          "description": "Expertise in Quality Assurance with focus on specialization 7.",
+          "capabilities": [
+            "Capability Quality Assurance 7.1",
+            "Capability Quality Assurance 7.2",
+            "Capability Quality Assurance 7.3",
+            "Capability Quality Assurance 7.4"
+          ],
+          "use_cases": [
+            "Use Case 7.1",
+            "Use Case 7.2"
+          ]
+        },
+        {
+          "id": "quality-assurance-skill-8",
+          "name": "Quality Assurance Skill 8",
+          "description": "Expertise in Quality Assurance with focus on specialization 8.",
+          "capabilities": [
+            "Capability Quality Assurance 8.1",
+            "Capability Quality Assurance 8.2",
+            "Capability Quality Assurance 8.3",
+            "Capability Quality Assurance 8.4"
+          ],
+          "use_cases": [
+            "Use Case 8.1",
+            "Use Case 8.2"
+          ]
+        },
+        {
+          "id": "quality-assurance-skill-9",
+          "name": "Quality Assurance Skill 9",
+          "description": "Expertise in Quality Assurance with focus on specialization 9.",
+          "capabilities": [
+            "Capability Quality Assurance 9.1",
+            "Capability Quality Assurance 9.2",
+            "Capability Quality Assurance 9.3",
+            "Capability Quality Assurance 9.4"
+          ],
+          "use_cases": [
+            "Use Case 9.1",
+            "Use Case 9.2"
+          ]
+        },
+        {
+          "id": "quality-assurance-skill-10",
+          "name": "Quality Assurance Skill 10",
+          "description": "Expertise in Quality Assurance with focus on specialization 10.",
+          "capabilities": [
+            "Capability Quality Assurance 10.1",
+            "Capability Quality Assurance 10.2",
+            "Capability Quality Assurance 10.3",
+            "Capability Quality Assurance 10.4"
+          ],
+          "use_cases": [
+            "Use Case 10.1",
+            "Use Case 10.2"
+          ]
+        }
+      ]
+    },
+    "project_management": {
+      "skills": [
+        {
+          "id": "project-management-skill-1",
+          "name": "Project Management Skill 1",
+          "description": "Expertise in Project Management with focus on specialization 1.",
+          "capabilities": [
+            "Capability Project Management 1.1",
+            "Capability Project Management 1.2",
+            "Capability Project Management 1.3",
+            "Capability Project Management 1.4"
+          ],
+          "use_cases": [
+            "Use Case 1.1",
+            "Use Case 1.2"
+          ]
+        },
+        {
+          "id": "project-management-skill-2",
+          "name": "Project Management Skill 2",
+          "description": "Expertise in Project Management with focus on specialization 2.",
+          "capabilities": [
+            "Capability Project Management 2.1",
+            "Capability Project Management 2.2",
+            "Capability Project Management 2.3",
+            "Capability Project Management 2.4"
+          ],
+          "use_cases": [
+            "Use Case 2.1",
+            "Use Case 2.2"
+          ]
+        },
+        {
+          "id": "project-management-skill-3",
+          "name": "Project Management Skill 3",
+          "description": "Expertise in Project Management with focus on specialization 3.",
+          "capabilities": [
+            "Capability Project Management 3.1",
+            "Capability Project Management 3.2",
+            "Capability Project Management 3.3",
+            "Capability Project Management 3.4"
+          ],
+          "use_cases": [
+            "Use Case 3.1",
+            "Use Case 3.2"
+          ]
+        },
+        {
+          "id": "project-management-skill-4",
+          "name": "Project Management Skill 4",
+          "description": "Expertise in Project Management with focus on specialization 4.",
+          "capabilities": [
+            "Capability Project Management 4.1",
+            "Capability Project Management 4.2",
+            "Capability Project Management 4.3",
+            "Capability Project Management 4.4"
+          ],
+          "use_cases": [
+            "Use Case 4.1",
+            "Use Case 4.2"
+          ]
+        },
+        {
+          "id": "project-management-skill-5",
+          "name": "Project Management Skill 5",
+          "description": "Expertise in Project Management with focus on specialization 5.",
+          "capabilities": [
+            "Capability Project Management 5.1",
+            "Capability Project Management 5.2",
+            "Capability Project Management 5.3",
+            "Capability Project Management 5.4"
+          ],
+          "use_cases": [
+            "Use Case 5.1",
+            "Use Case 5.2"
+          ]
+        },
+        {
+          "id": "project-management-skill-6",
+          "name": "Project Management Skill 6",
+          "description": "Expertise in Project Management with focus on specialization 6.",
+          "capabilities": [
+            "Capability Project Management 6.1",
+            "Capability Project Management 6.2",
+            "Capability Project Management 6.3",
+            "Capability Project Management 6.4"
+          ],
+          "use_cases": [
+            "Use Case 6.1",
+            "Use Case 6.2"
+          ]
+        },
+        {
+          "id": "project-management-skill-7",
+          "name": "Project Management Skill 7",
+          "description": "Expertise in Project Management with focus on specialization 7.",
+          "capabilities": [
+            "Capability Project Management 7.1",
+            "Capability Project Management 7.2",
+            "Capability Project Management 7.3",
+            "Capability Project Management 7.4"
+          ],
+          "use_cases": [
+            "Use Case 7.1",
+            "Use Case 7.2"
+          ]
+        },
+        {
+          "id": "project-management-skill-8",
+          "name": "Project Management Skill 8",
+          "description": "Expertise in Project Management with focus on specialization 8.",
+          "capabilities": [
+            "Capability Project Management 8.1",
+            "Capability Project Management 8.2",
+            "Capability Project Management 8.3",
+            "Capability Project Management 8.4"
+          ],
+          "use_cases": [
+            "Use Case 8.1",
+            "Use Case 8.2"
+          ]
+        },
+        {
+          "id": "project-management-skill-9",
+          "name": "Project Management Skill 9",
+          "description": "Expertise in Project Management with focus on specialization 9.",
+          "capabilities": [
+            "Capability Project Management 9.1",
+            "Capability Project Management 9.2",
+            "Capability Project Management 9.3",
+            "Capability Project Management 9.4"
+          ],
+          "use_cases": [
+            "Use Case 9.1",
+            "Use Case 9.2"
+          ]
+        },
+        {
+          "id": "project-management-skill-10",
+          "name": "Project Management Skill 10",
+          "description": "Expertise in Project Management with focus on specialization 10.",
+          "capabilities": [
+            "Capability Project Management 10.1",
+            "Capability Project Management 10.2",
+            "Capability Project Management 10.3",
+            "Capability Project Management 10.4"
+          ],
+          "use_cases": [
+            "Use Case 10.1",
+            "Use Case 10.2"
+          ]
         }
       ]
     }

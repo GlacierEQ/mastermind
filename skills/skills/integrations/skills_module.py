@@ -20,7 +20,7 @@ class SkillsEngine:
     def load_all_data(self):
         """Load all skills data"""
         try:
-            skills_file = self.data_path / "SKILLS_50_COMPLETE.json"
+            skills_file = self.data_path / "SKILLS_200_COMPLETE.json"
             if skills_file.exists():
                 with open(skills_file) as f:
                     self.skills = json.load(f)
