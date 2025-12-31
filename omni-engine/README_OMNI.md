@@ -18,6 +18,7 @@ Omni_Engine is a high-velocity orchestration framework designed to unify dispara
 *   **Repo Operator 2.0**: Automated analysis, completion, and validation protocol.
 
 ### 🛠️ Meta-Forge (The Evolution)
+*   **Omni Agent MCP**: Self-evolving system architect for local device management and Apple ecosystem integration.
 *   **Universal Skill Factory**: Dynamically provisions new capabilities on-demand.
 *   **Universal MCP Factory**: Bridges any OpenAPI spec into a functional MCP server.
 
