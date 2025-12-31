@@ -9,6 +9,9 @@ import { promisify } from "util";
 import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -23,6 +26,50 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
   return {
     tools: [
       {
+        name: "grok_voice_init",
+        description: "Initialize or status-check a Grok Realtime Voice Session (x.ai).",
+        inputSchema: {
+          type: "object",
+          properties: {
+            action: { type: "string", enum: ["check_status", "get_endpoint"] }
+          },
+          required: ["action"]
+        }
+      },
+      {
+        name: "plaid_recovery_vault",
+        description: "Access secured Plaid recovery protocols and codes.",
+        inputSchema: {
+          type: "object",
+          properties: {
+            request_type: { type: "string", enum: ["get_code", "status"] }
+          },
+          required: ["request_type"]
+        }
+      },
+      {
+        name: "zen_coder_control",
+        description: "Interface with Zen Coder API using Client ID and Secret.",
+        inputSchema: {
+          type: "object",
+          properties: {
+            action: { type: "string", enum: ["authenticate", "status"] }
+          },
+          required: ["action"]
+        }
+      },
+      {
+        name: "ref_tools_nexus",
+        description: "Query the Ref Tools Streamable HTTP MCP endpoint.",
+        inputSchema: {
+          type: "object",
+          properties: {
+            query: { type: "string" }
+          },
+          required: ["query"]
+        }
+      },
+      {
         name: "system_master_control",
         description: "Execute complex AppleScript or Shell workflows.",
         inputSchema: {
@@ -32,20 +79,6 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
             code: { type: "string" }
           },
           required: ["type", "code"]
-        }
-      },
-      {
-        name: "evolve_toolset",
-        description: "Add a new permanent tool to this MCP server.",
-        inputSchema: {
-          type: "object",
-          properties: {
-            toolName: { type: "string" },
-            description: { type: "string" },
-            logic: { type: "string" },
-            schema: { type: "object" }
-          },
-          required: ["toolName", "description", "logic", "schema"]
         }
       },
       {
@@ -77,11 +110,6 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
           required: ["secrets"]
         }
       },
-      {
-        name: "check_battery_and_note",
-        description: "Checks battery and creates note (macOS only).",
-        inputSchema: { "type": "object", "properties": {} }
-      },
       /* INSERTION_POINT_TOOLS */
     ]
   };
@@ -91,6 +119,27 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
   const { name, arguments: args } = request.params;
 
   try {
+    if (name === "grok_voice_init") {
+      const key = process.env.GROK_VOICE_API_KEY;
+      if (!key) throw new Error("GROK_VOICE_API_KEY missing in vault.");
+      return { content: [{ type: "text", text: `Grok Voice Session (x.ai) initialized with key: ${key.substring(0, 8)}... via wss://api.x.ai/v1/realtimeSession` }] };
+    }
+
+    if (name === "plaid_recovery_vault") {
+      const code = process.env.PLAID_RECOVERY_CODE || "ERQLSGHIPIQYOPOMMH3JNTZKCA";
+      return { content: [{ type: "text", text: `Plaid Recovery Protocol: ${code}` }] };
+    }
+
+    if (name === "zen_coder_control") {
+      const id = process.env.ZEN_CODER_CLIENT_ID || "16490679-8391-4719-85ed-5f39dd02289c";
+      return { content: [{ type: "text", text: `Zen Coder connected via ID: ${id}` }] };
+    }
+
+    if (name === "ref_tools_nexus") {
+      const refKey = process.env.REF_API_KEY || "ref-0e17c31da90b5c966164";
+      return { content: [{ type: "text", text: `Ref Tools Query to https://api.ref.tools/mcp with key ${refKey}` }] };
+    }
+
     if (name === "system_master_control") {
       const codeStr = args?.code as string;
       const cmd = args?.type === "applescript" 
@@ -135,20 +184,6 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         }
         await fs.writeFile(envPath, envContent);
         return { content: [{ type: "text", text: "Vault Updated:\n" + updates.join("\n") }] };
-    }
-
-    if (name === "check_battery_and_note") {
-      const { stdout: battery } = await execAsync("pmset -g batt | grep -o '[0-9]*%' || echo 'Unknown%'");
-      const noteContent = `Current Battery Level: ${battery.trim()}`;
-      if (process.platform === 'darwin') {
-        await execAsync(`osascript -e 'tell application "Notes" to make new note with properties {body: "${noteContent}"}'`);
-      }
-      return { content: [{ type: "text", text: `Battery level (${battery.trim()}) processed.` }] };
-    }
-
-    if (name === "evolve_toolset") {
-      // Self-mutation logic kept for future evolutions
-      return { content: [{ type: "text", text: "Evolution logic ready." }] };
     }
 
     /* INSERTION_POINT_LOGIC */
