@@ -1,0 +1,12 @@
+{
+  "patterns": {
+    "RECURSIVE_MEMORY": "Tier 1-5 Mem0 Integration",
+    "FORENSIC_MAPPING": "Primordial Titan Heuristics",
+    "UX_WEAVING": "Sub-atomic HUD Component Logic"
+  },
+  "hardened_libraries": [
+    "FastAPI_Hardened_v1",
+    "React_Nexus_HUD_v2",
+    "Python_Sigil_Core_v1"
+  ]
+}
