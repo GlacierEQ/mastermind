@@ -1,0 +1,6 @@
+{
+  "name": "Matrix View",
+  "tier": 3,
+  "visual_style": "Data-Dense Graph Matrix",
+  "intelligence_bridge": "ForensicArchitect_v4"
+}

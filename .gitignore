@@ -17,3 +17,7 @@ __pycache__/
 !omni-engine/**/*.json
 !*.md
 .gcs-sync/
+.env
+server.log
+*.pyc
+__pycache__/

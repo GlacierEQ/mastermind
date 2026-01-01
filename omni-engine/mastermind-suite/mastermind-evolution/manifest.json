@@ -1,0 +1,22 @@
+{
+  "project": "Evolutionary Mastermind",
+  "version": "5.2.0-EVO",
+  "evolutionary_tiers": {
+    "1": "Stealth Mode (Ghost UI)",
+    "2": "Command Mode (Nexus HUD)",
+    "3": "Forensic Mode (Matrix View)",
+    "4": "Universal Mode (Titan Mobile)",
+    "5": "Ecosystem Mode (MCP Integration)",
+    "6": "Operator Mode (Tomahawk API)"
+  },
+  "specialized_ais": [
+    "Forensic Architect",
+    "UI Weaver",
+    "Cloud Nexus",
+    "Logic Engine",
+    "Ecosystem Scout",
+    "Juggernaut Jack (Tomahawk)"
+  ],
+  "mcp_enabled": true,
+  "tomahawk_enabled": true
+}

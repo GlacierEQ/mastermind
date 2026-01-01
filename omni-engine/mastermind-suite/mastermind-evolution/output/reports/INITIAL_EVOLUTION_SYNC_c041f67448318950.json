@@ -1,0 +1,51 @@
+{
+  "mission_id": "INITIAL_EVOLUTION_SYNC",
+  "timestamp": "2025-12-31T21:54:15.703171",
+  "session": "c041f67448318950",
+  "data": {
+    "nodes_found": 23,
+    "artifacts": [
+      {
+        "entity": "Oven",
+        "file": "3_27 court.txt"
+      },
+      {
+        "entity": "Misconduct",
+        "file": "INFORMATION_SUMMARY.txt"
+      },
+      {
+        "entity": "Misconduct",
+        "file": "MEMORY_MCP_SUMMARY.txt"
+      },
+      {
+        "entity": "Oven",
+        "file": "SYSTEMS_VERIFICATION_REPORT.txt"
+      },
+      {
+        "entity": "Misconduct",
+        "file": "SYSTEMS_VERIFICATION_REPORT.txt"
+      },
+      {
+        "entity": "Oven",
+        "file": "XTREME MEMORY.txt"
+      },
+      {
+        "entity": "Misconduct",
+        "file": "XTREME MEMORY.txt"
+      },
+      {
+        "entity": "KKDCB",
+        "file": "report-merged-compressed (1).txt"
+      },
+      {
+        "entity": "Titanium",
+        "file": "report-merged-compressed (1).txt"
+      },
+      {
+        "entity": "Oven",
+        "file": "report-merged-compressed (1).txt"
+      }
+    ],
+    "status": "VERIFIED"
+  }
+}

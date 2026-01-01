@@ -1,0 +1,6 @@
+{
+  "appId": "io.glaciereq.supabasepro",
+  "appName": "Supabase Pro",
+  "webDir": "out",
+  "bundledWebRuntime": false
+}

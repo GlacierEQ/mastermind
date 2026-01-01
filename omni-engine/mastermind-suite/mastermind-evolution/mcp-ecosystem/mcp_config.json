@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "github-nexus": {
+      "command": "node",
+      "args": ["/home/user/github-nexus/index.js"],
+      "env": { "GITHUB_TOKEN": "REDACTED" }
+    },
+    "supabase-pro": {
+      "command": "python3",
+      "args": ["/home/user/supabase-pro/mcp_server.py"],
+      "env": { "SUPABASE_URL": "REDACTED", "SUPABASE_KEY": "REDACTED" }
+    },
+    "apple-mcp": {
+      "command": "node",
+      "args": ["/home/user/apple-mcp/dist/index.js"]
+    }
+  },
+  "nexus_sync": true,
+  "evolutionary_tier": 5
+}
