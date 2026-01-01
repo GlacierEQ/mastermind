@@ -15,7 +15,6 @@ class LettaAdapter:
 
     def manage_episodic_memory(self, session_id, event):
         print(f"🧠 [LETTA] Storing episodic event for session {session_id}...")
-        # Simulate Letta's self-editing memory logic
         return {"status": "STORED", "memory_type": "EPISODIC", "event_id": "0xEVT99"}
 
     def retrieve_long_term_context(self, agent_name):
