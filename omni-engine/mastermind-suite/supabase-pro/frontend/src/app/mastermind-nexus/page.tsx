@@ -18,6 +18,7 @@ import { TomahawkPanel } from "../../components/mastermind/TomahawkPanel";
 import { ChatHistoryHUD } from "../../components/mastermind/ChatHistoryHUD";
 import { ConnectivityMap } from "../../components/mastermind/ConnectivityMap";
 import { Mem0Dashboard } from "../../components/mastermind/Mem0Dashboard";
+import { MemoryHarmony } from "../../components/mastermind/MemoryHarmony"; from "../../components/mastermind/Mem0Dashboard";
 import { KernelStatus } from "../../components/mastermind/KernelStatus"; "../../components/mastermind/Mem0Dashboard";
 import { CoreRepoStatus } from "../../components/mastermind/CoreRepoStatus";
 import { SymbolicMap } from "../../components/mastermind/SymbolicMap";
@@ -75,6 +76,7 @@ export default function MastermindNexusPage() {
             <ConnectivityMap />
             <KernelStatus />
             <Mem0Dashboard />
+            <MemoryHarmony />
             <CoreRepoStatus />
           </div>
 
