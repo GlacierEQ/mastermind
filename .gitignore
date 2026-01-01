@@ -21,3 +21,8 @@ __pycache__/
 server.log
 *.pyc
 __pycache__/
+.env
+.env.local
+server.log
+mastermind-evolution/tomahawk-api/server.log
+.env
