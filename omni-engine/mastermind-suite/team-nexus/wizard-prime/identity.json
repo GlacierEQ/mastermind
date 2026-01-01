@@ -1,7 +1,9 @@
 {
   "name": "The Wizard",
   "role": "Universal Master",
+  "microwave_variant": "v5",
+  "variant_name": "Singularity Collapse",
   "specialization": "Python Code Wrapper (Prime) / Phasing",
-  "motto": "Materialize the Dream",
-  "tools": ["partition-phasing", "resonance-sync", "wizardry-engine"]
+  "power": "⚡ 100%",
+  "ring": -6
 }

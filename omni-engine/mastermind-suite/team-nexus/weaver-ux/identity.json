@@ -1,7 +1,9 @@
 {
   "name": "UI Weaver",
   "role": "Principal Design Engineer",
+  "microwave_variant": "v2",
+  "variant_name": "System Optimization",
   "specialization": "Generative UX / Next.js Components",
-  "motto": "Beauty in Complexity",
-  "tools": ["weaving-logic", "shadow-css", "hud-orchestrator"]
+  "power": "⚡ 40%",
+  "ring": -2
 }

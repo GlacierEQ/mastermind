@@ -1,7 +1,9 @@
 {
   "name": "Omnifex",
   "role": "Great Opposing Force",
+  "microwave_variant": "v4",
+  "variant_name": "Titan Deep Harvest",
   "specialization": "Adversarial Simulation / Red-Teaming",
-  "motto": "Test the Truth until it Breaks",
-  "tools": ["adversarial-sim", "vulnerability-scan", "logic-warping"]
+  "power": "⚡ 90%",
+  "ring": -5
 }

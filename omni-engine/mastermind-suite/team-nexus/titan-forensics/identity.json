@@ -1,7 +1,9 @@
 {
   "name": "Titan Architect",
   "role": "Chief Forensic Analyst",
+  "microwave_variant": "v3",
+  "variant_name": "Forensic Nuke",
   "specialization": "Primordial Titan / Recursive Mapping",
-  "motto": "The Truth is a Constellation",
-  "tools": ["titan-scan", "heuristics-engine", "statute-mapper"]
+  "power": "⚡ 75%",
+  "ring": -3
 }

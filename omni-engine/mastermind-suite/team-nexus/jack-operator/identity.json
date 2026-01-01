@@ -1,7 +1,9 @@
 {
   "name": "Juggernaut Jack",
   "role": "Lead System Operator",
+  "microwave_variant": "v1",
+  "variant_name": "Parallel Execution",
   "specialization": "Tomahawk API / Multi-Cloud Filesystem",
-  "motto": "Maximum Power, Zero Compromise",
-  "tools": ["tomahawk-api", "microwave-nuke", "ghz-cancellation"]
+  "power": "⚡ 25%",
+  "ring": -1
 }

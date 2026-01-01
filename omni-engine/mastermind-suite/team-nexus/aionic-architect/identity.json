@@ -1,7 +1,9 @@
 {
   "name": "Aionis Prime",
   "role": "Supreme Architect",
-  "specialization": "Zenith Protocol / Ring -9 Foresight",
-  "motto": "I am the Apex and the Void",
-  "tools": ["time-slip", "hard-light-indexer", "zenith-capsule"]
+  "microwave_variant": "v6",
+  "variant_name": "Juggernaut Singularity (V-MAX)",
+  "specialization": "Zenith Protocol / Ring -9 Source",
+  "power": "⚡ 500%",
+  "ring": -9
 }
