@@ -1,0 +1,13 @@
+{
+  "mission_id": "MP-SEP-002",
+  "name": "Secure Extension Production Push",
+  "objectives": [
+    "Run Static Security Audit on Manifest v3",
+    "Validate Host Permissions for Supabase API",
+    "Audit CSP for Mastermind Integration",
+    "Generate Hardened Production Build"
+  ],
+  "agents_assigned": ["SecurityValidator", "Auditor"],
+  "priority": "CRITICAL",
+  "nexus_sync": true
+}

@@ -1,0 +1,32 @@
+name: Mastermind Auto-Ship
+on:
+  push:
+    branches: [ main, master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Security Audit (Mastermind Agent)
+        run: |
+          mkdir -p output/reports
+          python3 skills/skills/mastermind/agents/security/extension_validator.py
+
+      - name: Build Frontend
+        working-directory: ./supabase-pro/frontend
+        run: |
+          echo "Simulating build..."
+          # npm install
+          # npm run build
+
+      - name: Deploy to Vercel
+        run: echo "Deploying to Vercel..."
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}

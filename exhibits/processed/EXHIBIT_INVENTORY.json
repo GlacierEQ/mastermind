@@ -31,6 +31,131 @@
     {
       "bates": "EXH-0008-test_evidence_001.txt",
       "hash": "aa2ec8fafa127ff7f4fa0e8f0578172b2f22cab8422b7fb4d377cdcc65a247d5"
+    },
+    {
+      "bates_id": "EXH-0001",
+      "original_name": "REAL_EVIDENCE_001.txt",
+      "processed_name": "EXH-0001-REAL_EVIDENCE_001.txt",
+      "hash": "8dfa96a39e8e560c6e571d4603a21fd3672b24abee6f8b773a196cc600e89ac8",
+      "metadata": {
+        "filename": "REAL_EVIDENCE_001.txt",
+        "size_bytes": 22,
+        "extension": ".txt",
+        "modified": "2025-12-25T08:15:35.178268",
+        "forensic_integrity": "VERIFIED"
+      },
+      "timestamp": "2025-12-31T21:33:07.781104",
+      "status": "PROCESSED_STAMPED"
+    },
+    {
+      "bates_id": "EXH-0002",
+      "original_name": "EXHIBIT_001.txt",
+      "processed_name": "EXH-0002-EXHIBIT_001.txt",
+      "hash": "024af2d969f0d46a814d400dbddba9b9440ccd976dd9dde93bc5deb873c93362",
+      "metadata": {
+        "filename": "EXHIBIT_001.txt",
+        "size_bytes": 69,
+        "extension": ".txt",
+        "modified": "2025-12-25T08:15:35.182268",
+        "forensic_integrity": "VERIFIED"
+      },
+      "timestamp": "2025-12-31T21:33:07.781429",
+      "status": "PROCESSED_STAMPED"
+    },
+    {
+      "bates_id": "EXH-0003",
+      "original_name": "REAL_EVIDENCE_002.pdf",
+      "processed_name": "EXH-0003-REAL_EVIDENCE_002.pdf",
+      "hash": "128d6f10e2a714dc99cf9885bdc75c548b0c2d4b4ab4a908882d5f23094b7072",
+      "metadata": {
+        "filename": "REAL_EVIDENCE_002.pdf",
+        "size_bytes": 22,
+        "extension": ".pdf",
+        "modified": "2025-12-25T08:15:35.198269",
+        "forensic_integrity": "VERIFIED"
+      },
+      "timestamp": "2025-12-31T21:33:07.781752",
+      "status": "PROCESSED_STAMPED"
+    },
+    {
+      "bates_id": "EXH-0004",
+      "original_name": "deep_test.txt",
+      "processed_name": "EXH-0004-deep_test.txt",
+      "hash": "21f5c551987185cd13a9c5993cf070f8f5d686a645bc1a91a0966f00b62e1c86",
+      "metadata": {
+        "filename": "deep_test.txt",
+        "size_bytes": 16,
+        "extension": ".txt",
+        "modified": "2025-12-25T08:15:35.198269",
+        "forensic_integrity": "VERIFIED"
+      },
+      "timestamp": "2025-12-31T21:33:07.782097",
+      "status": "PROCESSED_STAMPED"
+    },
+    {
+      "bates_id": "EXH-0005",
+      "original_name": "intel_001.txt",
+      "processed_name": "EXH-0005-intel_001.txt",
+      "hash": "d775ec940d3e2786c1afa2495a41405be4e6e1f580f17884354514be30a42761",
+      "metadata": {
+        "filename": "intel_001.txt",
+        "size_bytes": 23,
+        "extension": ".txt",
+        "modified": "2025-12-25T08:15:35.198269",
+        "forensic_integrity": "VERIFIED"
+      },
+      "timestamp": "2025-12-31T21:33:07.782343",
+      "status": "PROCESSED_STAMPED"
+    },
+    {
+      "bates_id": "EXH-0006",
+      "original_name": "intel_002.pdf",
+      "processed_name": "EXH-0006-intel_002.pdf",
+      "hash": "ae2a84ceb7845944d6441cd8c210935ce0484026d204e8bd871b99f3301b1793",
+      "metadata": {
+        "filename": "intel_002.pdf",
+        "size_bytes": 10,
+        "extension": ".pdf",
+        "modified": "2025-12-25T08:15:35.202270",
+        "forensic_integrity": "VERIFIED"
+      },
+      "timestamp": "2025-12-31T21:33:07.782584",
+      "status": "PROCESSED_STAMPED"
+    },
+    {
+      "bates_id": "EXH-0007",
+      "original_name": "intel_test.pdf",
+      "processed_name": "EXH-0007-intel_test.pdf",
+      "hash": "b3c43b5b9338d62c7a74ba72cf66bd130e9e0ccce6413ded025c75897830aedd",
+      "metadata": {
+        "filename": "intel_test.pdf",
+        "size_bytes": 23,
+        "extension": ".pdf",
+        "modified": "2025-12-25T08:15:35.202270",
+        "forensic_integrity": "VERIFIED"
+      },
+      "timestamp": "2025-12-31T21:33:07.782855",
+      "status": "PROCESSED_STAMPED"
+    },
+    {
+      "bates_id": "EXH-0008",
+      "original_name": "test_evidence_001.txt",
+      "processed_name": "EXH-0008-test_evidence_001.txt",
+      "hash": "aa2ec8fafa127ff7f4fa0e8f0578172b2f22cab8422b7fb4d377cdcc65a247d5",
+      "metadata": {
+        "filename": "test_evidence_001.txt",
+        "size_bytes": 23,
+        "extension": ".txt",
+        "modified": "2025-12-25T08:15:35.206270",
+        "forensic_integrity": "VERIFIED"
+      },
+      "timestamp": "2025-12-31T21:33:07.783169",
+      "status": "PROCESSED_STAMPED"
     }
-  ]
+  ],
+  "summary": {
+    "total_count": 8,
+    "total_bytes": 208,
+    "last_run": "2025-12-31T21:33:07.783402"
+  }
 }
