@@ -152,7 +152,7 @@ Supabase (Forensic Vault)
 
 #### Constitutional Reasoning (Redundant Models)
 ```
-OpenAI Admin (sk-admin-...)
+OpenAI Admin (REDACTED_KEY-...)
 ├─ GPT-4 with admin access
 ├─ Fine-tuned constitutional reasoning
 ├─ Admin audit logging

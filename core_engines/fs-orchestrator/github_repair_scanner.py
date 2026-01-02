@@ -69,7 +69,7 @@ def build_scanner():
         
         # RECOVERY
         ("Data-Recovery-Framework", "https://github.com/Opryxx/Data-Recovery-Framework", "Data Recovery & Backup", "Data recovery from storage devices", ["data-recovery","storage","forensics"]),
-        ("Partition-Recovery-Tool", "https://github.com/Opryxx/Partition-Recovery-Tool", "Data Recovery & Backup", "Partition recovery and repair", ["partitions","recovery","disk-management"]),
+        ("Partition-Recovery-Tool", "https://github.com/Opryxx/Partition-Recovery-Tool", "Data Recovery & Backup", "Partition recovery and repair", ["partitions","recovery","diREDACTED_KEY"]),
         
         # OS REPAIR
         ("Windows-Repair-Suite", "https://github.com/Opryxx/Windows-Repair-Suite", "OS Repair & Maintenance", "Windows repair and maintenance", ["windows","repair","maintenance"]),
@@ -82,7 +82,7 @@ def build_scanner():
         
         # OPTIMIZATION
         ("Performance-Optimizer", "https://github.com/Opryxx/Performance-Optimizer", "Optimization & Tuning", "System performance optimization", ["optimization","performance","tuning"]),
-        ("Disk-Cleanup-Manager", "https://github.com/Opryxx/Disk-Cleanup-Manager", "Optimization & Tuning", "Disk cleanup and optimization", ["disk-cleanup","storage","optimization"]),
+        ("DiREDACTED_KEY-Manager", "https://github.com/Opryxx/DiREDACTED_KEY-Manager", "Optimization & Tuning", "Disk cleanup and optimization", ["diREDACTED_KEY","storage","optimization"]),
         ("Memory-Manager", "https://github.com/Opryxx/Memory-Manager", "Optimization & Tuning", "RAM optimization and leak detection", ["memory","ram","optimization"]),
         
         # HARDWARE TESTING

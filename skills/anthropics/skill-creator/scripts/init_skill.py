@@ -35,7 +35,7 @@ description: [TODO: Complete and informative explanation of what the skill does 
 - Example: DOCX skill with "Workflow Decision Tree" → "Reading" → "Creating" → "Editing"
 - Structure: ## Overview → ## Workflow Decision Tree → ## Step 1 → ## Step 2...
 
-**2. Task-Based** (best for tool collections)
+**2. TaREDACTED_KEY** (best for tool collections)
 - Works well when the skill offers different operations/capabilities
 - Example: PDF skill with "Quick Start" → "Merge PDFs" → "Split PDFs" → "Extract Text"
 - Structure: ## Overview → ## Quick Start → ## Task Category 1 → ## Task Category 2...
@@ -50,7 +50,7 @@ description: [TODO: Complete and informative explanation of what the skill does 
 - Example: Product Management with "Core Capabilities" → numbered capability list
 - Structure: ## Overview → ## Core Capabilities → ### 1. Feature → ### 2. Feature...
 
-Patterns can be mixed and matched as needed. Most skills combine patterns (e.g., start with task-based, add workflow for complex operations).
+Patterns can be mixed and matched as needed. Most skills combine patterns (e.g., start with taREDACTED_KEY, add workflow for complex operations).
 
 Delete this entire "Structuring This Skill" section when done - it's just guidance.]
 

@@ -50,7 +50,7 @@ ls -la ~/mcp-integration/
 nano ~/mcp-integration/.env
 
 # Add your OpenAI API Key (already included):
-OPENAI_API_KEY=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
+OPENAI_API_KEY=REDACTED_KEY-v1-a42fe281aeabeffd35d774fa3459241887ae81a438ef326550d8aeb18d197c6f
 
 # Add optional API keys:
 JULES_API_KEY=your-jules-key
@@ -183,7 +183,7 @@ chmod +x ~/mcp-integration/servers/*.js
 ```bash
 # Verify API key format
 echo $OPENAI_API_KEY
-# Should start with "sk-or-v1-"
+# Should start with "REDACTED_KEY-v1-"
 
 # Test API key connectivity
 curl -H "Authorization: Bearer $OPENAI_API_KEY" https://api.openai.com/v1/models

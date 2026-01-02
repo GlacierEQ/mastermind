@@ -95,7 +95,7 @@ The SUPERLUMINAL framework proposes three core intelligence categories:
 - High-performance agent workspace
 - Real-time operational memory
 - Rapid context switching
-- Task-specific caching
+- TaREDACTED_KEY caching
 
 ### Long-Term: Supermemory Strategic Vault
 - Persistent memory across sessions

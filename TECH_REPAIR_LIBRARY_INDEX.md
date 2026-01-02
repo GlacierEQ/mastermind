@@ -10,7 +10,7 @@
 
 ### [Partition-Recovery-Tool](https://github.com/Opryxx/Partition-Recovery-Tool)
 - Partition recovery and repair
-- **Tags:** partitions, recovery, disk-management
+- **Tags:** partitions, recovery, diREDACTED_KEY
 
 ## Documentation & Reference (2)
 
@@ -92,9 +92,9 @@
 - System performance optimization
 - **Tags:** optimization, performance, tuning
 
-### [Disk-Cleanup-Manager](https://github.com/Opryxx/Disk-Cleanup-Manager)
+### [DiREDACTED_KEY-Manager](https://github.com/Opryxx/DiREDACTED_KEY-Manager)
 - Disk cleanup and optimization
-- **Tags:** disk-cleanup, storage, optimization
+- **Tags:** diREDACTED_KEY, storage, optimization
 
 ### [Memory-Manager](https://github.com/Opryxx/Memory-Manager)
 - RAM optimization and leak detection

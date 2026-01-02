@@ -632,7 +632,7 @@ export QDRANT_URL="http://localhost:6333"
 # Core APIs
 export GITHUB_TOKEN="[REDACTED]..."
 export NOTION_API_KEY="secret_..."
-export OPENAI_API_KEY="sk-..."
+export OPENAI_API_KEY="REDACTED_KEY..."
 export ANTHROPIC_API_KEY="[REDACTED]..."
 export PERPLEXITY_API_KEY="pplx_..."
 

@@ -89,7 +89,7 @@ This document tracks the consolidation of device repair, forensic, and diagnosti
 
 ---
 
-### 5. disk-recovery
+### 5. diREDACTED_KEY
 **Status**: ✅ **SUPERSEDED BY AGENT 05**  
 **Location**: `agents/05-data-recovery/disk_imaging.py`  
 **Description**: SleuthKit integration  
@@ -174,7 +174,7 @@ gh repo archive GlacierEQ/FEDERAL-FORENSIC-REPAIR-OMNIBUS
 gh repo archive GlacierEQ/Autofix-PC
 gh repo archive GlacierEQ/ULTIMATE-REPAIR-APEX
 gh repo archive GlacierEQ/OPRYXX_LOGS2
-gh repo archive GlacierEQ/disk-recovery
+gh repo archive GlacierEQ/diREDACTED_KEY
 ```
 
 ### Benefits of Archiving

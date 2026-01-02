@@ -733,7 +733,7 @@ curl "https://${ZENDESK_SUBDOMAIN}.zendesk.com/api/v2/tickets.json" \
 - Users API: https://developer.zendesk.com/api-reference/ticketing/users/users/
 - Organizations API: https://developer.zendesk.com/api-reference/ticketing/organizations/organizations/
 - Groups API: https://developer.zendesk.com/api-reference/ticketing/groups/groups/
-- Search API: https://developer.zendesk.com/documentation/ticketing/using-the-zendesk-api/searching-with-the-zendesk-api/
+- Search API: https://developer.zendesk.com/documentation/ticketing/using-the-zendeREDACTED_KEY/searching-with-the-zendeREDACTED_KEY/
 - Rate Limits: https://developer.zendesk.com/api-reference/introduction/rate-limits/
 - Authentication: https://developer.zendesk.com/api-reference/introduction/security-and-auth/
 - Admin Center: https://www.zendesk.com/admin/

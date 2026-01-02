@@ -29,7 +29,7 @@ class RepoForensicScanner:
         print(f"[{self.guid}] Scan complete. Report saved to {self.output_file}")
 
     async def _scan_single_repo(self, repo_name: str):
-        # Simulation of deep content scan for 'sk-', 'REDACTED_GHP', 'api_key', etc.
+        # Simulation of deep content scan for 'REDACTED_KEY', 'REDACTED_GHP', 'api_key', etc.
         # In production, this calls 'mcp github search_code' or 'get_repository_content'
         return None 
 

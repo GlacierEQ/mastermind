@@ -68,7 +68,7 @@ Your tech repair library is organized into **13 strategic categories** spanning 
 ### Optimization & Performance
 ```
 • Performance-Optimizer - System tuning
-• Disk-Cleanup-Manager - Storage optimization
+• DiREDACTED_KEY-Manager - Storage optimization
 • Memory-Manager - RAM management & leaks
 ```
 
@@ -132,7 +132,7 @@ Your tech repair library is organized into **13 strategic categories** spanning 
 ### For System Performance
 1. Use **System-Analyzer** → Identify bottlenecks
 2. Run **Performance-Optimizer** → Optimize settings
-3. Use **Disk-Cleanup-Manager** → Free space
+3. Use **DiREDACTED_KEY-Manager** → Free space
 4. Use **Memory-Manager** → RAM optimization
 
 ### For Security Issues
@@ -222,7 +222,7 @@ python3 tools/github_repair_scanner.py markdown > repair_lib.md
 ```
 1. System-Analyzer → Identify issues
 2. Performance-Optimizer → Apply optimizations
-3. Disk-Cleanup-Manager → Free disk space
+3. DiREDACTED_KEY-Manager → Free disk space
 4. Memory-Manager → Optimize RAM
 5. OPRYXX-Diagnostics → Verify improvements
 ```
