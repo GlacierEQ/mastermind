@@ -107,7 +107,7 @@ mcp supermemory getProjects '{}'
 Then add memory:
 mcp supermemory addMemory '{
   "content": "MCP Ecosystem has 35+ servers. Key gaps: Slack integration, project management (Linear/Jira). Strengths: Rich memory systems, excellent reasoning, strong web tools",
-  "projectId": "sm_project_main"
+  "projectId": "REDACTED_SM_main"
 }'
 SUPER
 

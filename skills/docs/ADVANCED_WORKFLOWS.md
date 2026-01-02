@@ -144,7 +144,7 @@ mcp supermemory getProjects '{}'
 # Then sync:
 mcp supermemory addMemory '{
   "content": "DECISION: Microservices Migration. Status: Approved (Jan 15, 2024). Timeline: 6 months. Budget: $200K. Impact: 40% perf improvement + easier scaling. Architecture: 4 core services (Auth, Payment, Order, Inventory) on Kubernetes. Phase 1 (Feb-Mar): Infra + Auth service. Risks: Service coupling, data consistency. Mitigation: Event sourcing, SAGA pattern, weekly syncs. See Neo4j for full details.",
-  "projectId": "sm_project_engineering"
+  "projectId": "REDACTED_SM_engineering"
 }'
 ```
 
@@ -299,7 +299,7 @@ mcp mem0-private store_memory '{
 ```bash
 mcp supermemory addMemory '{
   "content": "Payment Team Architecture: Handles all transaction logic. Team: Alice (Go/gRPC expert), Bob (Node.js/REST expert), Charlie (DevOps/K8s expert). On-call rotation: Weekly. Dependencies: Auth Service (JWT validation). Technology: Golang, gRPC, PostgreSQL, Stripe integration. Meeting: Mon 10am.",
-  "projectId": "sm_project_teams"
+  "projectId": "REDACTED_SM_teams"
 }'
 ```
 

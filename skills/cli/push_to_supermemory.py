@@ -29,21 +29,21 @@ MAPPING_FILE = ROOT / "SUPERMEMORY_PROJECT_MAPPING.json"
 
 # Fallback mapping if the JSON mapping file is missing
 FALLBACK_MAPPING: Dict[str, Any] = {
-    "default_project": "sm_project_memory_master",
+    "default_project": "REDACTED_SM_memory_master",
     "by_payload_id": {
-        "skills_global_overview": "sm_project_memory_master",
-        "skills_local_implementation": "sm_project_computers",
+        "skills_global_overview": "REDACTED_SM_memory_master",
+        "skills_local_implementation": "REDACTED_SM_computers",
     },
     "by_domain": {
-        "data_analysis": "sm_project_business",
-        "content_creation": "sm_project_business",
-        "development": "sm_project_computers",
-        "productivity": "sm_project_task_scheduled_ops",
-        "strategy": "sm_project_business",
-        "automation": "sm_project_task_scheduled_ops",
-        "communication": "sm_project_business",
-        "learning": "sm_project_memory_master",
-        "integration": "sm_project_computers",
+        "data_analysis": "REDACTED_SM_business",
+        "content_creation": "REDACTED_SM_business",
+        "development": "REDACTED_SM_computers",
+        "productivity": "REDACTED_SM_task_scheduled_ops",
+        "strategy": "REDACTED_SM_business",
+        "automation": "REDACTED_SM_task_scheduled_ops",
+        "communication": "REDACTED_SM_business",
+        "learning": "REDACTED_SM_memory_master",
+        "integration": "REDACTED_SM_computers",
     },
 }
 
@@ -59,7 +59,7 @@ def load_mapping() -> Dict[str, Any]:
 
 def resolve_project_id(item: Dict[str, Any], mapping: Dict[str, Any]) -> str:
     """Decide which Supermemory projectId to use for a given payload item."""
-    default_project = mapping.get("default_project", "sm_project_memory_master")
+    default_project = mapping.get("default_project", "REDACTED_SM_memory_master")
     by_id = mapping.get("by_payload_id", {})
     by_domain = mapping.get("by_domain", {})
 

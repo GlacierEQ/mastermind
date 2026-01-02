@@ -198,13 +198,13 @@ mcp supermemory getProjects '{}'
 # Add memory to project
 mcp supermemory addMemory '{
   "content": "Memory content here",
-  "projectId": "sm_project_main"
+  "projectId": "REDACTED_SM_main"
 }'
 
 # Search memories in project
 mcp supermemory search '{
   "query": "search term",
-  "projectId": "sm_project_main"
+  "projectId": "REDACTED_SM_main"
 }'
 
 # Get current user info

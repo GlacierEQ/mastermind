@@ -30,25 +30,25 @@ This will:
 
 Current mapping (see `SUPERMEMORY_PROJECT_MAPPING.json`):
 
-- **Default project**: `sm_project_memory_master`  
+- **Default project**: `REDACTED_SM_memory_master`  
   Used when nothing more specific is configured.
 
 - **By payload id**:
-  - `skills_global_overview` → `sm_project_memory_master`  
+  - `skills_global_overview` → `REDACTED_SM_memory_master`  
     (High-level overview of the entire Power Skills System.)
-  - `skills_local_implementation` → `sm_project_computers`  
+  - `skills_local_implementation` → `REDACTED_SM_computers`  
     (Workspace-local tools like pdf, gemini, file-organizer, forensics/tools, brainstorming.)
 
 - **By domain** (payload ids like `skills_domain_<domain_key>`):
-  - `data_analysis` → `sm_project_business`
-  - `content_creation` → `sm_project_business`
-  - `development` → `sm_project_computers`
-  - `productivity` → `sm_project_task_scheduled_ops`
-  - `strategy` → `sm_project_business`
-  - `automation` → `sm_project_task_scheduled_ops`
-  - `communication` → `sm_project_business`
-  - `learning` → `sm_project_memory_master`
-  - `integration` → `sm_project_computers`
+  - `data_analysis` → `REDACTED_SM_business`
+  - `content_creation` → `REDACTED_SM_business`
+  - `development` → `REDACTED_SM_computers`
+  - `productivity` → `REDACTED_SM_task_scheduled_ops`
+  - `strategy` → `REDACTED_SM_business`
+  - `automation` → `REDACTED_SM_task_scheduled_ops`
+  - `communication` → `REDACTED_SM_business`
+  - `learning` → `REDACTED_SM_memory_master`
+  - `integration` → `REDACTED_SM_computers`
 
 You can edit `SUPERMEMORY_PROJECT_MAPPING.json` to change any of this before running the push script.
 
@@ -61,7 +61,7 @@ Once the payloads are stored, you can use `supermemory.search` to pull back the 
 ```bash
 mcp supermemory search '{
   "informationToGet": "overview of my Power Skills System and domains",
-  "projectId": "sm_project_memory_master"
+  "projectId": "REDACTED_SM_memory_master"
 }'
 ```
 
@@ -70,7 +70,7 @@ mcp supermemory search '{
 ```bash
 mcp supermemory search '{
   "informationToGet": "my development and engineering skills and how to use them",
-  "projectId": "sm_project_computers"
+  "projectId": "REDACTED_SM_computers"
 }'
 ```
 
@@ -79,7 +79,7 @@ mcp supermemory search '{
 ```bash
 mcp supermemory search '{
   "informationToGet": "automation, workflows, and productivity-related skills",
-  "projectId": "sm_project_task_scheduled_ops"
+  "projectId": "REDACTED_SM_task_scheduled_ops"
 }'
 ```
 
@@ -88,7 +88,7 @@ mcp supermemory search '{
 ```bash
 mcp supermemory search '{
   "informationToGet": "content, marketing, and strategy skills I have defined",
-  "projectId": "sm_project_business"
+  "projectId": "REDACTED_SM_business"
 }'
 ```
 
@@ -97,7 +97,7 @@ mcp supermemory search '{
 ```bash
 mcp supermemory search '{
   "informationToGet": "workspace-local tools and skills like pdf processing, Gemini CLI, file organization, and forensics",
-  "projectId": "sm_project_computers"
+  "projectId": "REDACTED_SM_computers"
 }'
 ```
 

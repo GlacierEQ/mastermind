@@ -54,7 +54,7 @@ Projects Organized By Category:
    ```
    mcp supermemory addMemory '{
      "thingToRemember":"[Case fact]",
-     "projectId":"sm_project_kekoa_"
+     "projectId":"REDACTED_SM_kekoa_"
    }'
    ```
 
@@ -62,7 +62,7 @@ Projects Organized By Category:
    ```
    mcp supermemory search '{
      "informationToGet":"What happened with Judge Naso?",
-     "projectId":"sm_project_judge_naso"
+     "projectId":"REDACTED_SM_judge_naso"
    }'
    ```
 
@@ -235,11 +235,11 @@ npm root -g  # Get npm_modules path
 ### Phase 2: Populate Supermemory (2-3 hours)
 1. Add 25-30 critical case facts to appropriate projects
 2. Focus on:
-   - Judge Naso misconduct (sm_project_judge_naso)
-   - Attorney Brower bad faith (sm_project_scot_stuart_brower)
-   - CSEA bias patterns (sm_project_csea)
-   - Kekoa TRO testimony (sm_project_kekoa_)
-   - Evidence chain (sm_project_evidences)
+   - Judge Naso misconduct (REDACTED_SM_judge_naso)
+   - Attorney Brower bad faith (REDACTED_SM_scot_stuart_brower)
+   - CSEA bias patterns (REDACTED_SM_csea)
+   - Kekoa TRO testimony (REDACTED_SM_kekoa_)
+   - Evidence chain (REDACTED_SM_evidences)
 3. Test search retrieval
 
 ### Phase 3: Populate Memory Plugin (1 hour)
@@ -262,7 +262,7 @@ npm root -g  # Get npm_modules path
 ```bash
 mcp supermemory addMemory '{
   "thingToRemember":"Test 3-system memory activation - all systems operational",
-  "projectId":"sm_project_memory_master"
+  "projectId":"REDACTED_SM_memory_master"
 }'
 ```
 

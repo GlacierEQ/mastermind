@@ -29,41 +29,41 @@
 ## 2. ACTIVE PROJECT INVENTORY
 
 **Legal/Case Projects (15):**
-- sm_project_tros
-- sm_project_judge_naso
-- sm_project_judge_kyle
-- sm_project_judge_shaw
-- sm_project_kekoa_
-- sm_project_scot_stuart_brower
-- sm_project_malpractice_micky_yamatani
-- sm_project_legal_warfare
-- sm_project_labor_dispute_daniel_smith
-- sm_project_systemic_collapse
-- sm_project_nainoa_thefts
-- sm_project_lambert_and_nicholas_
-- sm_project_truck_repo
-- sm_project_erik_breisacher
-- sm_project_justin_higa
+- REDACTED_SM_tros
+- REDACTED_SM_judge_naso
+- REDACTED_SM_judge_kyle
+- REDACTED_SM_judge_shaw
+- REDACTED_SM_kekoa_
+- REDACTED_SM_scot_stuart_brower
+- REDACTED_SM_malpractice_micky_yamatani
+- REDACTED_SM_legal_warfare
+- REDACTED_SM_labor_dispute_daniel_smith
+- REDACTED_SM_systemic_collapse
+- REDACTED_SM_nainoa_thefts
+- REDACTED_SM_lambert_and_nicholas_
+- REDACTED_SM_truck_repo
+- REDACTED_SM_erik_breisacher
+- REDACTED_SM_justin_higa
 
 **Institutional Projects (5):**
-- sm_project_administrative_entities
-- sm_project_csea
-- sm_project_hi-class_home_services
-- sm_project_the_clerks_castillo_and_le
-- sm_project_upstairs_neighbors
+- REDACTED_SM_administrative_entities
+- REDACTED_SM_csea
+- REDACTED_SM_hi-class_home_services
+- REDACTED_SM_the_clerks_castillo_and_le
+- REDACTED_SM_upstairs_neighbors
 
 **Infrastructure/Meta Projects (5):**
-- sm_project_business
-- sm_project_computers
-- sm_project_github
-- sm_project_info_packet
-- sm_project_memory_master
+- REDACTED_SM_business
+- REDACTED_SM_computers
+- REDACTED_SM_github
+- REDACTED_SM_info_packet
+- REDACTED_SM_memory_master
 
 **Thematic Projects (4):**
-- sm_project_evidences
-- sm_project_teresa
-- sm_project_the_aionic_tree
-- sm_project_task_scheduled_ops
+- REDACTED_SM_evidences
+- REDACTED_SM_teresa
+- REDACTED_SM_the_aionic_tree
+- REDACTED_SM_task_scheduled_ops
 
 ---
 
@@ -88,13 +88,13 @@
 # Test memory addition to Kekoa project
 mcp supermemory addMemory '{
   "thingToRemember":"[Case 1FDV-23-0001009] Kekoa TRO - Emotional harm testimony in OFW transcript. Critical evidence: Judge Naso fabricated custody orders, Attorney Brower demonstrated bad faith, CSEA/CWS systematic bias.",
-  "projectId":"sm_project_kekoa_"
+  "projectId":"REDACTED_SM_kekoa_"
 }'
 
 # Attempt retrieval
 mcp supermemory search '{
   "informationToGet":"What documented evidence exists about Kekoa emotional harm and custody order fabrication?",
-  "projectId":"sm_project_kekoa_"
+  "projectId":"REDACTED_SM_kekoa_"
 }'
 ```
 

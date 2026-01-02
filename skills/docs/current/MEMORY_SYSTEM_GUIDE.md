@@ -165,7 +165,7 @@ mcp supermemory whoAmI '<json>'
 ```json
 {
   "query": "MCP ecosystem gaps",
-  "projectId": "sm_project_main"
+  "projectId": "REDACTED_SM_main"
 }
 ```
 

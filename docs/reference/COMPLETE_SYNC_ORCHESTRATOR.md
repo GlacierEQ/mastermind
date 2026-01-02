@@ -188,7 +188,7 @@ echo "🔄 Phase 2: Google Drive sync..."
 echo "📚 Phase 3: Supermemory metadata..."
 mcp supermemory addMemory '{
   "thingToRemember":"GitHub Sync Complete - Commit hash: [HASH]",
-  "projectId":"sm_project_memory_master"
+  "projectId":"REDACTED_SM_memory_master"
 }'
 
 # 4. Notification
@@ -332,7 +332,7 @@ git add -A && git commit -m "Update: [description]" && git push
 # Add sync metadata
 mcp supermemory addMemory '{
   "thingToRemember":"GitHub sync timestamp and commit info",
-  "projectId":"sm_project_memory_master"
+  "projectId":"REDACTED_SM_memory_master"
 }'
 ```
 

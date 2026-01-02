@@ -26,8 +26,8 @@ show_commands() {
 
 4. SUPERMEMORY - Cross-Tool Memory
    Projects: mcp supermemory getProjects '{}'
-   Add: mcp supermemory addMemory '{"content":"...","projectId":"sm_project_main"}'
-   Search: mcp supermemory search '{"query":"...","projectId":"sm_project_main"}'
+   Add: mcp supermemory addMemory '{"content":"...","projectId":"REDACTED_SM_main"}'
+   Search: mcp supermemory search '{"query":"...","projectId":"REDACTED_SM_main"}'
    User: mcp supermemory whoAmI '{}'
 
 CMDS

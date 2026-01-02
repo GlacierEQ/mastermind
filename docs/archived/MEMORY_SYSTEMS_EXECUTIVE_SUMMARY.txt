@@ -96,7 +96,7 @@ Action 1: Populate Supermemory with 25-30 critical case facts
   • Focus on Judge Naso misconduct & fabricated orders
   • Include Attorney Brower bad faith patterns
   • Add CSEA/CWS systematic bias evidence
-  • Target projects: sm_project_kekoa_, sm_project_judge_naso
+  • Target projects: REDACTED_SM_kekoa_, REDACTED_SM_judge_naso
 
 Action 2: Test retrieval functionality
   • Verify search works with populated data

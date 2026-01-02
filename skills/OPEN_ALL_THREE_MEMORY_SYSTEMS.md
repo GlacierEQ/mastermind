@@ -21,41 +21,41 @@
 ### 31 Projects Ready to Populate:
 ```
 LEGAL CASES (15):
-  • sm_project_kekoa_ (Kekoa TRO - PRIORITY)
-  • sm_project_tros (All TROs)
-  • sm_project_judge_naso (Judge Naso misconduct)
-  • sm_project_judge_kyle
-  • sm_project_judge_shaw
-  • sm_project_scot_stuart_brower (Attorney Brower - bad faith)
-  • sm_project_malpractice_micky_yamatani
-  • sm_project_legal_warfare
-  • sm_project_labor_dispute_daniel_smith
-  • sm_project_systemic_collapse
-  • sm_project_nainoa_thefts
-  • sm_project_lambert_and_nicholas_
-  • sm_project_truck_repo
-  • sm_project_erik_breisacher
-  • sm_project_justin_higa
+  • REDACTED_SM_kekoa_ (Kekoa TRO - PRIORITY)
+  • REDACTED_SM_tros (All TROs)
+  • REDACTED_SM_judge_naso (Judge Naso misconduct)
+  • REDACTED_SM_judge_kyle
+  • REDACTED_SM_judge_shaw
+  • REDACTED_SM_scot_stuart_brower (Attorney Brower - bad faith)
+  • REDACTED_SM_malpractice_micky_yamatani
+  • REDACTED_SM_legal_warfare
+  • REDACTED_SM_labor_dispute_daniel_smith
+  • REDACTED_SM_systemic_collapse
+  • REDACTED_SM_nainoa_thefts
+  • REDACTED_SM_lambert_and_nicholas_
+  • REDACTED_SM_truck_repo
+  • REDACTED_SM_erik_breisacher
+  • REDACTED_SM_justin_higa
 
 INSTITUTIONS (5):
-  • sm_project_csea (CSEA systemic bias - PRIORITY)
-  • sm_project_administrative_entities
-  • sm_project_hi-class_home_services
-  • sm_project_the_clerks_castillo_and_le
-  • sm_project_upstairs_neighbors
+  • REDACTED_SM_csea (CSEA systemic bias - PRIORITY)
+  • REDACTED_SM_administrative_entities
+  • REDACTED_SM_hi-class_home_services
+  • REDACTED_SM_the_clerks_castillo_and_le
+  • REDACTED_SM_upstairs_neighbors
 
 INFRASTRUCTURE (5):
-  • sm_project_business
-  • sm_project_computers
-  • sm_project_github
-  • sm_project_info_packet
-  • sm_project_memory_master
+  • REDACTED_SM_business
+  • REDACTED_SM_computers
+  • REDACTED_SM_github
+  • REDACTED_SM_info_packet
+  • REDACTED_SM_memory_master
 
 THEMATIC (4):
-  • sm_project_evidences (Evidence chain - PRIORITY)
-  • sm_project_teresa
-  • sm_project_the_aionic_tree
-  • sm_project_task_scheduled_ops
+  • REDACTED_SM_evidences (Evidence chain - PRIORITY)
+  • REDACTED_SM_teresa
+  • REDACTED_SM_the_aionic_tree
+  • REDACTED_SM_task_scheduled_ops
 ```
 
 ### How to Use Supermemory NOW
@@ -64,7 +64,7 @@ THEMATIC (4):
 ```bash
 mcp supermemory addMemory '{
   "thingToRemember":"[Your fact here]",
-  "projectId":"sm_project_kekoa_"
+  "projectId":"REDACTED_SM_kekoa_"
 }'
 ```
 
@@ -72,7 +72,7 @@ mcp supermemory addMemory '{
 ```bash
 mcp supermemory search '{
   "informationToGet":"What misconduct by Judge Naso?",
-  "projectId":"sm_project_judge_naso"
+  "projectId":"REDACTED_SM_judge_naso"
 }'
 ```
 
@@ -180,10 +180,10 @@ mcp memoryplugin store_memory '{
 ### Phase 1: IMMEDIATE (Now - 15 min)
 ✅ Supermemory is ready
 - Start adding priority facts to:
-  - sm_project_kekoa_
-  - sm_project_judge_naso
-  - sm_project_csea
-  - sm_project_evidences
+  - REDACTED_SM_kekoa_
+  - REDACTED_SM_judge_naso
+  - REDACTED_SM_csea
+  - REDACTED_SM_evidences
 
 ### Phase 2: TODAY (Next 2-3 hours)
 📊 Populate Supermemory
@@ -210,31 +210,31 @@ mcp memoryplugin store_memory '{
 
 ### To Supermemory (25-30 priority facts):
 
-**Judge Naso Misconduct (sm_project_judge_naso):**
+**Judge Naso Misconduct (REDACTED_SM_judge_naso):**
 - Fabricated custody orders
 - Suppressed evidence
 - Systematic bias (73% institutional favor)
 - May 2024 correlation with FBI letters
 
-**Attorney Brower Bad Faith (sm_project_scot_stuart_brower):**
+**Attorney Brower Bad Faith (REDACTED_SM_scot_stuart_brower):**
 - Rule 58 violations
 - Procedural delays (12-month pattern)
 - Coordination with judge
 - Bad faith evidence (Feb 27, 2025 recordings)
 
-**CSEA Systemic Bias (sm_project_csea):**
+**CSEA Systemic Bias (REDACTED_SM_csea):**
 - Financial harassment pattern
 - Coordination with judge/attorney
 - Child alienation facilitation
 - Institutional failure documentation
 
-**Evidence Chain (sm_project_evidences):**
+**Evidence Chain (REDACTED_SM_evidences):**
 - OFW emotional harm testimony
 - Merged.pdf 22-month timeline
 - Audio recordings (bad faith)
 - Erased court records
 
-**Kekoa Testimony (sm_project_kekoa_):**
+**Kekoa Testimony (REDACTED_SM_kekoa_):**
 - Emotional harm documentation
 - Custody order fabrication
 - Systematic harassment timeline
@@ -252,7 +252,7 @@ mcp supermemory whoAmI '{}'
 # Test write capability
 mcp supermemory addMemory '{
   "thingToRemember":"THREE MEMORY SYSTEMS ACTIVATED - Supermemory, Mem0, Memory Plugin - All operational",
-  "projectId":"sm_project_memory_master"
+  "projectId":"REDACTED_SM_memory_master"
 }'
 ```
 
@@ -261,7 +261,7 @@ mcp supermemory addMemory '{
 # Add first critical fact to Kekoa project
 mcp supermemory addMemory '{
   "thingToRemember":"[Case 1FDV-23-0001009] OFW Transcript - Kekoa emotional harm testimony regarding fabricated custody orders and systematic harassment",
-  "projectId":"sm_project_kekoa_"
+  "projectId":"REDACTED_SM_kekoa_"
 }'
 ```
 

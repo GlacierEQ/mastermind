@@ -146,13 +146,13 @@ mcp supermemory getProjects '{}'
 # Add memory
 mcp supermemory addMemory '{
   "content": "Your memory content",
-  "projectId": "sm_project_main"
+  "projectId": "REDACTED_SM_main"
 }'
 
 # Search
 mcp supermemory search '{
   "query": "search term",
-  "projectId": "sm_project_main"
+  "projectId": "REDACTED_SM_main"
 }'
 
 # Get user info
@@ -309,7 +309,7 @@ mcp supermemory getProjects '{}'
 # Add memory to project (visible in ChatGPT, Cursor, etc.)
 mcp supermemory addMemory '{
   "content": "MCP Ecosystem Setup Complete: 35+ servers connected including 4 memory systems (Neo4j, Letta, Mem0, Supermemory). Key gaps identified: Slack, Linear, email, calendar. Memory systems enable knowledge graphs, encrypted storage, cross-AI sync.",
-  "projectId": "sm_project_main"
+  "projectId": "REDACTED_SM_main"
 }'
 ```
 

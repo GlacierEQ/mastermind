@@ -21,45 +21,45 @@
 ### 31 Active Projects (Organized by Domain)
 
 **Case/Legal (Primary):**
-- sm_project_kekoa_ → Kekoa TRO case
-- sm_project_tros → All TROs
-- sm_project_judge_naso → Judge Naso misconduct
-- sm_project_judge_kyle → Judge Kyle
-- sm_project_judge_shaw → Judge Shaw
-- sm_project_csea → Child Services Entities
-- sm_project_scot_stuart_brower → Attorney Brower
-- sm_project_legal_warfare → Strategy/coordination
-- sm_project_systemic_collapse → Institutional failure patterns
+- REDACTED_SM_kekoa_ → Kekoa TRO case
+- REDACTED_SM_tros → All TROs
+- REDACTED_SM_judge_naso → Judge Naso misconduct
+- REDACTED_SM_judge_kyle → Judge Kyle
+- REDACTED_SM_judge_shaw → Judge Shaw
+- REDACTED_SM_csea → Child Services Entities
+- REDACTED_SM_scot_stuart_brower → Attorney Brower
+- REDACTED_SM_legal_warfare → Strategy/coordination
+- REDACTED_SM_systemic_collapse → Institutional failure patterns
 
 **Evidence/Documentation:**
-- sm_project_evidences → Physical evidence vault
-- sm_project_info_packet → Compiled information
-- sm_project_default → Miscellaneous
+- REDACTED_SM_evidences → Physical evidence vault
+- REDACTED_SM_info_packet → Compiled information
+- REDACTED_SM_default → Miscellaneous
 
 **Persons of Interest:**
-- sm_project_erik_breisacher
-- sm_project_justin_higa
-- sm_project_teresa
-- sm_project_malpractice_micky_yamatani
-- sm_project_nainoa_thefts
-- sm_project_upstairs_neighbors
+- REDACTED_SM_erik_breisacher
+- REDACTED_SM_justin_higa
+- REDACTED_SM_teresa
+- REDACTED_SM_malpractice_micky_yamatani
+- REDACTED_SM_nainoa_thefts
+- REDACTED_SM_upstairs_neighbors
 
 **Other Cases:**
-- sm_project_labor_dispute_daniel_smith
-- sm_project_truck_repo
-- sm_project_lambert_and_nicholas_
+- REDACTED_SM_labor_dispute_daniel_smith
+- REDACTED_SM_truck_repo
+- REDACTED_SM_lambert_and_nicholas_
 
 **Support Systems:**
-- sm_project_memory_master → Meta-memory tracking
-- sm_project_business → Business operations
-- sm_project_computers → Tech infrastructure
-- sm_project_github → Code repositories
-- sm_project_hi-class_home_services → Service projects
-- sm_project_task_scheduled_ops → Automation
-- sm_project_the_aionic_tree → Philosophy/framework
-- sm_project_administrative_entities → Entities
-- sm_project_administrative_entities_ → Entities (duplicate)
-- sm_project_the_clerks_castillo_and_le
+- REDACTED_SM_memory_master → Meta-memory tracking
+- REDACTED_SM_business → Business operations
+- REDACTED_SM_computers → Tech infrastructure
+- REDACTED_SM_github → Code repositories
+- REDACTED_SM_hi-class_home_services → Service projects
+- REDACTED_SM_task_scheduled_ops → Automation
+- REDACTED_SM_the_aionic_tree → Philosophy/framework
+- REDACTED_SM_administrative_entities → Entities
+- REDACTED_SM_administrative_entities_ → Entities (duplicate)
+- REDACTED_SM_the_clerks_castillo_and_le
 
 ---
 
@@ -148,16 +148,16 @@
 **For adding key case information:**
 
 ```
-Project: sm_project_kekoa_
+Project: REDACTED_SM_kekoa_
 Information: "[DATE] Kekoa testimony - emotional harm details: [CONTENT]"
 
-Project: sm_project_judge_naso
+Project: REDACTED_SM_judge_naso
 Information: "[DATE] Judge Naso decision [CASE_NO] - bias marker: [BEHAVIOR]"
 
-Project: sm_project_evidences
+Project: REDACTED_SM_evidences
 Information: "[EVIDENCE_TYPE] - [DATE] - chain of custody: [DETAILS]"
 
-Project: sm_project_systemic_collapse
+Project: REDACTED_SM_systemic_collapse
 Information: "[INSTITUTION] coordination with [ACTOR] on [DATE] - pattern: [CONNECTION]"
 ```
 

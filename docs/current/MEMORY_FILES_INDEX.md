@@ -140,7 +140,7 @@ mcp mem0-private store_memory '{
 ```bash
 mcp supermemory addMemory '{
   "content": "MCP ecosystem has 35+ servers",
-  "projectId": "sm_project_main"
+  "projectId": "REDACTED_SM_main"
 }'
 ```
 

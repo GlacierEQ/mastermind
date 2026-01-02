@@ -106,7 +106,7 @@ Once credentials retrieved, implement:
 ```bash
 mcp supermemory addMemory '{
   "thingToRemember":"[Fact]",
-  "projectId":"sm_project_kekoa_"
+  "projectId":"REDACTED_SM_kekoa_"
 }'
 # Will need to authenticate with secondary account first
 ```

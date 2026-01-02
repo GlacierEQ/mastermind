@@ -31,7 +31,7 @@
 
 3. **getProjects** - List all memory containers
    - Returns project names and container tags
-   - Format: sm_project_{name}
+   - Format: REDACTED_SM_{name}
    - Used as projectId in other tools
    - 31 projects currently available
 
@@ -45,51 +45,51 @@
 ## 📁 YOUR 31 SUPERMEMORY PROJECTS
 
 ### FEDERAL CASE CORE (4 projects):
-- **sm_project_legal_warfare** - Federal prosecution infrastructure
-- **sm_project_judge_shaw** - Judge Shaw behavior/bias documentation
-- **sm_project_judge_naso** - Judge Naso documentation
-- **sm_project_judge_kyle** - Judge Kyle documentation
+- **REDACTED_SM_legal_warfare** - Federal prosecution infrastructure
+- **REDACTED_SM_judge_shaw** - Judge Shaw behavior/bias documentation
+- **REDACTED_SM_judge_naso** - Judge Naso documentation
+- **REDACTED_SM_judge_kyle** - Judge Kyle documentation
 
 ### EVIDENCE & DOCUMENTATION (2 projects):
-- **sm_project_evidences** - All case evidence
-- **sm_project_info_packet** - Comprehensive information archive
+- **REDACTED_SM_evidences** - All case evidence
+- **REDACTED_SM_info_packet** - Comprehensive information archive
 
 ### KEY FIGURES (3 projects):
-- **sm_project_scot_stuart_brower** - Attorney Brower profile/tactics
-- **sm_project_teresa** - Defendant Teresa documentation
-- **sm_project_malpractice_micky_yamatani** - Attorney Malpractice tracking
+- **REDACTED_SM_scot_stuart_brower** - Attorney Brower profile/tactics
+- **REDACTED_SM_teresa** - Defendant Teresa documentation
+- **REDACTED_SM_malpractice_micky_yamatani** - Attorney Malpractice tracking
 
 ### PARTIES & STAKEHOLDERS (4 projects):
-- **sm_project_erik_breisacher** - Associated party
-- **sm_project_justin_higa** - Associated party
-- **sm_project_kekoa_** - ⭐ Your son (PRIORITY)
-- **sm_project_upstairs_neighbors** - Witness/context
+- **REDACTED_SM_erik_breisacher** - Associated party
+- **REDACTED_SM_justin_higa** - Associated party
+- **REDACTED_SM_kekoa_** - ⭐ Your son (PRIORITY)
+- **REDACTED_SM_upstairs_neighbors** - Witness/context
 
 ### CASE CATEGORIES (7 projects):
-- **sm_project_labor_dispute_daniel_smith** - Labor case
-- **sm_project_nainoa_thefts** - Theft case
-- **sm_project_truck_repo** - Repo case
-- **sm_project_tros** - Temporary Restraining Orders
-- **sm_project_systemic_collapse** - System failure documentation
-- **sm_project_the_clerks_castillo_and_le** - Court staff
-- **sm_project_lambert_and_nicholas_** - Associated case
+- **REDACTED_SM_labor_dispute_daniel_smith** - Labor case
+- **REDACTED_SM_nainoa_thefts** - Theft case
+- **REDACTED_SM_truck_repo** - Repo case
+- **REDACTED_SM_tros** - Temporary Restraining Orders
+- **REDACTED_SM_systemic_collapse** - System failure documentation
+- **REDACTED_SM_the_clerks_castillo_and_le** - Court staff
+- **REDACTED_SM_lambert_and_nicholas_** - Associated case
 
 ### ORGANIZATION/BUSINESS (3 projects):
-- **sm_project_hi-class_home_services** - Business entity
-- **sm_project_business** - General business
-- **sm_project_administrative_entities** - Admin structure
+- **REDACTED_SM_hi-class_home_services** - Business entity
+- **REDACTED_SM_business** - General business
+- **REDACTED_SM_administrative_entities** - Admin structure
 
 ### TECHNICAL/INFRASTRUCTURE (5 projects):
-- **sm_project_github** - GitHub repositories
-- **sm_project_computers** - System documentation
-- **sm_project_csea** - System entity
-- **sm_project_memory_master** - Memory system
-- **sm_project_task_scheduled_ops** - Scheduled operations
+- **REDACTED_SM_github** - GitHub repositories
+- **REDACTED_SM_computers** - System documentation
+- **REDACTED_SM_csea** - System entity
+- **REDACTED_SM_memory_master** - Memory system
+- **REDACTED_SM_task_scheduled_ops** - Scheduled operations
 
 ### OTHER CONTEXTS (3 projects):
-- **sm_project_the_aionic_tree** - Concept/theory
-- **sm_project_default** - Default container
-- **sm_project_info_packet** - Information archive
+- **REDACTED_SM_the_aionic_tree** - Concept/theory
+- **REDACTED_SM_default** - Default container
+- **REDACTED_SM_info_packet** - Information archive
 
 ---
 
@@ -107,24 +107,24 @@
 ### Integration Points:
 
 1. **Evidence Storage**
-   - Store court recordings analysis → sm_project_evidences
-   - Store cyberattack details → sm_project_legal_warfare
-   - Store witness statements → sm_project_kekoa_ / sm_project_upstairs_neighbors
+   - Store court recordings analysis → REDACTED_SM_evidences
+   - Store cyberattack details → REDACTED_SM_legal_warfare
+   - Store witness statements → REDACTED_SM_kekoa_ / REDACTED_SM_upstairs_neighbors
 
 2. **Judicial Monitoring**
-   - Judge statements from audio → sm_project_judge_shaw / sm_project_judge_naso
-   - Bias patterns → sm_project_judge_kyle
-   - Rulings analysis → sm_project_legal_warfare
+   - Judge statements from audio → REDACTED_SM_judge_shaw / REDACTED_SM_judge_naso
+   - Bias patterns → REDACTED_SM_judge_kyle
+   - Rulings analysis → REDACTED_SM_legal_warfare
 
 3. **Attorney Tracking**
-   - Scot Brower tactics → sm_project_scot_stuart_brower
-   - Malpractice patterns → sm_project_malpractice_micky_yamatani
-   - Misconduct documentation → sm_project_legal_warfare
+   - Scot Brower tactics → REDACTED_SM_scot_stuart_brower
+   - Malpractice patterns → REDACTED_SM_malpractice_micky_yamatani
+   - Misconduct documentation → REDACTED_SM_legal_warfare
 
 4. **Federal Investigation**
-   - Cyberattack evidence → sm_project_legal_warfare
-   - Conspiracy documentation → sm_project_systemic_collapse
-   - Timeline correlation → sm_project_task_scheduled_ops
+   - Cyberattack evidence → REDACTED_SM_legal_warfare
+   - Conspiracy documentation → REDACTED_SM_systemic_collapse
+   - Timeline correlation → REDACTED_SM_task_scheduled_ops
 
 ---
 
@@ -147,9 +147,9 @@ Audio Recording Analysis (3/27, 2/19, Aug, Oct)
   ↓
 Extract bias/violations
   ↓
-addMemory → sm_project_judge_shaw (Judge statements)
+addMemory → REDACTED_SM_judge_shaw (Judge statements)
   ↓
-addMemory → sm_project_evidences (Recording analysis)
+addMemory → REDACTED_SM_evidences (Recording analysis)
   ↓
 Semantic tagging for search
 ```
@@ -173,7 +173,7 @@ search → retrieve all evidence
   ↓
 Compose federal complaint
   ↓
-addMemory → sm_project_legal_warfare (Filing record)
+addMemory → REDACTED_SM_legal_warfare (Filing record)
   ↓
 Cross-reference with cyberattack evidence
   ↓
@@ -193,10 +193,10 @@ Next steps:
 4. Cross-reference across projects
 
 **Key Project for Federal Case**:
-- `sm_project_legal_warfare` - Central hub
-- `sm_project_judge_shaw` - Bias documentation
-- `sm_project_evidences` - All evidence
-- `sm_project_scot_stuart_brower` - Perpetrator tracking
+- `REDACTED_SM_legal_warfare` - Central hub
+- `REDACTED_SM_judge_shaw` - Bias documentation
+- `REDACTED_SM_evidences` - All evidence
+- `REDACTED_SM_scot_stuart_brower` - Perpetrator tracking
 
 ---
 

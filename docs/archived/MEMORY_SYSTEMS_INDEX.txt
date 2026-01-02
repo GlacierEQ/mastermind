@@ -131,7 +131,7 @@ All files in home directory (~/) :
   mcp supermemory whoAmI '{}'
   mcp supermemory addMemory '{
     "thingToRemember":"Three memory systems activated",
-    "projectId":"sm_project_memory_master"
+    "projectId":"REDACTED_SM_memory_master"
   }'
 
 ✓ Mem0 is READY - activate when needed
@@ -148,11 +148,11 @@ All files in home directory (~/) :
 ────────────────────────────────────────────────────────────────────────────
 
 Priority Projects to Populate:
-• sm_project_kekoa_ (Kekoa TRO - PRIMARY)
-• sm_project_judge_naso (Judge misconduct)
-• sm_project_scot_stuart_brower (Attorney bad faith)
-• sm_project_csea (Institutional bias)
-• sm_project_evidences (Evidence chain)
+• REDACTED_SM_kekoa_ (Kekoa TRO - PRIMARY)
+• REDACTED_SM_judge_naso (Judge misconduct)
+• REDACTED_SM_scot_stuart_brower (Attorney bad faith)
+• REDACTED_SM_csea (Institutional bias)
+• REDACTED_SM_evidences (Evidence chain)
 
 Expected capacity: 250+ facts across 31 projects
 Storage: 10TB+ available

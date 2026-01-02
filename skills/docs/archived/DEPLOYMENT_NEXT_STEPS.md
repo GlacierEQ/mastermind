@@ -86,7 +86,7 @@ git push -u origin master
 # Metadata already logged
 mcp supermemory addMemory '{
   "thingToRemember":"GitHub push complete - commit c90f2ec synced to glaciereq/Omni_Engine",
-  "projectId":"sm_project_memory_master"
+  "projectId":"REDACTED_SM_memory_master"
 }'
 ```
 
@@ -178,7 +178,7 @@ mcp mem0ai-mem0-memory-mcp add_memory '{
 # Supermemory - Add to projects
 mcp supermemory addMemory '{
   "thingToRemember":"Account 2 secondary workspace core activated",
-  "projectId":"sm_project_memory_master"
+  "projectId":"REDACTED_SM_memory_master"
 }'
 
 # Memory Plugin - Create secondary bucket
@@ -198,7 +198,7 @@ mcp mem0ai-mem0-memory-mcp search_memories '{
 # Verify Supermemory search
 mcp supermemory search '{
   "informationToGet":"test query",
-  "projectId":"sm_project_memory_master"
+  "projectId":"REDACTED_SM_memory_master"
 }'
 
 # Verify Memory Plugin
