@@ -13,8 +13,8 @@ class KeyValidator:
     async def validate_all(self):
         print(f"[{self.guid}] INITIATING_METHODICAL_KEY_VALIDATION...")
         # Add logic to ping Grok, Linear, Vercel, etc.
-        print(f"  [Grok Voice] Link established: wss://api.x.ai/v1/realtime")
-        print(f"  [Linear] lin_api_... Verified")
+        print(f"  [Grok Voice] Link established: wss://REDACTED_VOICE_URL")
+        print(f"  [Linear] REDACTED_KEY... Verified")
         print(f"  [Memory] REDACTED_SM... Vectorized")
         
         with open("/home/user/ZENITH_NEXUS/output/validation_status.json", "w") as f:

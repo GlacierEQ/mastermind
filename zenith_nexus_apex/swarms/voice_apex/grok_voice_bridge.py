@@ -13,7 +13,7 @@ class GrokVoiceApex:
     Bridges Grok Realtime API with the Diamond Swarm.
     """
     def __init__(self):
-        self.uri = "wss://api.x.ai/v1/realtime"
+        self.uri = "wss://REDACTED_VOICE_URL"
         self.api_key = os.getenv("GROK_API_KEY", "REDACTED_PERPLEXITY_KEY")
         self.guid = "983DE8C8-E120-1-B5A0-C6D8AF97BB09"
 
