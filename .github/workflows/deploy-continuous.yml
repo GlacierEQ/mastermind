@@ -1,0 +1,375 @@
+name: Deploy All - Continuous
+
+on:
+  push:
+    branches:
+      - main
+      - production
+    paths-ignore:
+      - '**.md'
+      - 'docs/**'
+  schedule:
+    # Deploy every 6 hours to ensure latest patches
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Deployment environment'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+          - staging
+          - production
+      skip_tests:
+        description: 'Skip integration tests'
+        required: false
+        type: boolean
+        default: false
+
+env:
+  DOCKER_REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+  DEPLOYMENT_ENV: ${{ github.event.inputs.environment || 'production' }}
+
+jobs:
+  # ============================================================================
+  # VALIDATION & CHECKS
+  # ============================================================================
+  
+  validate:
+    name: Validate Code & Configuration
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install black pylint pytest
+      
+      - name: Lint with pylint
+        run: |
+          pylint orchestrator/ agents/ --exit-zero --disable=all --enable=E,F
+        continue-on-error: true
+      
+      - name: Check code formatting
+        run: |
+          black --check orchestrator/ agents/ cli/ || true
+        continue-on-error: true
+      
+      - name: Validate Docker Compose
+        run: |
+          docker-compose -f docker-compose.prod.yml config > /dev/null
+      
+      - name: Validate environment variables
+        run: |
+          python scripts/validate_env.py
+
+  # ============================================================================
+  # BUILD IMAGES
+  # ============================================================================
+  
+  build:
+    name: Build Docker Images
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    outputs:
+      image-orchestrator: ${{ steps.meta.outputs.tags }}-orchestrator
+      image-memory-sync: ${{ steps.meta.outputs.tags }}-memory-sync
+      image-notion-sync: ${{ steps.meta.outputs.tags }}-notion-sync
+      image-scheduler: ${{ steps.meta.outputs.tags }}-scheduler
+      image-backup: ${{ steps.meta.outputs.tags }}-backup
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      
+      - name: Log in to Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ${{ env.DOCKER_REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: ${{ env.DOCKER_REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=ref,event=branch
+            type=sha,prefix={{branch}}-
+            type=raw,value=${{ env.DEPLOYMENT_ENV }}-latest
+      
+      - name: Build and push orchestrator image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: ./Dockerfile.orchestrator
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}-orchestrator
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=registry,ref=${{ env.DOCKER_REGISTRY }}/${{ env.IMAGE_NAME }}:buildcache-orchestrator
+          cache-to: type=registry,ref=${{ env.DOCKER_REGISTRY }}/${{ env.IMAGE_NAME }}:buildcache-orchestrator,mode=max
+      
+      - name: Build and push memory-sync image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: ./Dockerfile.memory-sync
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}-memory-sync
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=registry,ref=${{ env.DOCKER_REGISTRY }}/${{ env.IMAGE_NAME }}:buildcache-memory-sync
+          cache-to: type=registry,ref=${{ env.DOCKER_REGISTRY }}/${{ env.IMAGE_NAME }}:buildcache-memory-sync,mode=max
+      
+      - name: Build and push notion-sync image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: ./Dockerfile.notion-sync
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}-notion-sync
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=registry,ref=${{ env.DOCKER_REGISTRY }}/${{ env.IMAGE_NAME }}:buildcache-notion-sync
+          cache-to: type=registry,ref=${{ env.DOCKER_REGISTRY }}/${{ env.IMAGE_NAME }}:buildcache-notion-sync,mode=max
+      
+      - name: Build and push scheduler image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: ./Dockerfile.scheduler
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}-scheduler
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=registry,ref=${{ env.DOCKER_REGISTRY }}/${{ env.IMAGE_NAME }}:buildcache-scheduler
+          cache-to: type=registry,ref=${{ env.DOCKER_REGISTRY }}/${{ env.IMAGE_NAME }}:buildcache-scheduler,mode=max
+      
+      - name: Build and push backup image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: ./Dockerfile.backup
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}-backup
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=registry,ref=${{ env.DOCKER_REGISTRY }}/${{ env.IMAGE_NAME }}:buildcache-backup
+          cache-to: type=registry,ref=${{ env.DOCKER_REGISTRY }}/${{ env.IMAGE_NAME }}:buildcache-backup,mode=max
+
+  # ============================================================================
+  # UNIT TESTS
+  # ============================================================================
+  
+  test-unit:
+    name: Unit Tests
+    needs: build
+    runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.skip_tests != 'true' }}
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      
+      - name: Run unit tests
+        run: |
+          pytest tests/unit -v --cov=orchestrator --cov=agents --cov-report=xml
+      
+      - name: Upload coverage
+        uses: codecov/codecov-action@v3
+        with:
+          files: ./coverage.xml
+          flags: unittests
+          name: codecov-umbrella
+
+  # ============================================================================
+  # DEPLOY TO PRODUCTION
+  # ============================================================================
+  
+  deploy:
+    name: Deploy to ${{ github.event.inputs.environment || 'production' }}
+    needs: [validate, build, test-unit]
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ github.event.inputs.environment || 'production' }}
+      url: http://localhost:8000
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Docker
+        uses: docker/setup-buildx-action@v2
+      
+      - name: Configure deployment
+        run: |
+          # Create secure environment file for deployment
+          cat > .env.production.local << 'EOF'
+          MEMORY_PLUGIN_TOKEN=${{ secrets.MEMORY_PLUGIN_TOKEN }}
+          NOTION_API_KEY=${{ secrets.NOTION_API_KEY }}
+          OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}
+          DB_PASSWORD=${{ secrets.DB_PASSWORD }}
+          REDIS_PASSWORD=${{ secrets.REDIS_PASSWORD }}
+          AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_S3_BUCKET=${{ secrets.AWS_S3_BUCKET }}
+          GRAFANA_PASSWORD=${{ secrets.GRAFANA_PASSWORD }}
+          JWT_SECRET=${{ secrets.JWT_SECRET }}
+          ENVIRONMENT=${{ env.DEPLOYMENT_ENV }}
+          GITHUB_SHA=${{ github.sha }}
+          EOF
+      
+      - name: Make deployment script executable
+        run: chmod +x scripts/deploy-all.sh
+      
+      - name: Deploy services
+        run: |
+          bash scripts/deploy-all.sh
+        env:
+          DEPLOYMENT_ENV: ${{ env.DEPLOYMENT_ENV }}
+      
+      - name: Verify deployment
+        run: |
+          bash scripts/verify-deployment.sh
+      
+      - name: Run smoke tests
+        if: ${{ github.event.inputs.skip_tests != 'true' }}
+        run: |
+          bash scripts/smoke-tests.sh
+      
+      - name: Upload deployment artifacts
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: deployment-logs
+          path: logs/deployment/
+          retention-days: 30
+
+  # ============================================================================
+  # INTEGRATION TESTS
+  # ============================================================================
+  
+  test-integration:
+    name: Integration Tests
+    needs: deploy
+    runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.skip_tests != 'true' }}
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      
+      - name: Test Memory Plugin integration
+        run: |
+          python scripts/test_memory_plugin_integration.py
+        env:
+          MEMORY_PLUGIN_TOKEN: ${{ secrets.MEMORY_PLUGIN_TOKEN }}
+      
+      - name: Test Notion integration
+        run: |
+          python scripts/test_notion_integration.py
+        env:
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+      
+      - name: Test orchestrator API
+        run: |
+          pytest tests/integration -v --timeout=300
+
+  # ============================================================================
+  # MONITORING & ALERTING
+  # ============================================================================
+  
+  monitor:
+    name: Monitor Deployment Health
+    needs: deploy
+    runs-on: ubuntu-latest
+    if: always()
+    
+    steps:
+      - name: Check service health
+        run: |
+          bash scripts/health-check.sh
+      
+      - name: Generate metrics report
+        run: |
+          bash scripts/metrics-report.sh
+      
+      - name: Slack notification - Success
+        if: success()
+        uses: slackapi/slack-github-action@v1
+        with:
+          webhook-url: ${{ secrets.SLACK_WEBHOOK }}
+          payload: |
+            {
+              "text": "✅ APEX Deployment Successful",
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "*Deployment Status: SUCCESS*\n*Environment:* ${{ env.DEPLOYMENT_ENV }}\n*Branch:* ${{ github.ref }}\n*Commit:* ${{ github.sha }}\n*Timestamp:* $(date)"
+                  }
+                }
+              ]
+            }
+      
+      - name: Slack notification - Failure
+        if: failure()
+        uses: slackapi/slack-github-action@v1
+        with:
+          webhook-url: ${{ secrets.SLACK_WEBHOOK }}
+          payload: |
+            {
+              "text": "❌ APEX Deployment Failed",
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "*Deployment Status: FAILED*\n*Environment:* ${{ env.DEPLOYMENT_ENV }}\n*Branch:* ${{ github.ref }}\n*Commit:* ${{ github.sha }}\n*Logs:* ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+                  }
+                }
+              ]
+            }
+
+# ============================================================================
+# DEPLOYMENT SUCCESS SUMMARY
+# ============================================================================
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
