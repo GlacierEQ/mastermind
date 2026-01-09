@@ -1,0 +1,325 @@
+version: '3.8'
+
+services:
+  # Core Orchestrator Service
+  orchestrator:
+    image: apex-orchestrator:latest
+    build:
+      context: .
+      dockerfile: Dockerfile.orchestrator
+    container_name: apex-orchestrator
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - MEMORY_PLUGIN_TOKEN=${MEMORY_PLUGIN_TOKEN}
+      - NOTION_API_KEY=${NOTION_API_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - REDIS_URL=redis://redis:6379/0
+      - POSTGRES_URL=postgresql://mastermind:${DB_PASSWORD}@postgres:5432/mastermind
+      - ENVIRONMENT=production
+      - LOG_LEVEL=INFO
+      - MAX_WORKERS=8
+    depends_on:
+      - redis
+      - postgres
+      - postgres-init
+    volumes:
+      - ./config:/app/config:ro
+      - ./logs:/app/logs
+      - ./data:/app/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    networks:
+      - apex-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "10"
+
+  # Memory Plugin Sync Service
+  memory-sync:
+    image: apex-memory-sync:latest
+    build:
+      context: .
+      dockerfile: Dockerfile.memory-sync
+    container_name: apex-memory-sync
+    restart: always
+    environment:
+      - MEMORY_PLUGIN_TOKEN=${MEMORY_PLUGIN_TOKEN}
+      - NOTION_API_KEY=${NOTION_API_KEY}
+      - REDIS_URL=redis://redis:6379/1
+      - SYNC_INTERVAL=300
+      - LOG_LEVEL=INFO
+    depends_on:
+      - redis
+      - orchestrator
+    volumes:
+      - ./config:/app/config:ro
+      - ./logs:/app/logs
+    networks:
+      - apex-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "10"
+
+  # Notion Sync Service
+  notion-sync:
+    image: apex-notion-sync:latest
+    build:
+      context: .
+      dockerfile: Dockerfile.notion-sync
+    container_name: apex-notion-sync
+    restart: always
+    environment:
+      - NOTION_API_KEY=${NOTION_API_KEY}
+      - MEMORY_PLUGIN_TOKEN=${MEMORY_PLUGIN_TOKEN}
+      - REDIS_URL=redis://redis:6379/2
+      - SYNC_INTERVAL=600
+      - LOG_LEVEL=INFO
+    depends_on:
+      - redis
+      - postgres
+      - orchestrator
+    volumes:
+      - ./config:/app/config:ro
+      - ./logs:/app/logs
+    networks:
+      - apex-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "10"
+
+  # Redis Cache & Message Broker
+  redis:
+    image: redis:7-alpine
+    container_name: apex-redis
+    restart: always
+    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD}
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - apex-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "--raw", "incr", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "5"
+
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: apex-postgres
+    restart: always
+    environment:
+      POSTGRES_DB: mastermind
+      POSTGRES_USER: mastermind
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8 --locale=C"
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-db.sql:/docker-entrypoint-initdb.d/01-init.sql
+    networks:
+      - apex-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mastermind"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "5"
+
+  # Database initialization
+  postgres-init:
+    image: postgres:15-alpine
+    container_name: apex-postgres-init
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      PGPASSWORD: ${DB_PASSWORD}
+    command: |
+      psql -h postgres -U mastermind -d mastermind -f /docker-entrypoint-initdb.d/01-init.sql
+    volumes:
+      - ./init-db.sql:/docker-entrypoint-initdb.d/01-init.sql
+    networks:
+      - apex-network
+
+  # Monitoring & Metrics
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: apex-prometheus
+    restart: always
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+      - "--storage.tsdb.retention.time=30d"
+    networks:
+      - apex-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "5"
+
+  # Grafana Dashboard
+  grafana:
+    image: grafana/grafana:latest
+    container_name: apex-grafana
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD}
+      - GF_INSTALL_PLUGINS=redis-datasource
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./monitoring/grafana/provisioning:/etc/grafana/provisioning:ro
+    depends_on:
+      - prometheus
+    networks:
+      - apex-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "5"
+
+  # Log Aggregation
+  loki:
+    image: grafana/loki:latest
+    container_name: apex-loki
+    restart: always
+    ports:
+      - "3100:3100"
+    volumes:
+      - ./monitoring/loki-config.yml:/etc/loki/local-config.yaml:ro
+      - loki_data:/loki
+    command: -config.file=/etc/loki/local-config.yaml
+    networks:
+      - apex-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "5"
+
+  # Health Check & Alerting
+  alertmanager:
+    image: prom/alertmanager:latest
+    container_name: apex-alertmanager
+    restart: always
+    ports:
+      - "9093:9093"
+    volumes:
+      - ./monitoring/alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro
+      - alertmanager_data:/alertmanager
+    command:
+      - "--config.file=/etc/alertmanager/alertmanager.yml"
+      - "--storage.path=/alertmanager"
+    networks:
+      - apex-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "5"
+
+  # Task Scheduler
+  scheduler:
+    image: apex-scheduler:latest
+    build:
+      context: .
+      dockerfile: Dockerfile.scheduler
+    container_name: apex-scheduler
+    restart: always
+    environment:
+      - REDIS_URL=redis://redis:6379/3
+      - POSTGRES_URL=postgresql://mastermind:${DB_PASSWORD}@postgres:5432/mastermind
+      - ENVIRONMENT=production
+      - LOG_LEVEL=INFO
+    depends_on:
+      - redis
+      - postgres
+    volumes:
+      - ./config:/app/config:ro
+      - ./logs:/app/logs
+    networks:
+      - apex-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "10"
+
+  # Backup Service
+  backup:
+    image: apex-backup:latest
+    build:
+      context: .
+      dockerfile: Dockerfile.backup
+    container_name: apex-backup
+    restart: always
+    environment:
+      - POSTGRES_URL=postgresql://mastermind:${DB_PASSWORD}@postgres:5432/mastermind
+      - BACKUP_INTERVAL=86400
+      - BACKUP_RETENTION=7
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_S3_BUCKET=${AWS_S3_BUCKET}
+    depends_on:
+      - postgres
+    volumes:
+      - ./backups:/backups
+    networks:
+      - apex-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "5"
+
+networks:
+  apex-network:
+    driver: bridge
+
+volumes:
+  redis_data:
+    driver: local
+  postgres_data:
+    driver: local
+  prometheus_data:
+    driver: local
+  grafana_data:
+    driver: local
+  loki_data:
+    driver: local
+  alertmanager_data:
+    driver: local
