@@ -1,0 +1,386 @@
+{
+  "$schema": "https://glaciereq.dev/schemas/hypermaster-v2.json",
+  "version": "2.0.0",
+  "codename": "TITAN-FORGE-UNLIMITED",
+  "created": "2026-01-16T20:42:00Z",
+  "author": "GlacierEQ",
+  
+  "agents": {
+    "BUILD_MASTER": {
+      "id": "BUILD-MASTER-001",
+      "codename": "FORGE",
+      "domain": "ci_cd_deployment",
+      "token_weight": 1.2,
+      "priority": "high",
+      "capabilities": ["github_actions", "azure_devops", "jenkins", "docker", "kubernetes", "helm", "terraform", "release_management"],
+      "triggers": ["push_to_main", "tag_created", "pr_merged", "deploy_requested"]
+    },
+    "VOICE_MASTER": {
+      "id": "VOICE-MASTER-001",
+      "codename": "VOXEL",
+      "domain": "audio_voice",
+      "token_weight": 0.8,
+      "priority": "medium",
+      "capabilities": ["tts_synthesis", "voice_cloning", "audio_processing", "elevenlabs", "azure_speech"],
+      "triggers": ["tts_requested", "audio_upload"]
+    },
+    "FRONTEND_MASTER": {
+      "id": "FRONTEND-MASTER-001",
+      "codename": "PIXEL",
+      "domain": "frontend_ui",
+      "token_weight": 1.0,
+      "priority": "high",
+      "capabilities": ["react", "vue", "nextjs", "tailwind", "storybook", "accessibility", "responsive", "pwa"],
+      "triggers": ["ui_change_requested", "component_needed", "design_system_update"]
+    },
+    "GUI_MASTER": {
+      "id": "GUI-MASTER-001",
+      "codename": "NATIVE",
+      "domain": "desktop_native",
+      "token_weight": 1.1,
+      "priority": "medium",
+      "capabilities": ["electron", "tauri", "wpf", "maui", "winforms", "qt", "gtk", "cocoa"],
+      "triggers": ["desktop_app_requested", "native_feature_needed"]
+    },
+    "MIDDLEWARE_MASTER": {
+      "id": "MIDDLEWARE-MASTER-001",
+      "codename": "CONDUIT",
+      "domain": "middleware_integration",
+      "token_weight": 1.0,
+      "priority": "medium",
+      "capabilities": ["kong", "nginx", "kafka", "rabbitmq", "redis", "event_sourcing", "cqrs", "saga_pattern"],
+      "triggers": ["integration_requested", "event_bus_needed", "api_gateway_change"]
+    },
+    "BACKEND_MASTER": {
+      "id": "BACKEND-MASTER-001",
+      "codename": "CORE",
+      "domain": "backend_server",
+      "token_weight": 1.3,
+      "priority": "critical",
+      "capabilities": ["fastapi", "express", "dotnet", "spring", "postgres", "mongodb", "graphql", "rest", "grpc", "auth"],
+      "triggers": ["api_change", "database_migration", "auth_update", "performance_issue"]
+    },
+    "LOGIC_MASTER": {
+      "id": "LOGIC-MASTER-001",
+      "codename": "BRAIN",
+      "domain": "business_logic",
+      "token_weight": 0.9,
+      "priority": "high",
+      "capabilities": ["rules_engine", "state_machines", "workflow_engine", "decision_trees", "algorithms", "optimization"],
+      "triggers": ["business_rule_change", "algorithm_needed", "state_machine_update"]
+    },
+    "FUNCTION_MASTER": {
+      "id": "FUNCTION-MASTER-001",
+      "codename": "UTIL",
+      "domain": "utilities",
+      "token_weight": 0.7,
+      "priority": "low",
+      "capabilities": ["data_transforms", "string_ops", "date_handling", "validation", "formatting", "parsing"],
+      "triggers": ["utility_needed", "transform_requested"]
+    },
+    "SECURITY_MASTER": {
+      "id": "SECURITY-MASTER-001",
+      "codename": "SHIELD",
+      "domain": "security",
+      "token_weight": 1.5,
+      "priority": "critical",
+      "capabilities": ["sast", "dast", "dependency_scan", "secret_detection", "encryption", "auth", "rbac", "audit"],
+      "triggers": ["security_scan_needed", "vulnerability_detected", "audit_requested", "secret_exposed"]
+    },
+    "EVOLUTION_MASTER": {
+      "id": "EVOLUTION-MASTER-001",
+      "codename": "PHOENIX",
+      "domain": "upgrades_maintenance",
+      "token_weight": 1.0,
+      "priority": "medium",
+      "capabilities": ["dependency_updates", "deprecation_handling", "migration_planning", "compatibility", "technical_debt"],
+      "triggers": ["dependency_outdated", "deprecation_warning", "upgrade_available", "breaking_change"]
+    },
+    "TEST_MASTER": {
+      "id": "TEST-MASTER-001",
+      "codename": "VERIFY",
+      "domain": "testing_qa",
+      "token_weight": 1.1,
+      "priority": "high",
+      "capabilities": ["unit_tests", "integration_tests", "e2e_tests", "load_tests", "visual_regression", "coverage", "mutation"],
+      "triggers": ["test_needed", "coverage_low", "regression_detected", "pr_opened"]
+    },
+    "INTEGRATION_MASTER": {
+      "id": "INTEGRATION-MASTER-001",
+      "codename": "BRIDGE",
+      "domain": "external_integrations",
+      "token_weight": 0.9,
+      "priority": "medium",
+      "capabilities": ["api_integration", "webhooks", "oauth", "etl", "data_sync", "third_party_sdks"],
+      "triggers": ["integration_requested", "webhook_received", "sync_needed"]
+    },
+    "DOCUMENT_MASTER": {
+      "id": "DOC-MASTER-001",
+      "codename": "SCRIBE",
+      "domain": "document_processing",
+      "token_weight": 1.4,
+      "priority": "high",
+      "capabilities": {
+        "ocr": ["tesseract", "azure_cognitive", "google_vision", "handwriting", "table_extraction", "form_parsing"],
+        "forensics": ["metadata_extraction", "tampering_detection", "version_archaeology", "redaction_detection", "hidden_text_recovery", "steganography"],
+        "creation": ["template_generation", "auto_formatting", "citation_builder", "legal_assembly", "contract_drafting", "report_synthesis"],
+        "smart_docs": ["embedded_agents", "self_updating", "live_data_binding", "conditional_content", "approval_workflows", "version_evolution"]
+      },
+      "triggers": ["document_uploaded", "ocr_requested", "forensic_analysis", "smart_doc_refresh"]
+    },
+    "FILESYSTEM_MASTER": {
+      "id": "FS-MASTER-001",
+      "codename": "VAULT",
+      "domain": "filesystem_operations",
+      "token_weight": 0.8,
+      "priority": "medium",
+      "capabilities": {
+        "operations": ["bulk_rename", "smart_organize", "duplicate_detection", "deduplication", "compression", "format_conversion"],
+        "mounts": ["gdrive", "onedrive", "dropbox", "smb", "nfs", "webdav", "encrypted_volumes", "fuse"],
+        "sync": ["bidirectional", "conflict_resolution", "delta_sync", "bandwidth_throttling", "offline_queue"],
+        "watch": ["inotify", "change_detection", "trigger_on_modify", "audit_logging", "integrity_verification"]
+      },
+      "triggers": ["file_changed", "new_file_detected", "sync_conflict", "storage_threshold"]
+    },
+    "DEVICE_MASTER": {
+      "id": "DEVICE-MASTER-001",
+      "codename": "BUDDY",
+      "domain": "device_companion",
+      "token_weight": 1.0,
+      "priority": "high",
+      "capabilities": {
+        "perpetual": ["heartbeat", "auto_restart", "crash_recovery", "memory_management", "battery_optimization", "thermal_throttling"],
+        "phone_buddy": ["notification_management", "smart_replies", "context_awareness", "location_triggers", "health_monitoring"],
+        "laptop_buddy": ["workflow_automation", "window_management", "focus_mode", "meeting_assistant", "clipboard_intelligence"],
+        "cross_device": ["seamless_handoff", "shared_clipboard", "notification_sync", "session_continuity", "unified_search"]
+      },
+      "presence_modes": ["always_on", "on_demand", "scheduled", "contextual"],
+      "triggers": ["device_startup", "low_battery", "context_change", "handoff_requested"]
+    },
+    "GUARDIAN_MASTER": {
+      "id": "GUARDIAN-MASTER-001",
+      "codename": "SENTINEL",
+      "domain": "security_antivirus",
+      "token_weight": 1.6,
+      "priority": "critical",
+      "capabilities": {
+        "antivirus": ["signature_scanning", "heuristic_analysis", "behavioral_detection", "sandbox_execution", "quarantine", "auto_remediation"],
+        "threat_detection": ["anomaly_detection", "network_monitoring", "process_inspection", "registry_watch", "rootkit_detection", "zero_day_heuristics"],
+        "dynamic_protection": ["real_time_scanning", "on_access_protection", "download_inspection", "email_scan", "usb_control"],
+        "intelligence": ["threat_feeds", "ioc_matching", "yara_rules", "sigma_rules", "mitre_attack_mapping"],
+        "forensics": ["incident_timeline", "artifact_collection", "memory_forensics", "disk_imaging", "chain_of_custody"]
+      },
+      "alert_levels": {
+        "INFO": "log_only",
+        "LOW": "notify_log",
+        "MEDIUM": "notify_quarantine",
+        "HIGH": "isolate_notify_remediate",
+        "CRITICAL": "full_lockdown_emergency"
+      },
+      "triggers": ["threat_detected", "suspicious_activity", "scan_completed", "signature_update"]
+    },
+    "WHISPER_MASTER": {
+      "id": "WHISPER-MASTER-001",
+      "codename": "ECHO",
+      "domain": "audio_transcription",
+      "token_weight": 0.9,
+      "priority": "high",
+      "capabilities": {
+        "transcription": ["whisperx", "speaker_diarization", "word_timestamps", "multilingual_99", "accent_adaptation", "noise_reduction"],
+        "processing": ["batch_transcription", "real_time_streaming", "vad_filtering", "silence_removal", "audio_normalization"],
+        "intelligence": ["sentiment_analysis", "topic_extraction", "key_moments", "action_items", "question_identification", "speaker_identification"],
+        "output": ["srt_vtt", "searchable_transcripts", "summaries", "meeting_minutes", "legal_transcripts"],
+        "integration": ["elevenlabs_tts", "voice_cloning", "audio_response", "podcast_processing", "call_analysis"]
+      },
+      "performance": {
+        "rtf": "418x",
+        "accuracy": "98.7%",
+        "max_concurrent": 50
+      },
+      "triggers": ["audio_uploaded", "transcription_requested", "real_time_stream", "batch_job"]
+    },
+    "CASEBUILDER_MASTER": {
+      "id": "CASE-MASTER-001",
+      "codename": "JUSTICE",
+      "domain": "legal_case_building",
+      "token_weight": 1.5,
+      "priority": "critical",
+      "capabilities": {
+        "evidence": ["intake_processing", "chain_of_custody", "metadata_preservation", "hash_verification", "tamper_detection", "exhibit_numbering"],
+        "case_construction": ["timeline_builder", "relationship_mapping", "contradiction_detection", "pattern_analysis", "precedent_matching", "argument_synthesis"],
+        "document_processing": ["bates_numbering", "privilege_review", "relevance_scoring", "deduplication", "near_duplicate", "hot_doc_identification"],
+        "analysis": ["witness_comparison", "financial_forensics", "communication_analysis", "social_network_mapping", "geolocation_timeline", "device_forensics"],
+        "output": ["case_summary", "evidence_index", "witness_list", "exhibit_list", "chronology", "legal_memo_draft"]
+      },
+      "integrations": ["courtlistener", "pacer", "westlaw", "lexis", "evidence_databases", "court_filing"],
+      "case_types": ["civil_litigation", "criminal_defense", "family_law", "bankruptcy", "corporate", "ip"],
+      "triggers": ["new_case_intake", "evidence_uploaded", "deadline_approaching", "court_filing_needed"]
+    },
+    "ORACLE_MASTER": {
+      "id": "ORACLE-MASTER-001",
+      "codename": "SEER",
+      "domain": "predictive_analytics",
+      "token_weight": 1.2,
+      "priority": "medium",
+      "capabilities": {
+        "prediction": ["trend_forecasting", "anomaly_prediction", "failure_prediction", "demand_forecasting", "risk_assessment"],
+        "analysis": ["pattern_recognition", "correlation_discovery", "causal_inference", "what_if_scenarios", "monte_carlo"],
+        "monitoring": ["kpi_tracking", "threshold_alerting", "drift_detection", "performance_degradation"],
+        "recommendations": ["optimization_suggestions", "resource_allocation", "timing_recommendations", "priority_scoring"]
+      },
+      "triggers": ["analysis_requested", "threshold_breached", "prediction_needed", "scheduled_forecast"]
+    },
+    "GENESIS_MASTER": {
+      "id": "GENESIS-MASTER-001",
+      "codename": "CREATOR",
+      "domain": "code_generation",
+      "token_weight": 1.3,
+      "priority": "high",
+      "capabilities": {
+        "generation": ["app_scaffolding", "component_generation", "api_generation", "database_schema", "test_generation", "documentation"],
+        "auto_coding": ["bug_fix_generation", "refactoring", "optimization", "migration_scripts", "compatibility_patches"],
+        "evolution": ["dependency_updates", "deprecation_handling", "breaking_change_adaptation", "security_patching", "performance_tuning"],
+        "languages": ["python", "javascript", "typescript", "rust", "go", "csharp", "java", "sql", "graphql", "terraform", "kubernetes"]
+      },
+      "triggers": ["code_requested", "bug_reported", "refactor_needed", "upgrade_required"]
+    }
+  },
+
+  "protocols": {
+    "GENESIS": {
+      "description": "New feature development",
+      "trigger": "feature_request",
+      "chain": ["LOGIC_MASTER", "BACKEND_MASTER", "FRONTEND_MASTER", "TEST_MASTER", "BUILD_MASTER"],
+      "timeout": "4h"
+    },
+    "PHOENIX": {
+      "description": "Critical bug response",
+      "trigger": "critical_bug",
+      "chain": ["BACKEND_MASTER", "TEST_MASTER", "BUILD_MASTER", "SECURITY_MASTER"],
+      "timeout": "1h"
+    },
+    "HYDRA": {
+      "description": "Scale operations",
+      "trigger": "scale_required",
+      "chain": ["MIDDLEWARE_MASTER", "BACKEND_MASTER", "BUILD_MASTER", "TEST_MASTER"],
+      "timeout": "2h"
+    },
+    "SENTINEL": {
+      "description": "Security response",
+      "trigger": "security_event",
+      "chain": ["SECURITY_MASTER", "BACKEND_MASTER", "EVOLUTION_MASTER"],
+      "timeout": "30m"
+    },
+    "METAMORPHOSIS": {
+      "description": "Major upgrade",
+      "trigger": "major_upgrade",
+      "chain": ["EVOLUTION_MASTER", "TEST_MASTER", "BUILD_MASTER"],
+      "timeout": "8h"
+    },
+    "PHOENIX_LEGAL": {
+      "description": "Legal case processing",
+      "trigger": "new_case_intake",
+      "chain": ["DOCUMENT_MASTER", "WHISPER_MASTER", "CASEBUILDER_MASTER", "ORACLE_MASTER", "GENESIS_MASTER"],
+      "timeout": "24h"
+    },
+    "SENTINEL_DEEP": {
+      "description": "Deep security analysis",
+      "trigger": "security_incident",
+      "chain": ["GUARDIAN_MASTER", "FILESYSTEM_MASTER", "DOCUMENT_MASTER", "DEVICE_MASTER"],
+      "timeout": "2h"
+    },
+    "PERPETUAL_BUDDY": {
+      "description": "Device companion startup",
+      "trigger": "device_startup",
+      "chain": ["DEVICE_MASTER", "FILESYSTEM_MASTER", "GUARDIAN_MASTER", "ORACLE_MASTER"],
+      "timeout": "5m"
+    },
+    "TRANSCRIBE_EVERYTHING": {
+      "description": "Batch audio transcription",
+      "trigger": "audio_batch",
+      "chain": ["WHISPER_MASTER", "DOCUMENT_MASTER", "CASEBUILDER_MASTER", "FILESYSTEM_MASTER"],
+      "timeout": "varies"
+    },
+    "SMART_DOC_CREATE": {
+      "description": "Create intelligent document",
+      "trigger": "smart_doc_requested",
+      "chain": ["DOCUMENT_MASTER", "ORACLE_MASTER", "FILESYSTEM_MASTER"],
+      "timeout": "30m"
+    }
+  },
+
+  "smart_docs": {
+    "schema_version": "1.0",
+    "section_types": ["static", "dynamic", "agentic", "conditional"],
+    "templates": {
+      "status_dashboard": {
+        "description": "Live metrics and KPI tracking",
+        "sections": ["header", "live_metrics", "ai_insights", "alerts", "recommendations"],
+        "refresh": "*/15 * * * *",
+        "bound_agents": ["ORACLE_MASTER"]
+      },
+      "legal_brief": {
+        "description": "Auto-updating legal document",
+        "sections": ["header", "facts", "legal_analysis", "citations", "conclusion"],
+        "refresh": "on_source_change",
+        "bound_agents": ["CASEBUILDER_MASTER", "DOCUMENT_MASTER"]
+      },
+      "case_file": {
+        "description": "Evidence-linked case management",
+        "sections": ["case_summary", "timeline", "evidence_list", "witness_list", "analysis", "next_steps"],
+        "refresh": "on_evidence_change",
+        "bound_agents": ["CASEBUILDER_MASTER", "WHISPER_MASTER", "DOCUMENT_MASTER"]
+      },
+      "security_report": {
+        "description": "Threat analysis and recommendations",
+        "sections": ["executive_summary", "threats_detected", "remediation_steps", "compliance_status"],
+        "refresh": "on_scan_complete",
+        "bound_agents": ["GUARDIAN_MASTER", "ORACLE_MASTER"]
+      },
+      "project_tracker": {
+        "description": "Self-updating project status",
+        "sections": ["overview", "milestones", "blockers", "metrics", "predictions"],
+        "refresh": "*/30 * * * *",
+        "bound_agents": ["ORACLE_MASTER", "BUILD_MASTER"]
+      }
+    }
+  },
+
+  "stealth_modes": {
+    "GHOST": {
+      "description": "Silent background operations",
+      "features": ["no_logging", "trace_scrubbing", "memory_minimal", "network_minimal"],
+      "overhead_reduction": "95%"
+    },
+    "MICROWAVE": {
+      "description": "Maximum parallel execution",
+      "features": ["parallel_all", "batch_everything", "skip_validation", "fast_track"],
+      "speed_multiplier": "3x"
+    },
+    "SHADOW": {
+      "description": "Covert monitoring mode",
+      "features": ["passive_observation", "no_writes", "encrypted_logs", "stealth_alerts"],
+      "detection_risk": "minimal"
+    }
+  },
+
+  "orchestration": {
+    "max_concurrent_agents": 20,
+    "token_budget_per_task": 100000,
+    "context_compression": true,
+    "database_as_memory": true,
+    "hierarchical_delegation": true,
+    "auto_scaling": true,
+    "failure_recovery": "automatic",
+    "checkpoint_interval": "5m"
+  },
+
+  "integrations": {
+    "github": { "enabled": true, "connection": "conn_wb06cewvmw06brvxemtg" },
+    "notion": { "enabled": true, "workspace": "glaciereq" },
+    "whisperx": { "enabled": true, "rtf": "418x" },
+    "elevenlabs": { "enabled": true },
+    "courtlistener": { "enabled": true },
+    "mem0": { "enabled": true, "account": "casey@hi-classhomeservices.com" }
+  }
+}
